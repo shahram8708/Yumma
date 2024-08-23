@@ -113,7 +113,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f7f9fc;
+            background: linear-gradient(to right, #e0f7fa, #b9fbc0);
             color: #333;
             margin: 0;
             padding: 0;
@@ -132,10 +132,28 @@
         h1 {
             text-align: center;
             color: #0056b3;
-            margin-bottom: 40px;
             font-size: 2.5em;
             font-weight: 700;
             letter-spacing: -0.5px;
+        }
+
+        .filter-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #filterIcon {
+            margin-bottom: 40px;
+            cursor: pointer;
+            font-size: 2em;
+            color: #007bff;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        #filterIcon:hover {
+            color: #0056b3;
+            transform: scale(1.2);
         }
 
         .filters {
@@ -515,11 +533,13 @@
             <h1>Terms and Conditions</h1>
             <hr>
             <h2>1. Introduction</h2>
-            <p>Welcome to MY PG 🏠. These Terms and Conditions govern your use of our website and services. By accessing or
+            <p>Welcome to MY PG 🏠. These Terms and Conditions govern your use of our website and services. By accessing
+                or
                 using our site, you agree to comply with these Terms and Conditions.</p>
 
             <h2>2. Intellectual Property</h2>
-            <p>All content, including but not limited to text, graphics, logos, and images, is the property of MY PG 🏠 or
+            <p>All content, including but not limited to text, graphics, logos, and images, is the property of MY PG 🏠
+                or
                 its
                 licensors and is protected by copyright and intellectual property laws.</p>
 
@@ -528,7 +548,8 @@
                 others or restrict or inhibit anyone else's use and enjoyment of the site.</p>
 
             <h2>4. Limitation of Liability</h2>
-            <p>MY PG 🏠 shall not be liable for any direct, indirect, incidental, special, or consequential damages arising
+            <p>MY PG 🏠 shall not be liable for any direct, indirect, incidental, special, or consequential damages
+                arising
                 out
                 of or in connection with your use of the site.</p>
 
@@ -587,64 +608,68 @@
 
     <div class="containers">
         <h1>Find Your PG</h1>
-        <div class="filters">
-            <input type="text" id="searchName" placeholder="Enter PG name" oninput="filterPGs()">
-            <label for="country">Country:</label>
-            <select id="country" onchange="updateStates()">
-                <option value="">Select Country</option>
-                <option value="India">India</option>
-                <option value="USA">USA</option>
-            </select>
+        <div class="filter-toggle">
+            <i id="filterIcon" class="fas fa-filter"> Filter PG</i>
+        </div>
+        <div id="filterSection" style="display: none;">
+            <div class="filters">
+                <input type="text" id="searchName" placeholder="Enter PG name" oninput="filterPGs()">
+                <label for="country">Country:</label>
+                <select id="country" onchange="updateStates()">
+                    <option value="">Select Country</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                </select>
 
-            <label for="state">State:</label>
-            <select id="state" onchange="updateCities()">
-                <option value="">Select State</option>
-            </select>
-            <label for="city">City:</label>
-            <select id="city" onchange="updateAreas()">
-                <option value="">Select City</option>
-                <option value="Ahmedabad">Ahmedabad</option>
-                <option value="Gandhinagar">Gandhinagar</option>
-            </select>
+                <label for="state">State:</label>
+                <select id="state" onchange="updateCities()">
+                    <option value="">Select State</option>
+                </select>
+                <label for="city">City:</label>
+                <select id="city" onchange="updateAreas()">
+                    <option value="">Select City</option>
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Gandhinagar">Gandhinagar</option>
+                </select>
 
-            <label for="area">Area:</label>
-            <select id="area" onchange="updateNearbyAreas()">
-                <option value="">Select Area</option>
-            </select>
+                <label for="area">Area:</label>
+                <select id="area" onchange="updateNearbyAreas()">
+                    <option value="">Select Area</option>
+                </select>
 
-            <label for="roomType">Room Type:</label>
-            <select id="roomType">
-                <option value="">Select Room Type</option>
-                <option value="AC">AC</option>
-                <option value="Non-AC">Non-AC</option>
-            </select>
+                <label for="roomType">Room Type:</label>
+                <select id="roomType">
+                    <option value="">Select Room Type</option>
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
+                </select>
 
-            <label for="food">Food:</label>
-            <select id="food">
-                <option value="">Select Food Option</option>
-                <option value="With Food">With Food</option>
-                <option value="Without Food">Without Food</option>
-            </select>
+                <label for="food">Food:</label>
+                <select id="food">
+                    <option value="">Select Food Option</option>
+                    <option value="With Food">With Food</option>
+                    <option value="Without Food">Without Food</option>
+                </select>
 
-            <label for="size">Room Size:</label>
-            <select id="size">
-                <option value="">Select Room Size</option>
-                <option value="Small">Small</option>
-                <option value="Medium">Medium</option>
-                <option value="Large">Large</option>
-            </select>
+                <label for="size">Room Size:</label>
+                <select id="size">
+                    <option value="">Select Room Size</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
 
-            <label for="price">Max Price (per month):</label>
-            <input type="number" id="price" placeholder="Enter max price">
+                <label for="price">Max Price (per month):</label>
+                <input type="number" id="price" placeholder="Enter max price">
 
-            <button onclick="filterPGs()">Search</button>
+                <button onclick="filterPGs()">Search</button>
+            </div>
         </div>
 
         <div id="pgCount"></div>
         <div id="pgList"></div>
     </div>
 
-    <!-- Modal -->
     <div id="pgModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -681,10 +706,29 @@
                 <li><a href="https://www.instagram.com/mypgspace?utm_source=qr&igsh=MXVoZXozYXV1a3d6MQ=="
                         target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
+            <p id="last-updated">Loading last update date...</p>
         </div>
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastUpdated = document.getElementById("last-updated");
+            if (lastUpdated) {
+                var date = new Date(document.lastModified);
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
+            }
+        });
+
+        document.getElementById("filterIcon").onclick = function () {
+            var filterSection = document.getElementById("filterSection");
+            if (filterSection.style.display === "none") {
+                filterSection.style.display = "block";
+            } else {
+                filterSection.style.display = "none";
+            }
+        };
+
         function scrollToTop() {
             window.scrollTo({
                 top: 0,

@@ -299,10 +299,20 @@
                 <li><a href="https://www.instagram.com/mypgspace?utm_source=qr&igsh=MXVoZXozYXV1a3d6MQ=="
                         target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
+            <p id="last-updated">Loading last update date...</p>
         </div>
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastUpdated = document.getElementById("last-updated");
+            if (lastUpdated) {
+                var date = new Date(document.lastModified);
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
+            }
+        });
+
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });

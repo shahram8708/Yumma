@@ -185,7 +185,7 @@
     </section>
     <div class="conatiners">
         <h1 style="text-align: center; font-size: 50px;">Application Status</h1>
-        <p>your application has been successfully submitted. Please allow up to 48 hours for processing. We will notify
+        <p>Your application has been successfully submitted. Please allow up to 48 hours for processing. We will notify
             you via email whether your application has been approved or not. If approved, you'll receive detailed
             instructions and further steps via email. If your application is not approved, we will inform you as well.
             Please refrain from submitting another application until the 48-hour review period has elapsed. Thank you
@@ -204,10 +204,20 @@
                 <li><a href="https://www.instagram.com/mypgspace?utm_source=qr&igsh=MXVoZXozYXV1a3d6MQ=="
                         target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
+            <p id="last-updated">Loading last update date...</p>
         </div>
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastUpdated = document.getElementById("last-updated");
+            if (lastUpdated) {
+                var date = new Date(document.lastModified);
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
+            }
+        });
+
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });

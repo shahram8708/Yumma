@@ -117,6 +117,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to right, #e0f7fa, #b9fbc0);
         }
 
         .containers {
@@ -269,7 +270,8 @@
         <h2>Copyright Information</h2>
         <p>&copy; 2024 MY PG 🏠. All rights reserved.</p>
         <p>The content on this website, including but not limited to text, images, and graphics, is the property of
-            MY PG 🏠 and is protected by copyright laws. Unauthorized use, reproduction, or distribution of this material
+            MY PG 🏠 and is protected by copyright laws. Unauthorized use, reproduction, or distribution of this
+            material
             is prohibited.</p>
 
         <h2>Permissions</h2>
@@ -304,10 +306,20 @@
                 <li><a href="https://x.com/MYPGSpace" target="_blank"><i class="fab fa-twitter"></i></a></li>
                 <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
+            <p id="last-updated">Loading last update date...</p>
         </div>
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var lastUpdated = document.getElementById("last-updated");
+            if (lastUpdated) {
+                var date = new Date(document.lastModified);
+                var options = { year: 'numeric', month: 'long', day: 'numeric' };
+                lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
+            }
+        });
+
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
