@@ -192,15 +192,15 @@
                 <ul class="nav-menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="query.html">Contact</a></li>
-                    <li><a href="copy.html">Copyright Notice</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="help.html">Help & Support</a></li>
-                    <li><a href="login.html">Login</a></li>
                     <li><a href="pg-details-upload.html">Upload PG Details</a></li>
+                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="query.html">Contact</a></li>
+                    <li><a href="help.html">Help & Support</a></li>
                     <li><a href="policy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms and Conditions</a></li>
-                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="copy.html">Copyright Notice</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -286,6 +286,15 @@
 
             sendOtpBtn.disabled = true;
 
+            sendOtpBtn.style.display = 'none';
+
+            const message = document.createElement('p');
+            message.innerText = 'Please check your email for the OTP. If you don\'t see it in your inbox, kindly check your spam or junk folder. In the future, when interacting with this application, if you don\'t receive any expected emails, always remember to check the spam section. For now, please ensure you\'ve thoroughly checked your email for the OTP.';
+            message.style.fontSize = '16px';
+            message.style.color = '#333';
+
+            sendOtpBtn.insertAdjacentElement('afterend', message);
+
             if (email && name && phone) {
                 fetch('https://my-pg.onrender.com/send-otp', {
                     method: 'POST',
@@ -319,6 +328,15 @@
             const verifyOtpBtn = document.getElementById('verifyOtpBtn');
 
             verifyOtpBtn.disabled = true;
+
+            verifyOtpBtn.style.display = 'none';
+
+            const message = document.createElement('p');
+            message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
+            message.style.fontSize = '16px';
+            message.style.color = '#333';
+
+            verifyOtpBtn.insertAdjacentElement('afterend', message);
 
             fetch('https://my-pg.onrender.com/login', {
                 method: 'POST',

@@ -158,15 +158,15 @@
                 <ul class="nav-menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="query.html">Contact</a></li>
-                    <li><a href="copy.html">Copyright Notice</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="help.html">Help & Support</a></li>
-                    <li><a href="login.html">Login</a></li>
                     <li><a href="pg-details-upload.html">Upload PG Details</a></li>
+                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="query.html">Contact</a></li>
+                    <li><a href="help.html">Help & Support</a></li>
                     <li><a href="policy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms and Conditions</a></li>
-                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="copy.html">Copyright Notice</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -185,7 +185,8 @@
     </section>
     <div class="conatiners">
         <h1 style="text-align: center; font-size: 50px;">Application Status</h1>
-        <p>Your application has been successfully submitted. Please allow up to 48 hours for processing. We will notify
+        <p>Hi <strong id="userName"></strong>, Your application has been successfully submitted. Please allow up to 48
+            hours for processing. We will notify
             you via email whether your application has been approved or not. If approved, you'll receive detailed
             instructions and further steps via email. If your application is not approved, we will inform you as well.
             Please refrain from submitting another application until the 48-hour review period has elapsed. Thank you
@@ -216,6 +217,7 @@
                 var options = { year: 'numeric', month: 'long', day: 'numeric' };
                 lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
             }
+            displayUserDetails();
         });
 
         document.querySelector('.menu-toggle').addEventListener('click', function () {
@@ -226,6 +228,20 @@
                 top: 0,
                 behavior: 'smooth'
             });
+        }
+
+        const lastApplicationDate = localStorage.getItem('lastApplicationDate');
+
+        if (!lastApplicationDate) {
+            window.location.href = 'index.html';
+        }
+
+        function displayUserDetails() {
+            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+
+            if (userDetails) {
+                document.getElementById('userName').textContent = userDetails.name;
+            }
         }
     </script>
 </body>

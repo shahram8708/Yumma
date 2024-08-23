@@ -183,15 +183,15 @@
                 <ul class="nav-menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="query.html">Contact</a></li>
-                    <li><a href="copy.html">Copyright Notice</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="help.html">Help & Support</a></li>
-                    <li><a href="login.html">Login</a></li>
                     <li><a href="pg-details-upload.html">Upload PG Details</a></li>
+                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="query.html">Contact</a></li>
+                    <li><a href="help.html">Help & Support</a></li>
                     <li><a href="policy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms and Conditions</a></li>
-                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="copy.html">Copyright Notice</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -201,7 +201,9 @@
         <div class="hero-content">
             <h1>Your Perfect Place to Stay!</h1>
             <hr>
-            <p>Welcome to MY PG 🏠, where comfort meets convenience. We offer premium PG accommodations tailored
+            <p>Welcome to MY PG 🏠 <strong id="userNames"></strong>, where comfort meets convenience. We offer premium
+                PG
+                accommodations tailored
                 specifically for students. Enjoy a fantastic living experience with modern amenities, a vibrant
                 community, and a perfect study environment. <strong>Apply now and avail an exclusive 80%
                     discount!</strong> Don’t miss out on this incredible offer and secure your ideal place
@@ -249,7 +251,17 @@
                 var options = { year: 'numeric', month: 'long', day: 'numeric' };
                 lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
             }
+
+            displayUserDetails();
         });
+
+        function displayUserDetails() {
+            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+
+            if (userDetails) {
+                document.getElementById('userName').textContent = userDetails.name;
+            }
+        }
 
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
@@ -265,6 +277,7 @@
 
             if (userDetails) {
                 document.getElementById('userName').textContent = userDetails.name;
+                document.getElementById('userNames').textContent = userDetails.name;
                 document.getElementById('userEmail').textContent = userDetails.email;
                 document.getElementById('userPhone').textContent = userDetails.phone;
             } else {
@@ -273,16 +286,13 @@
         }
 
         function logout() {
-            localStorage.removeItem('userDetails');
-            localStorage.removeItem('loggedIn');
+            localStorage.clear();
+
             window.location.href = 'login.html';
         }
 
-        function logout() {
-            window.location.href = 'status.html';
-        }
-
         displayUserDetails();
+
     </script>
 </body>
 

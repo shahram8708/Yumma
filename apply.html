@@ -225,15 +225,15 @@
                 <ul class="nav-menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="query.html">Contact</a></li>
-                    <li><a href="copy.html">Copyright Notice</a></li>
-                    <li><a href="feedback.html">Feedback</a></li>
-                    <li><a href="help.html">Help & Support</a></li>
-                    <li><a href="login.html">Login</a></li>
                     <li><a href="pg-details-upload.html">Upload PG Details</a></li>
+                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="query.html">Contact</a></li>
+                    <li><a href="help.html">Help & Support</a></li>
                     <li><a href="policy.html">Privacy Policy</a></li>
                     <li><a href="terms.html">Terms and Conditions</a></li>
-                    <li><a href="user-details.html">Profile</a></li>
+                    <li><a href="copy.html">Copyright Notice</a></li>
+                    <li><a href="login.html">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -243,7 +243,8 @@
         <div class="hero-content">
             <h1>Your Perfect Place to Stay!</h1>
             <hr>
-            <p>Welcome to MY PG 🏠, where comfort meets convenience. We offer premium PG accommodations tailored
+            <p>Welcome to MY PG 🏠 <strong id="userName"></strong>, where comfort meets convenience. We offer premium PG
+                accommodations tailored
                 specifically for students. Enjoy a fantastic living experience with modern amenities, a vibrant
                 community, and a perfect study environment. <strong>Apply now and avail an exclusive 80%
                     discount!</strong> Don’t miss out on this incredible offer and secure your ideal place
@@ -384,6 +385,8 @@
                 var options = { year: 'numeric', month: 'long', day: 'numeric' };
                 lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
             }
+
+            displayUserDetails();
         });
 
         document.querySelector('.menu-toggle').addEventListener('click', function () {
@@ -488,6 +491,13 @@
                     const submitButton = document.querySelector('button[type="submit"]');
                     submitButton.style.display = 'none';
 
+                    const message = document.createElement('p');
+                    message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
+                    message.style.fontSize = '16px';
+                    message.style.color = '#333';
+
+                    submitButton.insertAdjacentElement('afterend', message);
+
                     localStorage.setItem('lastApplicationDate', new Date().toISOString());
 
                     submitButton.disabled = true;
@@ -495,6 +505,14 @@
                 }
             });
         });
+
+        function displayUserDetails() {
+            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+
+            if (userDetails) {
+                document.getElementById('userName').textContent = userDetails.name;
+            }
+        }
 
     </script>
 </body>
