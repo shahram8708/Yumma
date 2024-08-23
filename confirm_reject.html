@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MY PG - Application Details</title>
+</head>
+
+<body>
+    <h2>Application Details</h2>
+    <p>PG Details:</p>
+    <ul>
+        {% for key, value in pg_details.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <p>User Details:</p>
+    <ul>
+        {% for key, value in user_details.items() %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+
+    <form action="/confirm_application" method="get">
+        <input type="hidden" name="app_id" value="{{ app_id }}">
+        <button type="submit">Confirm</button>
+    </form>
+    <form action="/reject_application" method="get">
+        <input type="hidden" name="app_id" value="{{ app_id }}">
+        <button type="submit">Reject</button>
+    </form>
+</body>
+
+</html>
