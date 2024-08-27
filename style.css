@@ -284,7 +284,7 @@ nav {
     color: #fff;
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1235px) {
     .nav-menu {
         display: none;
         flex-direction: column;
