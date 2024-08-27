@@ -420,7 +420,7 @@
             }
 
             const formData = new FormData(document.getElementById('FoodForm'));
-            fetch('http://localhost:5000/upload-food-details', {
+            fetch('https://my-pg.onrender.com/upload-food-details', {
                 method: 'POST',
                 body: formData
             }).then(response => response.json())

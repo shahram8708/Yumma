@@ -353,7 +353,7 @@
             submitBtn.insertAdjacentElement('afterend', message);
 
             const formData = new FormData(document.getElementById('FoodForm'));
-            fetch('http://localhost:5000/food-accommodation-request', {
+            fetch('https://my-pg.onrender.com/food-accommodation-request', {
                 method: 'POST',
                 body: formData
             }).then(response => response.json())

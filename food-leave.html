@@ -344,7 +344,7 @@
                 submitFormBtn.insertAdjacentElement('afterend', message);
 
                 try {
-                    const response = await fetch('http://localhost:5000/submit-leave-food', {
+                    const response = await fetch('https://my-pg.onrender.com/submit-leave-food', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
