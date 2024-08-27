@@ -243,7 +243,7 @@
         <div class="hero-content">
             <h1>Your Perfect Place to Stay!</h1>
             <hr>
-            <p>Welcome to MY PG 🏠 <strong id="userName"></strong>, where comfort meets convenience. We offer premium PG
+            <p>Welcome to MY PG 🏠 <strong id="userNames"></strong>, where comfort meets convenience. We offer premium PG
                 accommodations tailored
                 specifically for students. Enjoy a fantastic living experience with modern amenities, a vibrant
                 community, and a perfect study environment. <strong>Apply now and avail an exclusive 80%
@@ -511,6 +511,7 @@
 
             if (userDetails) {
                 document.getElementById('userName').textContent = userDetails.name;
+                document.getElementById('userNames').textContent = userDetails.name;
             }
         }
 
