@@ -14,7 +14,7 @@
     <meta property="og:description"
         content="Discover premium Food accommodations for students with modern amenities and a vibrant community. Apply now to avail an exclusive 80% discount!">
     <meta property="og:image" content="logo.jpeg">
-    <meta property="og:url" content="https://MYPGSpace.netlify.app/">
+    <meta property="og:url" content="https://pgeats.netlify.app/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MY Food 🏠">
     <meta property="og:locale" content="en_US">
@@ -48,7 +48,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "MY Food 🏠",
-  "url": "https://MYPGSpace.netlify.app/",
+  "url": "https://pgeats.netlify.app/",
   "description": "Explore MY Food 🏠, where we provide top-notch Food accommodations designed specifically for students. Whether you need a full meal plan or prefer to arrange your own, our flexible options cater to all your needs. Enjoy the perfect blend of comfort, affordability, and convenience in a vibrant student community. Choose from premium or budget-friendly meal plans, with or without included dining services, all tailored to make your student life in India truly exceptional. Secure your spot today and elevate your student experience with the best in student living and dining!",
   "publisher": {
     "@type": "Organization",
@@ -73,13 +73,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://MYPGSpace.netlify.app/"
+      "item": "https://pgeats.netlify.app/"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Food Accommodations",
-      "item": "https://MYPGSpace.netlify.app/"
+      "item": "https://pgeats.netlify.app/"
     }
   ]
 }
@@ -104,10 +104,13 @@
     "email": "myFoodhelp@gmail.com",
     "contactType": "Customer Service"
   },
-  "url": "https://MYPGSpace.netlify.app/",
+  "url": "https://pgeats.netlify.app/",
   "sameAs": "https://www.facebook.com/profile.php?id=61564667847497"
 }
 </script>
+    <meta name="google-adsense-account" content="ca-pub-9877839152732215">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9877839152732215"
+        crossorigin="anonymous"></script>
     <title>MY Food 🏠 - Apply for Food</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -211,6 +214,12 @@
             font-weight: 700;
             letter-spacing: -0.5px;
         }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
     </style>
 </head>
 
@@ -277,7 +286,8 @@
     </section>
     <div class="containers">
         <h1 style="text-align: center; font-size: 50px;">Apply for Food</h1>
-        <form id="applyForm" method="POST" enctype="multipart/form-data" action="https://my-pg.onrender.com/food_apply">
+        <form id="applyForm" method="POST" enctype="multipart/form-data"
+            action="https://my-pg-tnp9.onrender.com/food_apply">
             <div class="form-group">
                 <label for="FoodName">Food Name:</label>
                 <input type="text" id="FoodName" name="FoodName" readonly>
@@ -297,6 +307,10 @@
             <div class="form-group">
                 <label for="area">Area:</label>
                 <input type="text" id="area" name="area" readonly>
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" readonly>
             </div>
             <div class="form-group" style="display: none;">
                 <label for="FoodPhone">Food Phone Number:</label>
@@ -331,19 +345,31 @@
                 <input type="email" id="userEmail" name="userEmail" readonly>
             </div>
             <div class="form-group">
+                <label for="userAddress">Your Address:</label>
+                <input type="text" id="userAddress" name="userAddress" readonly>
+            </div>
+            <div class="form-group">
                 <label for="duration">Food Duration:</label>
                 <select id="duration" name="duration" required>
                     <option value="">Select Food Duration</option>
                     <option value="1day-1times">1 Day - 1 Time</option>
                     <option value="1day-2times">1 Day - 2 Times</option>
-                    <option value="1week">1 Week</option>
-                    <option value="1month">1 Month</option>
-                    <option value="3months">3 Months</option>
-                    <option value="6months">6 Months</option>
-                    <option value="1year">1 Year</option>
-                    <option value="2years">2 Years</option>
-                    <option value="3years">3 Years</option>
-                    <option value="4years">4 Years</option>
+                    <option value="1week-1time">1 Week - 1 Time</option>
+                    <option value="1week-2times">1 Week - 2 Times</option>
+                    <option value="1month-1time">1 Month - 1 Time</option>
+                    <option value="1month-2times">1 Month - 2 Times</option>
+                    <option value="3months-1time">3 Months - 1 Time</option>
+                    <option value="3months-2times">3 Months - 2 Times</option>
+                    <option value="6months-1time">6 Months - 1 Time</option>
+                    <option value="6months-2times">6 Months - 2 Times</option>
+                    <option value="1year-1time">1 Year - 1 Time</option>
+                    <option value="1year-2times">1 Year - 2 Times</option>
+                    <option value="2years-1time">2 Years - 1 Time</option>
+                    <option value="2years-2times">2 Years - 2 Times</option>
+                    <option value="3years-1time">3 Years - 1 Time</option>
+                    <option value="3years-2times">3 Years - 2 Times</option>
+                    <option value="4years-1time">4 Years - 1 Time</option>
+                    <option value="4years-2times">4 Years - 2 Times</option>
                 </select>
             </div>
 
@@ -401,42 +427,91 @@
                 let mealsPerDay = 1;
                 if (durationSelect.value === '1day-2times') {
                     mealsPerDay = 2;
+                } else if (durationSelect.value === '1week-1time' || durationSelect.value === '1week-2times') {
+                    mealsPerDay = durationSelect.value === '1week-2times' ? 2 : 1;
+                } else if (durationSelect.value === '1month-1time' || durationSelect.value === '1month-2times') {
+                    mealsPerDay = durationSelect.value === '1month-2times' ? 2 : 1;
+                } else {
+                    mealsPerDay = 1;
                 }
 
                 let durationInDays = 0;
                 switch (durationSelect.value) {
                     case '1day-1times':
                         durationInDays = 1;
+                        mealsPerDay = 1;
                         break;
                     case '1day-2times':
                         durationInDays = 1;
+                        mealsPerDay = 2;
                         break;
-                    case '1week':
+                    case '1week-1time':
                         durationInDays = 7;
+                        mealsPerDay = 1;
                         break;
-                    case '1month':
+                    case '1week-2times':
+                        durationInDays = 7;
+                        mealsPerDay = 2;
+                        break;
+                    case '1month-1time':
                         durationInDays = 30;
+                        mealsPerDay = 1;
                         break;
-                    case '3months':
+                    case '1month-2times':
+                        durationInDays = 30;
+                        mealsPerDay = 2;
+                        break;
+                    case '3months-1time':
                         durationInDays = 90;
+                        mealsPerDay = 1;
                         break;
-                    case '6months':
+                    case '3months-2times':
+                        durationInDays = 90;
+                        mealsPerDay = 2;
+                        break;
+                    case '6months-1time':
                         durationInDays = 180;
+                        mealsPerDay = 1;
                         break;
-                    case '1year':
+                    case '6months-2times':
+                        durationInDays = 180;
+                        mealsPerDay = 2;
+                        break;
+                    case '1year-1time':
                         durationInDays = 365;
+                        mealsPerDay = 1;
                         break;
-                    case '2years':
+                    case '1year-2times':
+                        durationInDays = 365;
+                        mealsPerDay = 2;
+                        break;
+                    case '2years-1time':
                         durationInDays = 730;
+                        mealsPerDay = 1;
                         break;
-                    case '3years':
+                    case '2years-2times':
+                        durationInDays = 730;
+                        mealsPerDay = 2;
+                        break;
+                    case '3years-1time':
                         durationInDays = 1095;
+                        mealsPerDay = 1;
                         break;
-                    case '4years':
+                    case '3years-2times':
+                        durationInDays = 1095;
+                        mealsPerDay = 2;
+                        break;
+                    case '4years-1time':
                         durationInDays = 1460;
+                        mealsPerDay = 1;
+                        break;
+                    case '4years-2times':
+                        durationInDays = 1460;
+                        mealsPerDay = 2;
                         break;
                     default:
                         durationInDays = 0;
+                        mealsPerDay = 0;
                 }
 
                 const totalPrice = durationInDays * mealsPerDay * pricePerThali;
@@ -461,6 +536,7 @@
                     document.getElementById('userName').value = userDetails.name || '';
                     document.getElementById('userPhone').value = userDetails.phone || '';
                     document.getElementById('userEmail').value = userDetails.email || '';
+                    document.getElementById('userAddress').value = userDetails.address || '';
                 } else {
                     window.location.href = 'login.html';
                 }
@@ -483,7 +559,7 @@
             document.getElementById('FoodName').value = urlParams.get('name') || '';
             document.getElementById('city').value = urlParams.get('city') || '';
             document.getElementById('area').value = urlParams.get('area') || '';
-            document.getElementById('food').value = urlParams.get('food') || '';
+            document.getElementById('postalCode').value = urlParams.get('postalCode') || ''; document.getElementById('food').value = urlParams.get('food') || '';
             document.getElementById('FoodPrice').value = urlParams.get('currentPrice') ? `₹${urlParams.get('currentPrice')} per Thali` : '';
             document.getElementById('items').value = urlParams.get('items') || '';
             document.getElementById('FoodPhone').value = urlParams.get('phone') || '';
@@ -492,27 +568,23 @@
             document.getElementById('country').value = urlParams.get('country') || '';
 
             const applyForm = document.getElementById('applyForm');
+            const submitButton = document.getElementById('submitButton');
 
             applyForm.addEventListener('submit', function (event) {
+                submitButton.disabled = true;
+                submitButton.innerText = 'Submitting...';
 
-                if (!isValid) {
-                    event.preventDefault();
-                } else {
-                    const submitButton = document.querySelector('button[type="submit"]');
-                    submitButton.style.display = 'none';
+                const message = document.createElement('p');
+                message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
+                message.style.fontSize = '16px';
+                message.style.color = '#333';
+                submitButton.insertAdjacentElement('afterend', message);
 
-                    const message = document.createElement('p');
-                    message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
-                    message.style.fontSize = '16px';
-                    message.style.color = '#333';
+                event.preventDefault();
 
-                    submitButton.insertAdjacentElement('afterend', message);
-
-                    localStorage.setItem('lastApplicationDate', new Date().toISOString());
-
-                    submitButton.disabled = true;
-                    submitButton.innerText = 'Submitting...';
-                }
+                setTimeout(function () {
+                    applyForm.submit();
+                }, 2000);
             });
         });
 
