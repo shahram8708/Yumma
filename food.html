@@ -642,7 +642,7 @@
                 <select id="country" onchange="updateStates()">
                     <option value="">Select Country</option>
                     <option value="India">India</option>
-                    <option value="USA">USA</option>
+                    <!-- <option value="USA">USA</option> -->
                 </select>
 
                 <label for="state">State:</label>
@@ -653,7 +653,7 @@
                 <select id="city" onchange="updateAreas()">
                     <option value="">Select City</option>
                     <option value="Ahmedabad">Ahmedabad</option>
-                    <option value="Gandhinagar">Gandhinagar</option>
+                    <!-- <option value="Gandhinagar">Gandhinagar</option> -->
                 </select>
 
                 <label for="area">Area:</label>
@@ -936,10 +936,10 @@
 
             if (country === "India") {
                 stateSelect.innerHTML += '<option value="Gujarat">Gujarat</option>';
-                stateSelect.innerHTML += '<option value="Maharashtra">Maharashtra</option>';
+                // stateSelect.innerHTML += '<option value="Maharashtra">Maharashtra</option>';
             } else if (country === "USA") {
-                stateSelect.innerHTML += '<option value="California">California</option>';
-                stateSelect.innerHTML += '<option value="Texas">Texas</option>';
+                // stateSelect.innerHTML += '<option value="California">California</option>';
+                // stateSelect.innerHTML += '<option value="Texas">Texas</option>';
             }
         }
 
@@ -950,10 +950,10 @@
 
             if (state === "Gujarat") {
                 citySelect.innerHTML += '<option value="Ahmedabad">Ahmedabad</option>';
-                citySelect.innerHTML += '<option value="Gandhinagar">Gandhinagar</option>';
+                // citySelect.innerHTML += '<option value="Gandhinagar">Gandhinagar</option>';
             } else if (state === "California") {
-                citySelect.innerHTML += '<option value="Los Angeles">Los Angeles</option>';
-                citySelect.innerHTML += '<option value="San Francisco">San Francisco</option>';
+                // citySelect.innerHTML += '<option value="Los Angeles">Los Angeles</option>';
+                // citySelect.innerHTML += '<option value="San Francisco">San Francisco</option>';
             }
         }
 
@@ -964,11 +964,13 @@
 
             if (city === "Ahmedabad") {
                 areaSelect.innerHTML += '<option value="Navrangpura">Navrangpura</option>';
-                areaSelect.innerHTML += '<option value="Satellite">Satellite</option>';
+                areaSelect.innerHTML += '<option value="Chandkheda">Chandkheda</option>';
                 areaSelect.innerHTML += '<option value="Vastrapur">Vastrapur</option>';
+                areaSelect.innerHTML += '<option value="Gota">Gota</option>';
+                areaSelect.innerHTML += '<option value="Motera">Motera</option>';
             } else if (city === "Gandhinagar") {
-                areaSelect.innerHTML += '<option value="Sector 11">Sector 11</option>';
-                areaSelect.innerHTML += '<option value="Sector 21">Sector 21</option>';
+                // areaSelect.innerHTML += '<option value="Sector 11">Sector 11</option>';
+                // areaSelect.innerHTML += '<option value="Sector 21">Sector 21</option>';
             }
         }
 
