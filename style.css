@@ -281,7 +281,7 @@ nav {
     color: #fff;
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 1270px) {
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -376,4 +376,58 @@ nav {
 .social-media li:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.promo-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.promo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.promo-box {
+    flex: 1;
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.promo-box:hover {
+    transform: scale(1.05);
+}
+
+.promo-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.app-download {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.download-button:hover {
+    background: linear-gradient(135deg, #ff1e00, #e6005c);
+    box-shadow: 0px 4px 10px rgba(255, 0, 64, 0.4);
 }
