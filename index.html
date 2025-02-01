@@ -209,15 +209,14 @@
         }
 
         #pgList {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 0;
             margin: 0;
         }
 
         #pgList .pg-item {
-            display: flex;
             align-items: center;
             gap: 15px;
             padding: 20px;
@@ -248,7 +247,6 @@
         #pgList .pg-item h3 {
             margin: 0;
             font-size: 20px;
-            text-align: center;
             color: #333;
         }
 
@@ -626,8 +624,7 @@
 
             <h2>8. Payment Policy</h2>
             <p>Rent payments must be completed within 24 hours after the due date. Failure to do so may result in
-                penalties or termination of services. All payments should be made through the designated platform
-                channels only.</p>
+                penalties or termination of services.</p>
 
             <h2>9. Liability Disclaimer</h2>
             <p>PG and Eats is not responsible for any illegal activity conducted by the user. Users are solely
@@ -988,7 +985,7 @@
                     "image/vijita-1/4.jpg",
                     "image/vijita-1/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
                 availableSeats: 2,
                 ratings: 4.3,
                 pgType: "Only Girls"
@@ -1018,7 +1015,7 @@
                     "image/vijita-2/4.jpg",
                     "image/vijita-2/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
                 availableSeats: 3,
                 ratings: 4.4,
                 pgType: "Only Girls"
@@ -1048,7 +1045,7 @@
                     "image/vijita-3/4.jpg",
                     "image/vijita-3/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
                 availableSeats: 5,
                 ratings: 4.1,
                 pgType: "Only Girls"
@@ -1078,7 +1075,7 @@
                     "image/vijita-4/4.jpg",
                     "image/vijita-4/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
                 availableSeats: 3,
                 ratings: 4.2,
                 pgType: "Only Girls"
@@ -1108,7 +1105,7 @@
                     "image/I Care-1/4.jpg",
                     "image/I Care-1/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1138,7 +1135,7 @@
                     "image/I Care-2/4.jpg",
                     "image/I Care-2/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1168,7 +1165,7 @@
                     "image/I Care-1/4.jpg",
                     "image/I Care-1/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 5,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1198,7 +1195,7 @@
                     "image/Homely Heaven-1/4.jpeg",
                     "image/Homely Heaven-1/5.jpeg"
                 ],
-                nearbyAreas: ["Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 2,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1228,7 +1225,7 @@
                     "image/Homely Heaven-2/4.jpeg",
                     "image/Homely Heaven-2/5.jpeg"
                 ],
-                nearbyAreas: ["Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1258,7 +1255,7 @@
                     "image/Homely Heaven-1/4.jpeg",
                     "image/Homely Heaven-1/5.jpeg"
                 ],
-                nearbyAreas: ["Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1288,7 +1285,7 @@
                     "image/Homely Heaven-2/4.jpeg",
                     "image/Homely Heaven-2/5.jpeg"
                 ],
-                nearbyAreas: ["Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1318,7 +1315,7 @@
                     "image/Homely Heaven-1/4.jpeg",
                     "image/Homely Heaven-1/5.jpeg"
                 ],
-                nearbyAreas: ["Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 5,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1348,7 +1345,7 @@
                     "image/Homely Heaven-2/4.jpeg",
                     "image/Homely Heaven-2/5.jpeg"
                 ],
-                nearbyAreas: ["Satellite"],
+                nearbyAreas: ["Ellisbridge", "Paldi", "Vastrapur", "Satelite", "Shahibaug"],
                 availableSeats: 5,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1378,7 +1375,7 @@
                     "image/Mapple-1/4.jpg",
                     "image/Mapple-1/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 2,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1408,7 +1405,7 @@
                     "image/Mapple-2/4.jpg",
                     "image/Mapple-2/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 2,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1438,7 +1435,7 @@
                     "image/Mapple-1/4.jpg",
                     "image/Mapple-1/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1468,7 +1465,7 @@
                     "image/Mapple-2/4.jpg",
                     "image/Mapple-2/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1498,7 +1495,7 @@
                     "image/Mapple-1/3.jpg",
                     "image/Mapple-1/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1528,7 +1525,7 @@
                     "image/Mapple-2/4.jpg",
                     "image/Mapple-2/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1558,7 +1555,7 @@
                     "image/Mapple-1/4.jpg",
                     "image/Mapple-1/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 5,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1588,7 +1585,7 @@
                     "image/Mapple-2/3.jpg",
                     "image/Mapple-2/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 5,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1618,7 +1615,7 @@
                     "image/Mapple-1/3.jpg",
                     "image/Mapple-1/4.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 6,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1648,7 +1645,7 @@
                     "image/Mapple-2/4.jpg",
                     "image/Mapple-2/5.jpg"
                 ],
-                nearbyAreas: [""],
+                nearbyAreas: ["Gota", "Visat", "Chandkheda", "Sarkhej", "Ranip"],
                 availableSeats: 6,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1678,7 +1675,7 @@
                     "image/Momaji-1/4.jpg",
                     "image/Momaji-1/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Vastrapur", "Satelite", "Paldi", "Ellisbridge", "Bodakdev"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1708,7 +1705,7 @@
                     "image/Momaji-2/4.jpg",
                     "image/Momaji-2/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Vastrapur", "Satelite", "Paldi", "Ellisbridge", "Bodakdev"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1738,7 +1735,7 @@
                     "image/Momaji-3/4.jpg",
                     "image/Momaji-3/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Vastrapur", "Satelite", "Paldi", "Ellisbridge", "Bodakdev"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1768,7 +1765,7 @@
                     "image/Momaji-1/4.jpg",
                     "image/Momaji-2/5.jpg"
                 ],
-                nearbyAreas: ["Navrangpura", "Satellite"],
+                nearbyAreas: ["Vastrapur", "Satelite", "Paldi", "Ellisbridge", "Bodakdev"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Only Boys"
@@ -1798,7 +1795,7 @@
                     "image/Krishnam-1/4.jpg",
                     "image/Krishnam-1/5.jpg"
                 ],
-                nearbyAreas: ["Chandkheda", "Visat"],
+                nearbyAreas: ["Visat", "Chandkheda", "Gota", "Ranip", "Sarkhej", "Motera"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Boys & Girls"
@@ -1828,7 +1825,7 @@
                     "image/Krishnam-1/4.jpg",
                     "image/Krishnam-1/5.jpg"
                 ],
-                nearbyAreas: ["Chandkheda", "Visat"],
+                nearbyAreas: ["Visat", "Chandkheda", "Gota", "Ranip", "Sarkhej", "Motera"],
                 availableSeats: 4,
                 ratings: 4.5,
                 pgType: "Boys & Girls"
@@ -1858,7 +1855,7 @@
                     "image/Krishnam-1/4.jpg",
                     "image/Krishnam-1/5.jpg"
                 ],
-                nearbyAreas: ["Chandkheda", "Visat"],
+                nearbyAreas: ["Visat", "Chandkheda", "Gota", "Ranip", "Sarkhej", "Motera"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Boys & Girls"
@@ -1888,7 +1885,7 @@
                     "image/Krishnam-1/4.jpg",
                     "image/Krishnam-1/5.jpg"
                 ],
-                nearbyAreas: ["Chandkheda", "Visat"],
+                nearbyAreas: ["Visat", "Chandkheda", "Gota", "Ranip", "Sarkhej", "Motera"],
                 availableSeats: 3,
                 ratings: 4.5,
                 pgType: "Boys & Girls"
@@ -1918,7 +1915,7 @@
                     "image/Krishnam-1/4.jpg",
                     "image/Krishnam-1/5.jpg"
                 ],
-                nearbyAreas: ["Chandkheda", "Visat"],
+                nearbyAreas: ["Visat", "Chandkheda", "Gota", "Ranip", "Sarkhej", "Motera"],
                 availableSeats: 2,
                 ratings: 4.5,
                 pgType: "Boys & Girls"
@@ -1948,10 +1945,1870 @@
                     "image/Krishnam-1/4.jpg",
                     "image/Krishnam-1/5.jpg"
                 ],
-                nearbyAreas: ["Chandkheda", "Visat"],
+                nearbyAreas: ["Visat", "Chandkheda", "Gota", "Ranip", "Sarkhej", "Motera"],
                 availableSeats: 2,
                 ratings: 4.5,
                 pgType: "Boys & Girls"
+            },
+            {
+                name: "Ayodhya-1 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 15000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-2 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 12000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-3 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 10000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-4 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 8500,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-5 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-6 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 10000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-7 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 11000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-8 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 13000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-9 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 15000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-10 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 20000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-11 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 16000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-12 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 13000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-13 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 14000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-14 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9500,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-15 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Gota",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 10000,
+                address: "5th floor, Ayodhya living PG boys, Swarnim Busniess Hub 1, nr. Global Indian International School, Godrej Garden City, Gota, Ahmedabad, Gujarat 382470",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-1/2.jpg",
+                    "image/Ayodhya-1/1.jpg",
+                    "image/Ayodhya-1/3.jpg",
+                    "image/Ayodhya-1/4.jpg",
+                    "image/Ayodhya-1/5.jpg"
+                ],
+                nearbyAreas: ["Gota", "Chandkheda", "Motera", "Ranip", "Sarkhej"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Ayodhya-16 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 11000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-17 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 12000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-18 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 14000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-19 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 16000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Ayodhya-20 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Parimal Garden",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 21000,
+                address: "Ayodhya Living Pg for Girls, Parimal Garden, Parimal Cross Rd, near by Kalupur Bank, Shanti Sadan Society, Ellisbridge, Ahmedabad, Gujarat 380006",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Tobbaco & No Smoking",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Ayodhya-2/2.jpg",
+                    "image/Ayodhya-2/1.jpg",
+                    "image/Ayodhya-2/3.jpg",
+                    "image/Ayodhya-2/4.jpg",
+                    "image/Ayodhya-2/5.jpg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Navrangpura", "Paldi", "C.G. Road", "Shahibaug"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-1 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 13000,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-2 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 7500,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-3 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 5000,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-4 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 4300,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-5 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 4000,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/5.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-6 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 3700,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-7 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 3500,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 7,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-8 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 14000,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-9 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 6500,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-10 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 6000,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-11 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 5300,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/5.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-12 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 5000,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-13 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 4700,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-14 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 4500,
+                address: "I Block, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera, Ahmedabad 380005",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 7,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Zisa-15 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 4000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-16 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 5000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-17 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 6500,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-18 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 8000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-19 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "Non-AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 13000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-20 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 5000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-21 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 6000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-21 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 7500,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-23 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Zisa-24 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 14000,
+                address: "A/301 Maitri Apartment, Ashok Vihar, Near Vishwakarma Government Engineering College, Motera",
+                facilities: "Daily Room Service, High-Speed WIFI, RO Drinking Water, 24x7 Water Availability, Canteen Facility, Indoor Games, 24x7 Security Service, Personal Bed, Wardrobe, Mattress, Pillow & Locker, A.C. & Non A.C. Rooms, Personal PG Building & Parking Area, Washing Machine, Gas Stove for Self Cooking (Girls).",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+919512345775",
+                    email: "vidhyut.gosai@gmail.com"
+                },
+                images: [
+                    "image/Zisa-1/4.jpg",
+                    "image/Zisa-1/1.jpg",
+                    "image/Zisa-1/2.jpg",
+                    "image/Zisa-1/3.jpg",
+                    "image/Zisa-1/5.jpg"
+                ],
+                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+                availableSeats: 1,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-1 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 8000,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-2 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 8500,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-3 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 10000,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-4 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 11000,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-5 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 8000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-6 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 10000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-7 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 11000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-8 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 14000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-9 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "Non-AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 8500,
+                address: "Above 7Violettes cafe, A5, Vishal Apartments, Next to Neelam Lutf restaurant, Off Close to, University Rd, Vijay Char Rasta, Ahmedabad, Gujarat 380009",
+                facilities: "Non-AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-10 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9000,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-11 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9500,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 5,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-12 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 11000,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-13 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 12000,
+                address: "Pushpmala Bunglow's, 4, Vijay Cross Rd, opp. Central Bank, Sarvottam Nagar Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Boys"
+            },
+            {
+                name: "Vinayak-14 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 6,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-15 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 11000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-16 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 12000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 3,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-17 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 15000,
+                address: "B2, Guru Chandipani Society, Vijay Cross Rd, opp. Brand Factory, Professor's Colony, Rupam Society, Navrangpura, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-1/4.jpeg",
+                    "image/Vinayak-1/1.jpeg",
+                    "image/Vinayak-1/2.jpeg",
+                    "image/Vinayak-1/3.jpeg",
+                    "image/Vinayak-1/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 2,
+                ratings: 4.5,
+                pgType: "Only Girls"
+            },
+            {
+                name: "Vinayak-18 PG",
+                country: "India",
+                state: "Gujarat",
+                city: "Ahmedabad",
+                area: "Navrangpura",
+                roomType: "AC",
+                food: "With Food",
+                size: "Large",
+                originalPrice: 30000,
+                currentPrice: 9500,
+                address: "Above 7Violettes cafe, A5, Vishal Apartments, Next to Neelam Lutf restaurant, Off Close to, University Rd, Vijay Char Rasta, Ahmedabad, Gujarat 380009",
+                facilities: "AC Rooms, Tea and Breakfast, Unlimited Lunch, Unlimited Dinner, Unlimited Hi-Speed Wi-Fi, Specific Living Area, Personal Box Bed, Pillow & Bedsheet, Personal Cupboard, R.O. Water Purifier, Daily Cleaning, Laundry, Fridge, Pure Homely Environment.",
+                rules: "No Mention",
+                ownerContact: {
+                    phone: "+918980383178",
+                    email: "rohitrajkalal@gmail.com"
+                },
+                images: [
+                    "image/Vinayak-2/1.jpeg",
+                    "image/Vinayak-2/2.jpeg",
+                    "image/Vinayak-2/3.jpeg",
+                    "image/Vinayak-2/4.jpeg",
+                    "image/Vinayak-2/5.jpeg"
+                ],
+                nearbyAreas: ["Ellisbridge", "Paldi", "CG Road", "Gulbai Tekra", "Naranpura"],
+                availableSeats: 4,
+                ratings: 4.5,
+                pgType: "Only Boys"
             }
         ];
 
@@ -1989,13 +3846,19 @@
             areaSelect.innerHTML = '<option value="">Select Area</option>';
 
             if (city === "Ahmedabad") {
-                areaSelect.innerHTML += '<option value="Navrangpura">Navrangpura</option>';
                 areaSelect.innerHTML += '<option value="Chandkheda">Chandkheda</option>';
-                areaSelect.innerHTML += '<option value="Vastrapur">Vastrapur</option>';
+                areaSelect.innerHTML += '<option value="Ellisbridge">Ellisbridge</option>';
                 areaSelect.innerHTML += '<option value="Gota">Gota</option>';
                 areaSelect.innerHTML += '<option value="Motera">Motera</option>';
-                areaSelect.innerHTML += '<option value="Visat">Visat</option>';
+                areaSelect.innerHTML += '<option value="Navrangpura">Navrangpura</option>';
+                areaSelect.innerHTML += '<option value="Paldi">Paldi</option>';
                 areaSelect.innerHTML += '<option value="Panjara Pole">Panjara Pole</option>';
+                areaSelect.innerHTML += '<option value="Ranip">Ranip</option>';
+                areaSelect.innerHTML += '<option value="Sarkhej">Sarkhej</option>';
+                areaSelect.innerHTML += '<option value="Satelite">Satelite</option>';
+                areaSelect.innerHTML += '<option value="Shahibaug">Shahibaug</option>';
+                areaSelect.innerHTML += '<option value="Vastrapur">Vastrapur</option>';
+                areaSelect.innerHTML += '<option value="Visat">Visat</option>';
             } else if (city === "Gandhinagar") {
                 // areaSelect.innerHTML += '<option value="Sector 11">Sector 11</option>';
                 // areaSelect.innerHTML += '<option value="Sector 21">Sector 21</option>';
