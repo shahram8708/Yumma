@@ -216,7 +216,6 @@
             font-weight: bold;
         }
 
-        /* Team Section Styling */
         .main-content.team {
             background-color: #f9f9f9;
             padding: 50px 20px;
@@ -235,7 +234,6 @@
             font-weight: 600;
         }
 
-        /* Team Member Card Styling */
         .team-member {
             background-color: #fff;
             padding: 30px;
@@ -245,18 +243,15 @@
             text-align: center;
             margin: 20px;
             width: 250px;
-            /* Fixed width for better alignment */
             overflow: hidden;
             position: relative;
         }
 
-        /* Hover effect on team member card */
         .team-member:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
 
-        /* Team Member Image */
         .team-member img {
             width: 150px;
             height: 150px;
@@ -264,10 +259,8 @@
             object-fit: cover;
             margin-bottom: 20px;
             border: 4px solid #007bff;
-            /* Adds a blue border around images */
         }
 
-        /* Team Member Name */
         .team-member h3 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -275,14 +268,12 @@
             margin-bottom: 10px;
         }
 
-        /* Team Member Role */
         .team-member p {
             font-size: 1rem;
             color: #777;
             margin-bottom: 20px;
         }
 
-        /* Profile Button */
         .profile-btn {
             background-color: #007bff;
             color: #fff;
@@ -294,14 +285,11 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Hover effect on Profile button */
         .profile-btn:hover {
             background-color: #0056b3;
             transform: scale(1.05);
-            /* Slight scale for interactivity */
         }
 
-        /* Flexbox for team member alignment */
         .content-wrapper {
             display: flex;
             justify-content: center;
@@ -309,7 +297,6 @@
             gap: 30px;
         }
 
-        /* Responsiveness for small screens */
         @media (max-width: 768px) {
             .team-member {
                 width: 100%;
@@ -358,6 +345,10 @@
             <p>Where comfort meets convenience and taste meets nutrition, offering premium PG accommodations and
                 nutritious food options for students and working professionals with a fantastic living and dining
                 experience—apply now and avail an exclusive 80% discount!</p>
+            <a href="#target-section" id="apply-button" class="button"
+                style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #fff; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease; margin-top: 10px;">
+                About US
+            </a>
         </div>
     </sections>
 
@@ -375,7 +366,7 @@
 
     <script src="scripts.js"></script>
 
-    <div class="page-header">
+    <div class="page-header" id="target-section">
         <div class="content-wrapper">
             <h1>About Us</h1>
         </div>
@@ -534,12 +525,6 @@
             font-size: 20px;
             color: #333;
             margin: 10px 0;
-        }
-
-        p {
-            color: #777;
-            font-size: 16px;
-            margin-bottom: 15px;
         }
 
         .profile-button {
