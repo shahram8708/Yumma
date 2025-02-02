@@ -115,7 +115,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #e0f7fa, #b9fbc0);
+            background: white;
             color: #333;
             margin: 0;
             padding: 0;
@@ -214,6 +214,7 @@
             gap: 20px;
             padding: 0;
             margin: 0;
+            transition: all 0.3s ease;
         }
 
         #pgList .pg-item {
@@ -224,24 +225,79 @@
             border-radius: 10px;
             background-color: #ffffff;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             margin: 0;
+            transform: scale(1);
+            opacity: 1;
+            overflow: hidden;
         }
 
         #pgList .pg-item:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            opacity: 0.95;
+            animation: shake 0.6s ease-out;
         }
 
         #pgList .pg-item .images {
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-            flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
         }
 
         #pgList .pg-item .images img {
             border-radius: 8px;
             object-fit: cover;
+            transition: transform 0.5s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        }
+
+        #pgList .pg-item:hover .images img {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            opacity: 0.9;
+        }
+
+        #pgList .pg-item:hover .pg-details {
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform 0.5s ease-out, opacity 0.5s ease;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(-10px);
+            }
+
+            25% {
+                transform: translateX(10px);
+            }
+
+            50% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #pgList .pg-item {
+            animation: fadeInUp 0.5s ease-out;
         }
 
         #pgList .pg-item h3 {
@@ -740,6 +796,29 @@
         </div>
     </header>
 
+    <sections class="hero-banner">
+        <div class="hero-contents">
+            <h1>Welcome to Our PG 🏠 & EATS 🍽️</h1>
+            <p>Where comfort meets convenience and taste meets nutrition, offering premium PG accommodations and
+                nutritious food options for students and working professionals with a fantastic living and dining
+                experience—apply now and avail an exclusive 80% discount!</p>
+        </div>
+    </sections>
+
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide"><img src="image/Vinayak-2/1.jpeg" alt="Image 1"></div>
+                <div class="slide"><img src="image/Vinayak-2/2.jpeg" alt="Image 2"></div>
+                <div class="slide"><img src="image/Vinayak-1/1.jpeg" alt="Image 3"></div>
+                <div class="slide"><img src="image/Vinayak-2/4.jpeg" alt="Image 4"></div>
+                <div class="slide"><img src="image/Vinayak-2/5.jpeg" alt="Image 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Your Perfect Place to Stay!</h1>
@@ -872,11 +951,15 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3 id="modalName"></h3>
-            <div id="modalImages" class="images">
-                <img id="mainImage" src="" alt="PG Image">
-                <div id="extraImages" class="images" style="display: none;"></div>
+            <div id="modalImages" class="image-carousel">
+                <div class="carousel-container">
+                    <img id="mainImage" class="carousel-image" src="" alt="PG Image">
+                    <div id="extraImages" class="carousel-images">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="changeImage(1)">&#10095;</button>
+                </div>
             </div>
-            <button id="viewMoreBtn" class="view-more-btn" onclick="toggleImages()">View More Images</button>
             <p id="modalCity"></p>
             <p id="modalArea"></p>
             <p id="modalRoomType"></p>
@@ -3924,13 +4007,13 @@
                                         <img class="main-image" src="${pg.images[0]}" alt="${pg.name} Image">
                                     </div>
                                     <div class="details">
-                                        <p><strong>Area:</strong> ${pg.area}</p>
-                                        <p><strong>Original Price:</strong> <span class="original-price">₹${pg.originalPrice}</span></p>
-                                        <p><strong>Current Price:</strong> ₹${pg.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
-                                        <p><strong>PG Type:</strong> ${pg.pgType}</p>
-                                        <p><strong>Room Sharing:</strong> ${pg.availableSeats}</p>
-                                        <p><strong>Ratings:</strong> ${pg.ratings}</p>
-                                        <a href="#" class="apply-btn" onclick="openModal('${pg.name}')">View Details</a>
+                                        <p><strong>🌍 Area:</strong> ${pg.area}</p>
+                                        <p><strong>💰 Original Price:</strong> <span class="original-price">₹${pg.originalPrice}</span></p>
+                                        <p><strong>🎯 Current Price:</strong> ₹${pg.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+                                        <p><strong>🏡 PG Type:</strong> ${pg.pgType}</p>
+                                        <p><strong>🤝 Room Sharing:</strong> ${pg.availableSeats}</p>
+                                        <p><strong>⭐ Ratings:</strong> ${pg.ratings}</p>
+                                        <a href="#" class="apply-btn" onclick="openModal('${pg.name}')">🔍 View Details</a>
                                     </div>
                                 `;
 
@@ -3938,29 +4021,83 @@
             });
         }
 
+        let currentImageIndex = 0;
+        let images = [];
+        let imageTimer;
+
         function openModal(pgName) {
             const pg = pgData.find(p => p.name === pgName);
 
-            document.getElementById('modalName').innerText = pg.name;
-            document.getElementById('mainImage').src = pg.images[0];
-            document.getElementById('extraImages').innerHTML = pg.images.slice(1).map(img => `<img src="${img}" alt="${pg.name} Image">`).join('');
-            document.getElementById('modalCity').innerText = `City: ${pg.city}`;
-            document.getElementById('modalArea').innerText = `Area: ${pg.area}`;
-            document.getElementById('modalRoomType').innerText = `Room Type: ${pg.roomType}`;
-            document.getElementById('modalFood').innerText = `Food: ${pg.food}`;
-            document.getElementById('modalSize').innerText = `Room Size: ${pg.size}`;
-            document.getElementById('modalPrice').innerHTML = `Price: <strong>₹${pg.currentPrice}</strong> <span class="original-price">Original Price: ₹${pg.originalPrice}</span>`;
-            document.getElementById('modalAddress').innerText = `Address: ${pg.address}`;
-            document.getElementById('modalFacilities').innerText = `Facilities: ${pg.facilities}`;
-            document.getElementById('modalRules').innerText = `Rules: ${pg.rules}`;
-            document.getElementById('modalAvailableSeats').innerText = `Room Sharing: ${pg.availableSeats}`;
-            document.getElementById('modalRatings').innerText = `Ratings: ${pg.ratings}`;
+            document.getElementById('modalName').innerText = `${pg.name} 🏠`;
+            images = pg.images || [];
+            currentImageIndex = 0;
+
+            document.getElementById('mainImage').src = images[currentImageIndex];
+
+            const extraImagesContainer = document.getElementById('extraImages');
+            extraImagesContainer.innerHTML = images.slice(1).map(img =>
+                `<img src="${img}" alt="${pg.name} Image" onclick="setMainImage('${img}')">`).join('');
+
+            document.getElementById('modalCity').innerText = `📍 City: ${pg.city}`;
+            document.getElementById('modalArea').innerText = `🌍 Area: ${pg.area}`;
+            document.getElementById('modalRoomType').innerText = `🛏️ Room Type: ${pg.roomType}`;
+            document.getElementById('modalFood').innerText = `🍽️ Food: ${pg.food}`;
+            document.getElementById('modalSize').innerText = `📏 Room Size: ${pg.size}`;
+            document.getElementById('modalPrice').innerHTML = `💸 Price: <strong>₹${pg.currentPrice}</strong> <span class="original-price">💰 Original Price: ₹${pg.originalPrice}</span>`;
+            document.getElementById('modalAddress').innerText = `🏠 Address: ${pg.address}`;
+
+            const facilitiesList = pg.facilities.split(',').map(facility => `<li>${facility.trim()}</li>`).join('');
+            document.getElementById('modalFacilities').innerHTML = `<strong>🔧 Facilities:</strong><ul class="styled-list">${facilitiesList}</ul>`;
+
+            const rulesList = pg.rules.split(',').map(rule => `<li>${rule.trim()}</li>`).join('');
+            document.getElementById('modalRules').innerHTML = `<strong>📜 Rules:</strong><ul class="styled-list">${rulesList}</ul>`;
+
+            document.getElementById('modalAvailableSeats').innerText = `👥 Room Sharing: ${pg.availableSeats}`;
+            document.getElementById('modalRatings').innerText = `⭐ Ratings: ${pg.ratings}`;
             document.getElementById('modalApplyBtn').href = `apply.html?name=${encodeURIComponent(pg.name)}&country=${encodeURIComponent(pg.country)}&state=${encodeURIComponent(pg.state)}&city=${encodeURIComponent(pg.city)}&area=${encodeURIComponent(pg.area)}&roomType=${encodeURIComponent(pg.roomType)}&food=${encodeURIComponent(pg.food)}&size=${encodeURIComponent(pg.size)}&currentPrice=${encodeURIComponent(pg.currentPrice)}&address=${encodeURIComponent(pg.address)}&facilities=${encodeURIComponent(pg.facilities)}&rules=${encodeURIComponent(pg.rules)}&phone=${encodeURIComponent(pg.ownerContact.phone)}&email=${encodeURIComponent(pg.ownerContact.email)}`;
 
             const modal = document.getElementById('pgModal');
             modal.style.display = 'block';
             document.querySelector('.modal-content').classList.add('show');
+
+            startAutoScroll();
         }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            document.getElementById('mainImage').src = images[currentImageIndex];
+        }
+
+        function setMainImage(imageSrc) {
+            currentImageIndex = images.indexOf(imageSrc);
+            document.getElementById('mainImage').src = imageSrc;
+        }
+
+        function startAutoScroll() {
+            if (imageTimer) clearInterval(imageTimer);
+            imageTimer = setInterval(() => {
+                changeImage(1);
+            }, 5000);
+        }
+
+        document.querySelector('.close').onclick = function () {
+            const modal = document.getElementById('pgModal');
+            modal.style.display = 'none';
+            clearInterval(imageTimer);
+        };
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('pgModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                clearInterval(imageTimer);
+            }
+        };
 
         function toggleImages() {
             const extraImages = document.getElementById('extraImages');

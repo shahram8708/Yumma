@@ -115,7 +115,7 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(to right, #e0f7fa, #b9fbc0);
+            background: white;
             color: #333;
             margin: 0;
             padding: 0;
@@ -242,6 +242,98 @@
         #FoodList .Food-item .images img {
             border-radius: 8px;
             object-fit: cover;
+        }
+
+        #FoodList {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        #FoodList .Food-item {
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin: 0;
+            transform: scale(1);
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        #FoodList .Food-item:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            opacity: 0.95;
+            animation: shake 0.6s ease-out;
+        }
+
+        #FoodList .Food-item .images {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #FoodList .Food-item .images img {
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.5s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+        }
+
+        #FoodList .Food-item:hover .images img {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+            opacity: 0.9;
+        }
+
+        #FoodList .Food-item:hover .Food-details {
+            opacity: 1;
+            transform: translateY(0);
+            transition: transform 0.5s ease-out, opacity 0.5s ease;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(-10px);
+            }
+
+            25% {
+                transform: translateX(10px);
+            }
+
+            50% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #FoodList .Food-item {
+            animation: fadeInUp 0.5s ease-out;
         }
 
         #FoodList .Food-item h3 {
@@ -596,6 +688,29 @@
         </div>
     </header>
 
+    <sections class="hero-banner">
+        <div class="hero-contents">
+            <h1>Welcome to Our PG 🏠 & EATS 🍽️</h1>
+            <p>Where comfort meets convenience and taste meets nutrition, offering premium PG accommodations and
+                nutritious food options for students and working professionals with a fantastic living and dining
+                experience—apply now and avail an exclusive 80% discount!</p>
+        </div>
+    </sections>
+
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide"><img src="image/Vinayak-2/1.jpeg" alt="Image 1"></div>
+                <div class="slide"><img src="image/Vinayak-2/2.jpeg" alt="Image 2"></div>
+                <div class="slide"><img src="image/Vinayak-1/1.jpeg" alt="Image 3"></div>
+                <div class="slide"><img src="image/Vinayak-2/4.jpeg" alt="Image 4"></div>
+                <div class="slide"><img src="image/Vinayak-2/5.jpeg" alt="Image 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Your Perfect Place to Stay!</h1>
@@ -709,11 +824,15 @@
         <div class="modal-content">
             <span class="close">&times;</span>
             <h3 id="modalName"></h3>
-            <div id="modalImages" class="images">
-                <img id="mainImage" src="" alt="Food Image">
-                <div id="extraImages" class="images" style="display: none;"></div>
+            <div id="modalImages" class="image-carousel">
+                <div class="carousel-container">
+                    <img id="mainImage" class="carousel-image" src="" alt="PG Image">
+                    <div id="extraImages" class="carousel-images">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeImage(-1)">&#10094;</button>
+                    <button class="carousel-btn next" onclick="changeImage(1)">&#10095;</button>
+                </div>
             </div>
-            <button id="viewMoreBtn" class="view-more-btn" onclick="toggleImages()">View More Images</button>
             <p id="modalCity"></p>
             <p id="modalArea"></p>
             <p id="modalFood"></p>
@@ -1090,14 +1209,14 @@
                 <img class="main-image" src="${Food.images[0]}" alt="${Food.name} Image">
             </div>
             <div class="details">
-                <p><strong>Area:</strong> ${Food.area}</p>
-                <p><strong>Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
-                <p><strong>Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
-                <p><strong>Ratings:</strong> ${Food.ratings}</p>
-                <p><strong>Food Option:</strong> ${Food.food}</p>
-                <p><strong>Order Time:</strong> Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
-                <p style="color: red; font-weight: bold;">⚠ Orders placed outside the given time slots will not be delivered.</p>
-                <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">View Details</a>
+                <p><strong>🌍 Area:</strong> ${Food.area}</p>
+                <p><strong>💰 Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
+                <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+                <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
+                <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
+                <p><strong>🕒 Order Time:</strong> Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
+                <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
             </div>
         `;
 
@@ -1105,24 +1224,76 @@
             });
         }
 
+        let currentImageIndex = 0;
+        let images = [];
+        let imageTimer;
+
         function openModal(FoodName) {
             const Food = FoodData.find(p => p.name === FoodName);
 
-            document.getElementById('modalName').innerText = Food.name;
-            document.getElementById('mainImage').src = Food.images[0];
-            document.getElementById('extraImages').innerHTML = Food.images.slice(1).map(img => `<img src="${img}" alt="${Food.name} Image">`).join('');
-            document.getElementById('modalCity').innerText = `City: ${Food.city}`;
-            document.getElementById('modalArea').innerText = `Area: ${Food.area}`;
-            document.getElementById('modalFood').innerText = `Food: ${Food.food}`;
-            document.getElementById('modalPrice').innerHTML = `Price (Per Thali): <strong>₹${Food.currentPrice}</strong> <span class="original-price">Original Price: ₹${Food.originalPrice}</span>`;
-            document.getElementById('modalitems').innerText = `Items: ${Food.items}`;
-            document.getElementById('modalRatings').innerText = `Ratings: ${Food.ratings}`;
+            document.getElementById('modalName').innerText = `🍽️ ${Food.name}`;
+            images = Food.images || [];
+            currentImageIndex = 0;
+
+            document.getElementById('mainImage').src = images[currentImageIndex];
+
+            const extraImagesContainer = document.getElementById('extraImages');
+            extraImagesContainer.innerHTML = images.slice(1).map(img =>
+                `<img src="${img}" alt="${Food.name} Image" onclick="setMainImage('${img}')">`).join('');
+            document.getElementById('modalCity').innerText = `🏙️ City: ${Food.city}`;
+            document.getElementById('modalArea').innerText = `📍 Area: ${Food.area}`;
+            document.getElementById('modalFood').innerText = `🍲 Food: ${Food.food}`;
+            document.getElementById('modalPrice').innerHTML = `💰 Price (Per Thali): <strong>₹${Food.currentPrice}</strong> <span class="original-price">Original Price: ₹${Food.originalPrice}</span>`;
+
+            const itemsList = Food.items.split(',').map(item => `<li>${item}</li>`).join('');
+            document.getElementById('modalitems').innerHTML = `🍽️ Items Included: <ul class="styled-list">${itemsList}</ul>`;
+
+            document.getElementById('modalRatings').innerText = `⭐ Ratings: ${Food.ratings}`;
+
             document.getElementById('modalApplyBtn').href = `food-apply.html?name=${encodeURIComponent(Food.name)}&country=${encodeURIComponent(Food.country)}&state=${encodeURIComponent(Food.state)}&city=${encodeURIComponent(Food.city)}&area=${encodeURIComponent(Food.area)}&food=${encodeURIComponent(Food.food)}&currentPrice=${encodeURIComponent(Food.currentPrice)}&items=${encodeURIComponent(Food.items)}&phone=${encodeURIComponent(Food.ownerContact.phone)}&email=${encodeURIComponent(Food.ownerContact.email)}&postalCode=${encodeURIComponent(Food.postalCode)}`;
 
             const modal = document.getElementById('FoodModal');
             modal.style.display = 'block';
             document.querySelector('.modal-content').classList.add('show');
+
+            startAutoScroll();
         }
+
+        function changeImage(direction) {
+            currentImageIndex += direction;
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+            }
+            document.getElementById('mainImage').src = images[currentImageIndex];
+        }
+
+        function setMainImage(imageSrc) {
+            currentImageIndex = images.indexOf(imageSrc);
+            document.getElementById('mainImage').src = imageSrc;
+        }
+
+        function startAutoScroll() {
+            if (imageTimer) clearInterval(imageTimer);
+            imageTimer = setInterval(() => {
+                changeImage(1);
+            }, 5000);
+        }
+
+        document.querySelector('.close').onclick = function () {
+            const modal = document.getElementById('FoodModal');
+            modal.style.display = 'none';
+            clearInterval(imageTimer);
+        };
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('FoodModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+                clearInterval(imageTimer);
+            }
+        };
 
         function toggleImages() {
             const extraImages = document.getElementById('extraImages');

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,7 +119,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #e0f7fa, #b9fbc0);
+            background: white;
         }
 
         .page-header {
@@ -216,6 +215,114 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* Team Section Styling */
+        .main-content.team {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: 600;
+        }
+
+        /* Team Member Card Styling */
+        .team-member {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            margin: 20px;
+            width: 250px;
+            /* Fixed width for better alignment */
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Hover effect on team member card */
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Team Member Image */
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid #007bff;
+            /* Adds a blue border around images */
+        }
+
+        /* Team Member Name */
+        .team-member h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Team Member Role */
+        .team-member p {
+            font-size: 1rem;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        /* Profile Button */
+        .profile-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Hover effect on Profile button */
+        .profile-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+            /* Slight scale for interactivity */
+        }
+
+        /* Flexbox for team member alignment */
+        .content-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        /* Responsiveness for small screens */
+        @media (max-width: 768px) {
+            .team-member {
+                width: 100%;
+                max-width: 350px;
+                margin: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -245,6 +352,29 @@
         </div>
     </header>
 
+    <sections class="hero-banner">
+        <div class="hero-contents">
+            <h1>Welcome to Our PG 🏠 & EATS 🍽️</h1>
+            <p>Where comfort meets convenience and taste meets nutrition, offering premium PG accommodations and
+                nutritious food options for students and working professionals with a fantastic living and dining
+                experience—apply now and avail an exclusive 80% discount!</p>
+        </div>
+    </sections>
+
+    <section class="image-slider">
+        <div class="slider-container">
+            <div class="slides">
+                <div class="slide"><img src="image/Vinayak-2/1.jpeg" alt="Image 1"></div>
+                <div class="slide"><img src="image/Vinayak-2/2.jpeg" alt="Image 2"></div>
+                <div class="slide"><img src="image/Vinayak-1/1.jpeg" alt="Image 3"></div>
+                <div class="slide"><img src="image/Vinayak-2/4.jpeg" alt="Image 4"></div>
+                <div class="slide"><img src="image/Vinayak-2/5.jpeg" alt="Image 5"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+
     <div class="page-header">
         <div class="content-wrapper">
             <h1>About Us</h1>
@@ -265,11 +395,12 @@
             <a href="/PGEATS.apk" class="download-button">Download Now</a>
         </div>
     </section>
-    
+
     <div class="main-content">
         <div class="content-wrapper">
             <h2>Welcome to PG 🏠 & EATS 🍽️ <strong id="userName"></strong></h2>
-            <p>At PG 🏠 & EATS 🍽️, we are dedicated to providing top-quality accommodations tailored specifically for students.
+            <p>At PG 🏠 & EATS 🍽️, we are dedicated to providing top-quality accommodations tailored specifically for
+                students.
                 Our goal is to create a comfortable and supportive living environment where you can thrive academically
                 and socially.</p>
             <p>We offer a range of premium PG accommodations with modern amenities, vibrant community spaces, and a
@@ -301,29 +432,136 @@
     <div class="main-content team">
         <div class="content-wrapper">
             <h2>Meet Our Team</h2>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Shah Ram">
-                <h3>Shah Ram</h3>
-                <p>Founder & CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Umang Chavda">
-                <h3>Umang Chavda</h3>
-                <p>Founder & CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Agarwal Krishna">
-                <h3>Agarwal Krishna</h3>
-                <p>Founder & CEO</p>
-            </div>
-            <div class="team-member">
-                <img src="https://via.placeholder.com/150" alt="Sujal Davda">
-                <h3>Sujal Davda</h3>
-                <p>Founder & CEO</p>
+
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQG1l4w5TwHzZw/profile-displayphoto-shrink_200_200/B4DZRkIcv2HIAY-/0/1736846725921?e=1744243200&v=beta&t=sYrBCq3KNG7mMQlwdB43RVFRljA3ud0NZBX15G0B9PQ"
+                        alt="Shah Ram">
+                    <h3>Shah Ram</h3>
+                    <p>Founder & CEO</p>
+                    <a href="https://www.linkedin.com/in/shah-ram-0682a7284/" class="profile-button">View Profile</a>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEkUvWIzJGZSA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729156262023?e=1744243200&v=beta&t=eLkFHtEexWhjHsQIq-MAcjKR49KtlGKmWL0ITJvj3BA"
+                        alt="Umang Chavda">
+                    <h3>Umang Chavda</h3>
+                    <p>Founder & CEO</p>
+                    <a href="https://www.linkedin.com/in/umang-chavda-9a98b7333/" class="profile-button">View
+                        Profile</a>
+                </div>
+
+                <div class="team-member">
+                    <img src="https://media.licdn.com/dms/image/v2/D4E35AQGKOH04VAJgGA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1738071497406?e=1739084400&v=beta&t=XZ8aJpIEnsEWK_i6p4Ape5cTxeisVBpxsZXLM__uMNQ"
+                        alt="Agarwal Krishna">
+                    <h3>Agarwal Krishna</h3>
+                    <p>Founder & CEO</p>
+                    <a href="https://www.linkedin.com/in/agrawal-krishna-57b160302/" class="profile-button">View
+                        Profile</a>
+                </div>
+
+                <div class="team-member">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                        alt="Sujal Davda">
+                    <h3>Sujal Davda</h3>
+                    <p>Founder & CEO</p>
+                    <a href="https://www.linkedin.com/in/sujal-davda-786587302" class="profile-button">View Profile</a>
+                </div>
             </div>
         </div>
     </div>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
 
+        .main-content.team {
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .content-wrapper {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .team-members {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: #e6e6e6;
+            border-radius: 12px;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .profile-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .profile-button:hover {
+            background-color: #4cae4c;
+            transform: translateY(-5px);
+        }
+
+        .profile-button:focus {
+            outline: none;
+        }
+    </style>
     <div class="main-content contact">
         <div class="content-wrapper">
             <h2>Contact Us</h2>
