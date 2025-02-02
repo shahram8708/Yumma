@@ -466,6 +466,11 @@ nav {
     padding: 0 20px;
 }
 
+.hero-banner a {
+    z-index: 2;
+    position: relative;
+}
+
 .hero-banner h1 {
     z-index: 2;
     position: relative;
