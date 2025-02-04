@@ -547,7 +547,6 @@ nav {
 }
 
 .styled-list li::before {
-    content: '✔️';
     margin-right: 10px;
     color: #4CAF50;
 }
