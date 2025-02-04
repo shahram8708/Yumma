@@ -242,6 +242,7 @@
         #pgList .pg-item .images {
             position: relative;
             overflow: hidden;
+            flex-direction: column;
         }
 
         #pgList .pg-item .images img {
@@ -634,6 +635,51 @@
             background: linear-gradient(135deg, #ff1e00, #e6005c);
             box-shadow: 0px 4px 10px rgba(255, 0, 64, 0.4);
         }
+
+        .view-all-btn {
+            background: linear-gradient(145deg, #6e7f82, #3b4f53);
+            color: #fff;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), -2px -2px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .view-all-btn:hover {
+            background: linear-gradient(145deg, #3b4f53, #6e7f82);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2), -4px -4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .reset-btn {
+            background: linear-gradient(145deg, #f8a5c2, #f53b57);
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), -2px -2px 10px rgba(255, 255, 255, 0.2);
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .reset-btn:hover {
+            background: linear-gradient(145deg, #f53b57, #f8a5c2);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2), -4px -4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .view-all-btn:focus,
+        .reset-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(0, 115, 230, 0.4);
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -952,6 +998,7 @@
         </div>
 
         <div id="pgCount"></div>
+        <button id="resetBtn" class="reset-btn">🔄 Reset PGs</button>
         <div id="pgList"></div>
     </div>
 
@@ -3995,6 +4042,8 @@
             displayPGs(filteredPGs);
         }
 
+        document.getElementById('pgCount').innerText = `${pgData.length} PG(s) available`;
+
         function displayPGs(pgs) {
             const pgList = document.getElementById('pgList');
             pgList.innerHTML = '';
@@ -4003,30 +4052,79 @@
                 pgList.innerHTML = '<div class="contain"><p>No PGs found.</p><p>If there are no available PGs right now, you can submit a request to be notified when a PG becomes available. In the meantime, you can filter by country, state, city, and area to find available options. If you still can\'t find a PG, especially in your specific area, you can submit a request, and we\'ll inform you as soon as a suitable PG becomes available.</p><a href="get.html" id="request-button" class="button">Submit Request</a></div>';
                 return;
             }
+
+            const groupedPGs = {};
             pgs.sort(() => Math.random() - 0.5);
             pgs.forEach(pg => {
-                const discount = ((pg.originalPrice - pg.currentPrice) / pg.originalPrice * 100).toFixed(2);
-
-                const pgItem = document.createElement('div');
-                pgItem.classList.add('pg-item');
-                pgItem.innerHTML = `
-                                    <div class="images">
-                                        <h3>${pg.name}</h3>
-                                        <img class="main-image" src="${pg.images[0]}" alt="${pg.name} Image">
-                                    </div>
-                                    <div class="details">
-                                        <p><strong>🌍 Area:</strong> ${pg.area}</p>
-                                        <p><strong>💰 Original Price:</strong> <span class="original-price">₹${pg.originalPrice}</span></p>
-                                        <p><strong>🎯 Current Price:</strong> ₹${pg.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
-                                        <p><strong>🏡 PG Type:</strong> ${pg.pgType}</p>
-                                        <p><strong>🤝 Room Sharing:</strong> ${pg.availableSeats}</p>
-                                        <p><strong>⭐ Ratings:</strong> ${pg.ratings}</p>
-                                        <a href="#" class="apply-btn" onclick="openModal('${pg.name}')">🔍 View Details</a>
-                                    </div>
-                                `;
-
-                pgList.appendChild(pgItem);
+                const pgKey = pg.name.replace(/-\d+\s*PG$/, ' PG');
+                if (!groupedPGs[pgKey]) {
+                    groupedPGs[pgKey] = [];
+                }
+                groupedPGs[pgKey].push(pg);
             });
+
+            Object.keys(groupedPGs).forEach(pgKey => {
+                const firstPG = groupedPGs[pgKey][0];
+                const pgGroup = document.createElement('div');
+                pgGroup.classList.add('pg-item');
+                pgGroup.innerHTML = `
+                <div class="images">
+                    <h3>🏠 ${pgKey}</h3>
+                    <img class="main-image" src="${firstPG.images[0]}" alt="${firstPG.name.replace(/-\d+\s*PG$/, ' PG')} Image">
+                </div>
+                <div class="details">
+                    <p><strong>🌍 Area:</strong> ${firstPG.area}</p>
+                    <p><strong>🏡 PG Type:</strong> ${firstPG.pgType}</p>
+                    <p><strong>⭐ Ratings:</strong> ${firstPG.ratings}</p>
+                    <button class="view-all-btn" onclick="showPGDetails('${pgKey}')">📂 View All PGs</button>
+                    <div class="pg-details" id="${pgKey.replace(/\s+/g, '-')}" style="display: none;"></div>
+                </div>
+        `;
+                pgList.appendChild(pgGroup);
+            });
+        }
+
+        document.getElementById('resetBtn').addEventListener('click', function () {
+            resetPGList();
+        });
+
+        function resetPGList() {
+            const pgList = document.getElementById('pgList');
+            pgList.innerHTML = '';
+
+            displayPGs(pgData);
+        }
+
+        function showPGDetails(pgKey) {
+            const pgList = document.getElementById('pgList');
+            pgList.innerHTML = '';
+
+            const matchedPGs = pgData.filter(pg => pg.name.includes(pgKey.replace(' PG', '')));
+
+            if (matchedPGs.length > 0) {
+                matchedPGs.sort(() => Math.random() - 0.5);
+                matchedPGs.forEach(pg => {
+                    const discount = ((pg.originalPrice - pg.currentPrice) / pg.originalPrice * 100).toFixed(2);
+                    const pgItem = document.createElement('div');
+                    pgItem.classList.add('pg-item');
+                    pgItem.innerHTML = `
+                <div class="images">
+                    <h3>🏠 ${pg.name.replace(/-\d+\s*PG$/, ' PG')}</h3>
+                    <img class="main-image" src="${pg.images[0]}" alt="${pg.name.replace(/-\d+\s*PG$/, ' PG')} Image">
+                </div>
+                <div class="details">
+                    <p><strong>🌍 Area:</strong> ${pg.area}</p>
+                    <p><strong>💰 Original Price:</strong> <span class="original-price">₹${pg.originalPrice}</span></p>
+                    <p><strong>🎯 Current Price:</strong> ₹${pg.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+                    <p><strong>🏡 PG Type:</strong> ${pg.pgType}</p>
+                    <p><strong>🤝 Room Sharing:</strong> ${pg.availableSeats}</p>
+                    <p><strong>⭐ Ratings:</strong> ${pg.ratings}</p>
+                    <a href="#" class="apply-btn" onclick="openModal('${pg.name}')">🔍 View Details</a>
+                </div>
+            `;
+                    pgList.appendChild(pgItem);
+                });
+            }
         }
 
         let currentImageIndex = 0;
@@ -4036,7 +4134,7 @@
         function openModal(pgName) {
             const pg = pgData.find(p => p.name === pgName);
 
-            document.getElementById('modalName').innerText = `${pg.name} 🏠`;
+            document.getElementById('modalName').innerText = `${pg.name.replace(/-\d+\s*PG$/, ' PG')} 🏠`;
             images = pg.images || [];
             currentImageIndex = 0;
 
@@ -4044,7 +4142,7 @@
 
             const extraImagesContainer = document.getElementById('extraImages');
             extraImagesContainer.innerHTML = images.slice(1).map(img =>
-                `<img src="${img}" alt="${pg.name} Image" onclick="setMainImage('${img}')">`).join('');
+                `<img src="${img}" alt="${pg.name.replace(/-\d+\s*PG$/, ' PG')} Image" onclick="setMainImage('${img}')">`).join('');
 
             document.getElementById('modalCity').innerText = `📍 City: ${pg.city}`;
             document.getElementById('modalArea').innerText = `🌍 Area: ${pg.area}`;

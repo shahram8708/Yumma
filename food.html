@@ -612,6 +612,51 @@
         .button:hover {
             background-color: #45a049;
         }
+
+        .view-all-btn {
+            background: linear-gradient(145deg, #6e7f82, #3b4f53);
+            color: #fff;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), -2px -2px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .view-all-btn:hover {
+            background: linear-gradient(145deg, #3b4f53, #6e7f82);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2), -4px -4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .reset-btn {
+            background: linear-gradient(145deg, #f8a5c2, #f53b57);
+            color: white;
+            font-size: 16px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1), -2px -2px 10px rgba(255, 255, 255, 0.2);
+            display: block;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .reset-btn:hover {
+            background: linear-gradient(145deg, #f53b57, #f8a5c2);
+            transform: scale(1.05);
+            box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2), -4px -4px 12px rgba(255, 255, 255, 0.3);
+        }
+
+        .view-all-btn:focus,
+        .reset-btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(0, 115, 230, 0.4);
+        }
     </style>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -821,6 +866,7 @@
         </div>
 
         <div id="FoodCount"></div>
+        <button id="resetBtn" class="reset-btn">🔄 Reset Foods</button>
         <div id="FoodList"></div>
     </div>
 
@@ -918,7 +964,7 @@
 
         const FoodData = [
             {
-                name: "Ridhi Tiffin Service-1",
+                name: "Ridhi Tiffin-1 Service",
                 country: "India",
                 state: "GJ",
                 city: "Ahmedabad",
@@ -949,7 +995,7 @@
                 }
             },
             {
-                name: "Ridhi Tiffin Service-2",
+                name: "Ridhi Tiffin-2 Service",
                 country: "India",
                 state: "GJ",
                 city: "Ahmedabad",
@@ -1200,32 +1246,84 @@
 
             if (Foods.length === 0) {
                 FoodList.innerHTML = '<div class="contain"><p>No food options found.</p><p>If there are no available food options right now, you can submit a request to be notified when something becomes available. In the meantime, you can filter by country, state, city, and area to find available options. If you still can\'t find any food options, especially in your specific area, you can submit a request, and we\'ll inform you as soon as a suitable option becomes available.</p><a href="food-get.html" id="request-button" class="button">Submit Request</a></div>';
+                return;
             }
+
+            const groupedFoods = {};
             Foods.sort(() => Math.random() - 0.5);
             Foods.forEach(Food => {
-                const discount = ((Food.originalPrice - Food.currentPrice) / Food.originalPrice * 100).toFixed(2);
-
-                const FoodItem = document.createElement('div');
-                FoodItem.classList.add('Food-item');
-                FoodItem.innerHTML = `
-            <div class="images">
-                <h3>${Food.name}</h3>
-                <img class="main-image" src="${Food.images[0]}" alt="${Food.name} Image">
-            </div>
-            <div class="details">
-                <p><strong>🌍 Area:</strong> ${Food.area}</p>
-                <p><strong>💰 Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
-                <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
-                <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
-                <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
-                <p><strong>🕒 Order Time:</strong> Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
-                <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
-                <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
-            </div>
-        `;
-
-                FoodList.appendChild(FoodItem);
+                const FoodKey = Food.name.replace(/-\d+\s*Service$/, ' Service');
+                if (!groupedFoods[FoodKey]) {
+                    groupedFoods[FoodKey] = [];
+                }
+                groupedFoods[FoodKey].push(Food);
             });
+
+            Object.keys(groupedFoods).forEach(FoodKey => {
+                const firstFood = groupedFoods[FoodKey][0];
+                const FoodGroup = document.createElement('div');
+                FoodGroup.classList.add('Food-item');
+                FoodGroup.innerHTML = `
+                <div class="images">
+                    <h3>🍽️ ${FoodKey}</h3>
+                    <img class="main-image" src="${firstFood.images[0]}" alt="${firstFood.name.replace(/-\d+\s*Service$/, ' Service')} Image">
+                </div>
+                <div class="details">
+                    <p><strong>🌍 Area:</strong> ${firstFood.area}</p>
+                    <p><strong>🍽️ Food Option:</strong> ${firstFood.food}</p>
+                    <p><strong>⭐ Ratings:</strong> ${firstFood.ratings}</p>
+                    <p><strong>🕒 Order Time:</strong> Morning (${firstFood.availableDeliveryTime.morningStart} - ${firstFood.availableDeliveryTime.morningEnd}), Night (${firstFood.availableDeliveryTime.nightStart} - ${firstFood.availableDeliveryTime.nightEnd})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                    <button class="view-all-btn" onclick="showFoodDetails('${FoodKey}')">📂 View All Foods</button>
+                    <div class="Food-details" id="${FoodKey.replace(/\s+/g, '-')}" style="display: none;"></div>
+                </div>
+        `;
+                FoodList.appendChild(FoodGroup);
+            });
+        }
+
+        document.getElementById('resetBtn').addEventListener('click', function () {
+            resetFoodList();
+        });
+
+        function resetFoodList() {
+            const FoodList = document.getElementById('FoodList');
+            FoodList.innerHTML = '';
+
+            displayFoods(FoodData);
+        }
+
+        function showFoodDetails(FoodKey) {
+            const FoodList = document.getElementById('FoodList');
+            FoodList.innerHTML = '';
+
+            const matchedFoods = FoodData.filter(Food => Food.name.includes(FoodKey.replace(' Service', '')));
+
+            if (matchedFoods.length > 0) {
+                matchedFoods.sort(() => Math.random() - 0.5);
+                matchedFoods.forEach(Food => {
+                    const discount = ((Food.originalPrice - Food.currentPrice) / Food.originalPrice * 100).toFixed(2);
+                    const FoodItem = document.createElement('div');
+                    FoodItem.classList.add('Food-item');
+                    FoodItem.innerHTML = `
+                <div class="images">
+                    <h3>🍽️ ${Food.name.replace(/-\d+\s*Service$/, ' Service')}</h3>
+                    <img class="main-image" src="${Food.images[0]}" alt="${Food.name.replace(/-\d+\s*Service$/, ' Service')} Image">
+                </div>
+                <div class="details">
+                    <p><strong>🌍 Area:</strong> ${Food.area}</p>
+                    <p><strong>💰 Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
+                    <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+                    <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
+                    <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
+                    <p><strong>🕒 Order Time:</strong> Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                    <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
+                </div>
+            `;
+                    FoodList.appendChild(FoodItem);
+                });
+            }
         }
 
         let currentImageIndex = 0;
@@ -1235,7 +1333,7 @@
         function openModal(FoodName) {
             const Food = FoodData.find(p => p.name === FoodName);
 
-            document.getElementById('modalName').innerText = `🍽️ ${Food.name}`;
+            document.getElementById('modalName').innerText = `🍽️ ${Food.name.replace(/-\d+\s*Service$/, ' Service')}`;
             images = Food.images || [];
             currentImageIndex = 0;
 
@@ -1243,7 +1341,7 @@
 
             const extraImagesContainer = document.getElementById('extraImages');
             extraImagesContainer.innerHTML = images.slice(1).map(img =>
-                `<img src="${img}" alt="${Food.name} Image" onclick="setMainImage('${img}')">`).join('');
+                `<img src="${img}" alt="${Food.name.replace(/-\d+\s*Service$/, ' Service')} Image" onclick="setMainImage('${img}')">`).join('');
             document.getElementById('modalCity').innerText = `🏙️ City: ${Food.city}`;
             document.getElementById('modalArea').innerText = `📍 Area: ${Food.area}`;
             document.getElementById('modalFood').innerText = `🍲 Food: ${Food.food}`;
