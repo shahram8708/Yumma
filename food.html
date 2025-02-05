@@ -1305,10 +1305,11 @@
                     const discount = ((Food.originalPrice - Food.currentPrice) / Food.originalPrice * 100).toFixed(2);
                     const FoodItem = document.createElement('div');
                     FoodItem.classList.add('Food-item');
+                    const randomImage = Food.images[Math.floor(Math.random() * Food.images.length)];
                     FoodItem.innerHTML = `
                 <div class="images">
                     <h3>🍽️ ${Food.name.replace(/-\d+\s*Service$/, ' Service')}</h3>
-                    <img class="main-image" src="${Food.images[0]}" alt="${Food.name.replace(/-\d+\s*Service$/, ' Service')} Image">
+                    <img class="main-image" src="${randomImage}" alt="${Food.name.replace(/-\d+\s*Service$/, ' Service')} Image">
                 </div>
                 <div class="details">
                     <p><strong>🌍 Area:</strong> ${Food.area}</p>
