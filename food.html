@@ -973,6 +973,7 @@
                 food: "Gujarati Thali",
                 originalPrice: 190,
                 currentPrice: 90,
+                extradiscount: 7.4,
                 items: "🍛 Chana, 🍲 Kadhi, 🍚 Rice, 🌮 5 Roti",
                 ownerContact: {
                     phone: "+919574037824",
@@ -1004,6 +1005,7 @@
                 food: "Gujarati Thali",
                 originalPrice: 200,
                 currentPrice: 120,
+                extradiscount: 7.4,
                 items: "🌱 Methi Chana, 🍲 Kadhi, 🍚 Rice, 🌮 7 Roti",
                 ownerContact: {
                     phone: "+919574037824",
@@ -1035,6 +1037,7 @@
                 food: "Punjabi Thali",
                 originalPrice: 290,
                 currentPrice: 190,
+                extradiscount: 0,
                 items: "🍛 Paneer Butter Masala (Gravy), 🌶️ Bhindi 2 Pyaza (Sukhli), 🍲 Dal Fry, 🍚 Jeera Rice, 🌮 4 Chapatis",
                 ownerContact: {
                     phone: "+919833815423",
@@ -1066,6 +1069,7 @@
                 food: "Punjabi Thali",
                 originalPrice: 290,
                 currentPrice: 160,
+                extradiscount: 0,
                 items: "🍛 Paneer Butter Masala (Gravy), 🍲 Dal Fry, 🍚 Jeera Rice, 🌮 4 Chapatis",
                 ownerContact: {
                     phone: "+919833815423",
@@ -1097,6 +1101,7 @@
                 food: "Punjabi Thali",
                 originalPrice: 290,
                 currentPrice: 130,
+                extradiscount: 0,
                 items: "🌶️ Bhindi 2 Pyaza (Sukhi), 🍲 Dal Fry, 🍚 Jeera Rice, 🌮 4 Chapatis",
                 ownerContact: {
                     phone: "+919833815423",
@@ -1353,7 +1358,7 @@
 
             document.getElementById('modalRatings').innerText = `⭐ Ratings: ${Food.ratings}`;
 
-            document.getElementById('modalApplyBtn').href = `food-apply.html?name=${encodeURIComponent(Food.name)}&country=${encodeURIComponent(Food.country)}&state=${encodeURIComponent(Food.state)}&city=${encodeURIComponent(Food.city)}&area=${encodeURIComponent(Food.area)}&food=${encodeURIComponent(Food.food)}&currentPrice=${encodeURIComponent(Food.currentPrice)}&items=${encodeURIComponent(Food.items)}&phone=${encodeURIComponent(Food.ownerContact.phone)}&email=${encodeURIComponent(Food.ownerContact.email)}&postalCode=${encodeURIComponent(Food.postalCode)}`;
+            document.getElementById('modalApplyBtn').href = `food-apply.html?name=${encodeURIComponent(Food.name)}&country=${encodeURIComponent(Food.country)}&state=${encodeURIComponent(Food.state)}&city=${encodeURIComponent(Food.city)}&area=${encodeURIComponent(Food.area)}&food=${encodeURIComponent(Food.food)}&currentPrice=${encodeURIComponent(Food.currentPrice)}&items=${encodeURIComponent(Food.items)}&phone=${encodeURIComponent(Food.ownerContact.phone)}&email=${encodeURIComponent(Food.ownerContact.email)}&postalCode=${encodeURIComponent(Food.postalCode)}&extraDiscount=${encodeURIComponent(Food.extradiscount)}`;
 
             const modal = document.getElementById('FoodModal');
             modal.style.display = 'block';
