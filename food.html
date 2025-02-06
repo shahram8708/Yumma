@@ -990,9 +990,11 @@
                 ratings: 4.7,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "10:30 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "03:00 PM",
+                    "nightEnd": "06:30 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1022,9 +1024,11 @@
                 ratings: 4.7,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "10:30 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "03:00 PM",
+                    "nightEnd": "06:30 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1054,9 +1058,11 @@
                 ratings: 4.5,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "09:00 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "04:00 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1086,9 +1092,11 @@
                 ratings: 4.5,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "09:00 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "04:00 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1118,11 +1126,47 @@
                 ratings: 4.5,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "09:00 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "04:00 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
-            }
+            },
+            {
+                name: "Matrutva Tiffin-1 Service",
+                country: "India",
+                state: "GJ",
+                city: "Ahmedabad",
+                area: "Motera",
+                postalCode: "380005",
+                food: "Gujarati Thali",
+                originalPrice: 290,
+                currentPrice: 100,
+                extradiscount: 0,
+                items: "🥔 Vatana Bataka, 🍛 Dal, 🍚 Rice, 🥙 5 Roti",
+                ownerContact: {
+                    phone: "+917859833437",
+                    email: "tiffinservice2209@gmail.com"
+                },
+                images: [
+                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
+                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
+                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
+                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
+                ],
+                nearbyAreas: ["Motera", "Sabarmati", "Visat"],
+                ratings: 4.5,
+                availableDeliveryTime: {
+                    "morningStart": "06:00 AM",
+                    "morningEnd": "10:30 AM",
+                    "morningdeliverytime": "12:30 - 01:00 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "05:00 PM",
+                    "nightdeliverytime": "07:30 - 08:00 PM"
+                }
+            },
         ];
 
         function updateStates() {
@@ -1277,8 +1321,9 @@
                     <p><strong>🌍 Area:</strong> ${firstFood.area}</p>
                     <p><strong>🍽️ Food Option:</strong> ${firstFood.food}</p>
                     <p><strong>⭐ Ratings:</strong> ${firstFood.ratings}</p>
-                    <p><strong>🕒 Order Time:</strong> Morning (${firstFood.availableDeliveryTime.morningStart} - ${firstFood.availableDeliveryTime.morningEnd}), Night (${firstFood.availableDeliveryTime.nightStart} - ${firstFood.availableDeliveryTime.nightEnd})</p>
-                    <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                    <p><strong>🕒 Order Time:</strong> 🌅 Morning (${firstFood.availableDeliveryTime.morningStart} - ${firstFood.availableDeliveryTime.morningEnd}), 🌆 Night (${firstFood.availableDeliveryTime.nightStart} - ${firstFood.availableDeliveryTime.nightEnd})</p>
+                    <p><strong>🚚 Delivery Time:</strong>  🍽️ Morning (${firstFood.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${firstFood.availableDeliveryTime.nightdeliverytime})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
                     <button class="view-all-btn" onclick="showFoodDetails('${FoodKey}')">📂 View All Foods</button>
                     <div class="Food-details" id="${FoodKey.replace(/\s+/g, '-')}" style="display: none;"></div>
                 </div>
@@ -1322,8 +1367,9 @@
                     <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
                     <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
                     <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
-                    <p><strong>🕒 Order Time:</strong> Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
-                    <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                    <p><strong>🕒 Order Time:</strong> 🌅 Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), 🌆 Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
+                    <p><strong>🚚 Delivery Time:</strong>  🍽️ Morning (${Food.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${Food.availableDeliveryTime.nightdeliverytime})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
                     <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
                 </div>
             `;
