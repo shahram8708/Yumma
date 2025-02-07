@@ -5089,7 +5089,14 @@
 
             document.getElementById('pgCount').innerText = `${filteredPGs.length} PG available`;
 
-            displayPGs(filteredPGs);
+            if (filteredPGs.length > 0) {
+                showFilteredPGDetails(filteredPGs);
+            } else {
+                document.getElementById('pgList').innerHTML = `
+        <div class="contain"><p>No PGs found.</p><p>If there are no available PGs right now, you can submit a request to be notified when a PG becomes available. In the meantime, you can filter by country, state, city, and area to find available options. If you still can\'t find a PG, especially in your specific area, you can submit a request, and we\'ll inform you as soon as a suitable PG becomes available.</p><a href="get.html" id="request-button" class="button">Submit Request</a></div>
+    `;
+            }
+
         }
 
         document.getElementById('pgCount').innerText = `${pgData.length} PG(s) available`;
@@ -5143,6 +5150,35 @@
             pgList.innerHTML = '';
 
             displayPGs(pgData);
+        }
+
+        function showFilteredPGDetails(pgs) {
+            const pgList = document.getElementById('pgList');
+            pgList.innerHTML = '';
+
+            pgs.sort(() => Math.random() - 0.5);
+            pgs.forEach(pg => {
+                const discount = ((pg.originalPrice - pg.currentPrice) / pg.originalPrice * 100).toFixed(2);
+                const pgItem = document.createElement('div');
+                pgItem.classList.add('pg-item');
+                const randomImage = pg.images[Math.floor(Math.random() * pg.images.length)];
+                pgItem.innerHTML = `
+            <div class="images">
+                <h3>🏠 ${pg.name.replace(/-\d+\s*PG$/, ' PG')}</h3>
+                <img class="main-image" src="${randomImage}" alt="${pg.name.replace(/-\d+\s*PG$/, ' PG')} Image">
+            </div>
+            <div class="details">
+                <p><strong>🌍 Area:</strong> ${pg.area}</p>
+                <p><strong>💰 Original Price:</strong> <span class="original-price">₹${pg.originalPrice}</span></p>
+                <p><strong>🎯 Current Price:</strong> ₹${pg.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+                <p><strong>🏡 PG Type:</strong> ${pg.pgType}</p>
+                <p><strong>🤝 Room Sharing:</strong> ${pg.availableSeats}</p>
+                <p><strong>⭐ Ratings:</strong> ${pg.ratings}</p>
+                <a href="#" class="apply-btn" onclick="openModal('${pg.name}')">🔍 View Details</a>
+            </div>
+        `;
+                pgList.appendChild(pgItem);
+            });
         }
 
         function showPGDetails(pgKey) {
