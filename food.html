@@ -1138,7 +1138,7 @@
                 country: "India",
                 state: "GJ",
                 city: "Ahmedabad",
-                area: "Motera",
+                area: "Chandkheda",
                 postalCode: "380005",
                 food: "Gujarati Thali",
                 originalPrice: 290,
@@ -1286,7 +1286,13 @@
 
             document.getElementById('FoodCount').innerText = `${filteredFoods.length} Food available`;
 
-            displayFoods(filteredFoods);
+            if (filteredFoods.length > 0) {
+                showFilteredFoodDetails(filteredFoods);
+            } else {
+                document.getElementById('FoodList').innerHTML = `
+        <div class="contain"><p>No food options found.</p><p>If there are no available food options right now, you can submit a request to be notified when something becomes available. In the meantime, you can filter by country, state, city, and area to find available options. If you still can\'t find any food options, especially in your specific area, you can submit a request, and we\'ll inform you as soon as a suitable option becomes available.</p><a href="food-get.html" id="request-button" class="button">Submit Request</a></div>
+    `;
+            }
         }
 
         function displayFoods(Foods) {
@@ -1341,6 +1347,37 @@
             FoodList.innerHTML = '';
 
             displayFoods(FoodData);
+        }
+
+        function showFilteredFoodDetails(Foods) {
+            const FoodList = document.getElementById('FoodList');
+            FoodList.innerHTML = '';
+
+            Foods.sort(() => Math.random() - 0.5);
+            Foods.forEach(Food => {
+                const discount = ((Food.originalPrice - Food.currentPrice) / Food.originalPrice * 100).toFixed(2);
+                const FoodItem = document.createElement('div');
+                FoodItem.classList.add('Food-item');
+                const randomImage = Food.images[Math.floor(Math.random() * Food.images.length)];
+                FoodItem.innerHTML = `
+            <div class="images">
+                    <h3>🍽️ ${Food.name.replace(/-\d+\s*Service$/, ' Service')}</h3>
+                    <img class="main-image" src="${randomImage}" alt="${Food.name.replace(/-\d+\s*Service$/, ' Service')} Image">
+                </div>
+                <div class="details">
+                    <p><strong>🌍 Area:</strong> ${Food.area}</p>
+                    <p><strong>💰 Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
+                    <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+                    <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
+                    <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
+                    <p><strong>🕒 Order Time:</strong> 🌅 Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), 🌆 Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
+                    <p><strong>🚚 Delivery Time:</strong>  🍽️ Morning (${Food.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${Food.availableDeliveryTime.nightdeliverytime})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
+                    <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
+                </div>
+        `;
+                FoodList.appendChild(FoodItem);
+            });
         }
 
         function showFoodDetails(FoodKey) {
