@@ -405,17 +405,47 @@
                 <div id="adharError" class="error"></div>
             </div>
             <div class="form-group">
-                <label for="studentId">Student ID Card (100KB max):</label>
+                <label for="studentId">Upload Document (100KB max):</label>
                 <input type="file" id="studentId" name="studentId" accept="image/*,application/pdf">
                 <span class="file-info">Accepted formats: PDF, JPG, PNG</span>
                 <div id="studentIdError" class="error"></div>
             </div>
+
             <div class="form-group">
-                <label for="otherDoc">Admission Letter or Fee Receipt (if Student ID not available, 100KB max):</label>
+                <label for="otherDoc">Alternative Document (if primary document not available, 100KB max):</label>
                 <input type="file" id="otherDoc" name="otherDoc" accept="image/*,application/pdf">
                 <span class="file-info">Accepted formats: PDF, JPG, PNG</span>
                 <div id="otherDocError" class="error"></div>
             </div>
+
+            <p class="instructions">
+                <strong>Instructions:</strong><br>
+                <strong>Note:</strong> Uploading at least <u>one</u> document is mandatory. You must upload either the
+                <em>primary</em> or the <em>alternative</em> document.<br>
+                <strong>For Students:</strong> Please upload your <em>Student ID Card</em>. If not available, upload
+                your <em>Admission Letter</em> or <em>Fee Receipt</em>.<br>
+                <strong>For Working Professionals:</strong> Please upload your <em>Employee ID Card</em>. If not
+                available, upload your <em>Offer Letter</em>, <em>Salary Slip (last 3 months)</em>, or a <em>Company
+                    Bonafide Certificate</em>.<br>
+                <strong>For Laborers or Self-Employed Individuals:</strong> If you do not have an employer, please
+                upload any valid government-issued ID (such as <em>Voter ID, or Ration Card</em>) as proof
+                of identity.
+            </p>
+
+            <style>
+                .file-info {
+                    font-size: 12px;
+                    color: #555;
+                }
+
+                .instructions {
+                    background-color: #f8f9fa;
+                    padding: 10px;
+                    border-left: 4px solid #007bff;
+                    font-size: 14px;
+                    margin: 15px 0;
+                }
+            </style>
             <div class="form-group">
                 <label for="duration">PG Duration:</label>
                 <select id="duration" name="duration" required>
