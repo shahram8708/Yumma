@@ -896,16 +896,88 @@
     <button onclick="scrollToTop()" id="scrollToTopBtn">&#8593;</button>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 PG 🏠 & EATS 🍽️. All rights reserved.</p>
-            <ul class="social-media">
-                <li><a href="https://www.facebook.com/profile.php?id=61564667847497" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://x.com/MYPGSpace" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/mypgspace?utm_source=qr&igsh=MXVoZXozYXV1a3d6MQ=="
-                        target="_blank"><i class="fab fa-instagram"></i></a></li>
-            </ul>
+        <div class="fcontainer">
+            <div class="footer-top">
+                <h2>Your Perfect Place to Stay & Eat!</h2>
+                <p>Welcome to <strong>PG 🏠 & EATS 🍽️</strong>, where comfort meets convenience. We offer premium PG
+                    accommodations and delicious food services tailored specifically for students.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>PG Services</h3>
+                    <ul>
+                        <li><a href="/">Apply for PG Services</a></li>
+                        <li><a href="/">Exclusive PG Offer</a></li>
+                        <li><a href="/">Premium Accommodations</a></li>
+                        <li><a href="/">Student Housing</a></li>
+                        <li><a href="/">Safety & Security</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Food Services</h3>
+                    <ul>
+                        <li><a href="food.html">Apply for Food Services</a></li>
+                        <li><a href="food.html">Healthy Meal Plans</a></li>
+                        <li><a href="food.html">Tasty & Nutritious Food</a></li>
+                        <li><a href="food.html">Convenient Delivery</a></li>
+                        <li><a href="food.html">Special Discounts</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">Our Mission</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="query.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="copy.html">Copyright Notice</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="policy.html">Privacy Policy</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Download App</h3>
+                    <p style="padding-bottom: 10px;">📲 Download Our App for a Seamless Experience!</p>
+                    <a href="/PGEATS.apk" class="download-button">Download Now</a>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <ul class="social-media">
+                    <li><a href="https://www.facebook.com/share/1B7s2g3de5/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://x.com/MYPGSpace" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/pgandeats/" target="_blank"><i
+                                class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/pg-eats" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://in.pinterest.com/pgeats/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </li>
+                    <li><a href="https://www.quora.com/profile/PG-EATS" target="_blank"><i class="fab fa-quora"></i></a>
+                    </li>
+                    <li><a href="https://www.reddit.com/user/Busy-Beautiful-5305/" target="_blank"><i
+                                class="fab fa-reddit"></i></a></li>
+                    <li><a href="https://www.youtube.com/@PG-EATS" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
+
             <p id="last-updated">Loading last update date...</p>
+            <p class="copyright">&copy; 2024 PG 🏠 & EATS 🍽️. All rights reserved.</p>
         </div>
     </footer>
 
@@ -990,9 +1062,11 @@
                 ratings: 4.7,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "10:30 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "03:00 PM",
+                    "nightEnd": "06:30 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1022,9 +1096,11 @@
                 ratings: 4.7,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "10:30 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "03:00 PM",
+                    "nightEnd": "06:30 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1054,9 +1130,11 @@
                 ratings: 4.5,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "09:00 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "04:00 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1086,9 +1164,11 @@
                 ratings: 4.5,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "09:00 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "04:00 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
             },
             {
@@ -1118,11 +1198,115 @@
                 ratings: 4.5,
                 availableDeliveryTime: {
                     "morningStart": "06:00 AM",
-                    "morningEnd": "12:00 PM",
-                    "nightStart": "06:00 PM",
-                    "nightEnd": "11:59 PM"
+                    "morningEnd": "09:00 AM",
+                    "morningdeliverytime": "01:00 - 01:30 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "04:00 PM",
+                    "nightdeliverytime": "08:00 - 08:30 PM"
                 }
-            }
+            },
+            {
+                name: "Matrutva Tiffin-1 Service",
+                country: "India",
+                state: "GJ",
+                city: "Ahmedabad",
+                area: "Chandkheda",
+                postalCode: "380005",
+                food: "Gujarati Thali",
+                originalPrice: 290,
+                currentPrice: 100,
+                extradiscount: 0,
+                items: "🥔 Vatana Bataka, 🍛 Dal, 🍚 Rice, 🥙 5 Roti",
+                ownerContact: {
+                    phone: "+917859833437",
+                    email: "tiffinservice2209@gmail.com"
+                },
+                images: [
+                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
+                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
+                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
+                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
+                ],
+                nearbyAreas: ["Motera", "Sabarmati", "Visat"],
+                ratings: 4.5,
+                availableDeliveryTime: {
+                    "morningStart": "06:00 AM",
+                    "morningEnd": "10:30 AM",
+                    "morningdeliverytime": "12:30 - 01:00 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "05:00 PM",
+                    "nightdeliverytime": "07:30 - 08:00 PM"
+                }
+            },
+            {
+                name: "Vegggies Tiffin-1 Service",
+                country: "India",
+                state: "GJ",
+                city: "Ahmedabad",
+                area: "Sabarmati",
+                postalCode: "380005",
+                food: "Gujarati Thali",
+                originalPrice: 290,
+                currentPrice: 140,
+                extradiscount: 7.14,
+                items: "🍛 Dal Rice, 🥗 Sabji, 🥗 Salad, 🍞 5 Rotis",
+                ownerContact: {
+                    phone: "+918200211470",
+                    email: "veggiesheavenamd@gmail.com"
+                },
+                images: [
+                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
+                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
+                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
+                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
+                ],
+                nearbyAreas: ["Motera", "Chandkheda", "Visat"],
+                ratings: 4.5,
+                availableDeliveryTime: {
+                    "morningStart": "06:00 AM",
+                    "morningEnd": "11:30 AM",
+                    "morningdeliverytime": "12:30 - 01:00 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "06:30 PM",
+                    "nightdeliverytime": "07:30 - 08:30 PM"
+                }
+            },
+            {
+                name: "Vegggies Tiffin-2 Service",
+                country: "India",
+                state: "GJ",
+                city: "Ahmedabad",
+                area: "Sabarmati",
+                postalCode: "380005",
+                food: "Gujarati Thali",
+                originalPrice: 290,
+                currentPrice: 90,
+                extradiscount: 11.11,
+                items: "🥗 Sabji, 🥗 Salad, 🍞 5 Rotis",
+                ownerContact: {
+                    phone: "+918200211470",
+                    email: "veggiesheavenamd@gmail.com"
+                },
+                images: [
+                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
+                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
+                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
+                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
+                ],
+                nearbyAreas: ["Motera", "Chandkheda", "Visat"],
+                ratings: 4.5,
+                availableDeliveryTime: {
+                    "morningStart": "06:00 AM",
+                    "morningEnd": "11:30 AM",
+                    "morningdeliverytime": "12:30 - 01:00 PM",
+                    "nightStart": "02:00 PM",
+                    "nightEnd": "06:30 PM",
+                    "nightdeliverytime": "07:30 - 08:30 PM"
+                }
+            },
         ];
 
         function updateStates() {
@@ -1242,8 +1426,50 @@
 
             document.getElementById('FoodCount').innerText = `${filteredFoods.length} Food available`;
 
-            displayFoods(filteredFoods);
+            const FoodList = document.getElementById('FoodList');
+            FoodList.innerHTML = '';
+
+            if (searchName || country || state || city || area || food || maxPrice) {
+                if (filteredFoods.length > 0) {
+                    filteredFoods.sort(() => Math.random() - 0.5);
+                    filteredFoods.forEach(Food => appendFoodDetails(Food));
+                } else {
+                    FoodList.innerHTML = '<div class="contain"><p>No food options found.</p><p>If there are no available food options right now, you can submit a request to be notified when something becomes available. In the meantime, you can filter by country, state, city, and area to find available options. If you still can\'t find any food options, especially in your specific area, you can submit a request, and we\'ll inform you as soon as a suitable option becomes available.</p><a href="food-get.html" id="request-button" class="button">Submit Request</a></div>';
+                }
+            } else {
+                displayFoods(filteredFoods);
+            }
+
         }
+
+        function appendFoodDetails(Food) {
+            const FoodList = document.getElementById('FoodList');
+            const discount = ((Food.originalPrice - Food.currentPrice) / Food.originalPrice * 100).toFixed(2);
+            const FoodItem = document.createElement('div');
+            FoodItem.classList.add('Food-item');
+            const randomImage = Food.images[Math.floor(Math.random() * Food.images.length)];
+
+            FoodItem.innerHTML = `
+        <div class="images">
+            <h3>🍽️ ${Food.name.replace(/-\d+\s*Service$/, ' Service')}</h3>
+            <img class="main-image" src="${randomImage}" alt="${Food.name.replace(/-\d+\s*Service$/, ' Service')} Image">
+        </div>
+        <div class="details">
+            <p><strong>🌍 Area:</strong> ${Food.area}</p>
+            <p><strong>💰 Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
+            <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+            <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
+            <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
+            <p><strong>🕒 Order Time:</strong> 🌅 Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), 🌆 Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
+            <p><strong>🚚 Delivery Time:</strong> 🍽️ Morning (${Food.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${Food.availableDeliveryTime.nightdeliverytime})</p>
+            <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
+            <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
+        </div>
+    `;
+
+            FoodList.appendChild(FoodItem);
+        }
+
 
         function displayFoods(Foods) {
             const FoodList = document.getElementById('FoodList');
@@ -1277,8 +1503,9 @@
                     <p><strong>🌍 Area:</strong> ${firstFood.area}</p>
                     <p><strong>🍽️ Food Option:</strong> ${firstFood.food}</p>
                     <p><strong>⭐ Ratings:</strong> ${firstFood.ratings}</p>
-                    <p><strong>🕒 Order Time:</strong> Morning (${firstFood.availableDeliveryTime.morningStart} - ${firstFood.availableDeliveryTime.morningEnd}), Night (${firstFood.availableDeliveryTime.nightStart} - ${firstFood.availableDeliveryTime.nightEnd})</p>
-                    <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                    <p><strong>🕒 Order Time:</strong> 🌅 Morning (${firstFood.availableDeliveryTime.morningStart} - ${firstFood.availableDeliveryTime.morningEnd}), 🌆 Night (${firstFood.availableDeliveryTime.nightStart} - ${firstFood.availableDeliveryTime.nightEnd})</p>
+                    <p><strong>🚚 Delivery Time:</strong>  🍽️ Morning (${firstFood.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${firstFood.availableDeliveryTime.nightdeliverytime})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
                     <button class="view-all-btn" onclick="showFoodDetails('${FoodKey}')">📂 View All Foods</button>
                     <div class="Food-details" id="${FoodKey.replace(/\s+/g, '-')}" style="display: none;"></div>
                 </div>
@@ -1322,8 +1549,9 @@
                     <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
                     <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
                     <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
-                    <p><strong>🕒 Order Time:</strong> Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
-                    <p style="color: red; font-weight: bold;">⚠️ Orders placed outside the given time slots will not be delivered.</p>
+                    <p><strong>🕒 Order Time:</strong> 🌅 Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), 🌆 Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
+                    <p><strong>🚚 Delivery Time:</strong>  🍽️ Morning (${Food.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${Food.availableDeliveryTime.nightdeliverytime})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
                     <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
                 </div>
             `;

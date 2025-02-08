@@ -633,3 +633,157 @@ nav {
 .carousel-btn.next {
     right: 10px;
 }
+
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.fcontainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-top h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #ffcc00;
+}
+
+.footer-social {
+    margin-top: 30px;
+}
+
+.footer-social h3 {
+    font-size: 18px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.social-media li {
+    margin: 5px;
+}
+
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+.social-media i {
+    font-size: 18px;
+    color: #222;
+}
+
+.social-media a[href*="facebook"] i {
+    color: #1877F2;
+}
+
+.social-media a[href*="twitter"] i {
+    color: #1DA1F2;
+}
+
+.social-media a[href*="instagram"] i {
+    color: #E4405F;
+}
+
+.social-media a[href*="linkedin"] i {
+    color: #0077B5;
+}
+
+.social-media a[href*="pinterest"] i {
+    color: #E60023;
+}
+
+.social-media a[href*="quora"] i {
+    color: #B92B27;
+}
+
+.social-media a[href*="reddit"] i {
+    color: #FF4500;
+}
+
+.social-media a[href*="youtube"] i {
+    color: #FF0000;
+}
+
+#last-updated {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+}
