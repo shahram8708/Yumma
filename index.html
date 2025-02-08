@@ -1021,7 +1021,7 @@
             <p id="modalFood"></p>
             <p id="modalSize"></p>
             <p id="modalPrice"></p>
-            <p id="modalAddress"></p>
+            <!-- <p id="modalAddress"></p> -->
             <p id="modalFacilities"></p>
             <p id="modalRules"></p>
             <p id="modalAvailableSeats"></p>
@@ -5309,7 +5309,7 @@
             document.getElementById('modalFood').innerText = `🍽️ Food: ${pg.food}`;
             document.getElementById('modalSize').innerText = `📏 Room Size: ${pg.size}`;
             document.getElementById('modalPrice').innerHTML = `💸 Price: <strong>₹${pg.currentPrice}</strong> <span class="original-price">💰 Original Price: ₹${pg.originalPrice}</span>`;
-            document.getElementById('modalAddress').innerText = `🏠 Address: ${pg.address}`;
+            // document.getElementById('modalAddress').innerText = `🏠 Address: ${pg.address}`;
 
             const facilitiesList = pg.facilities.split(',').map(facility => `<li>${facility.trim()}</li>`).join('');
             document.getElementById('modalFacilities').innerHTML = `<strong>🔧 Facilities:</strong><ul class="styled-list">${facilitiesList}</ul>`;
