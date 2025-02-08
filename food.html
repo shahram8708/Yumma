@@ -1044,6 +1044,10 @@
             document.querySelector('.nav-menu').classList.toggle('active');
         });
 
+        function getRandomRating() {
+            return (Math.random() * (5 - 4) + 4).toFixed(1);
+        }
+
         const FoodData = [
             {
                 name: "Ridhi Tiffin-1 Service",
@@ -1318,6 +1322,10 @@
                 }
             },
         ];
+
+        FoodData.forEach(Food => {
+            Food.ratings = getRandomRating();
+        });
 
         function updateStates() {
             const country = document.getElementById('country').value;
