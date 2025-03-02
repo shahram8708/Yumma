@@ -192,6 +192,46 @@
             font-weight: 700;
             letter-spacing: -0.5px;
         }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            max-width: 90%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 22px;
+            color: #333;
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transform: scale(1.02);
+        }
+
+        .loading {
+            text-align: center;
+            font-size: 16px;
+            color: #888;
+            padding: 10px;
+            display: none;
+        }
     </style>
 </head>
 
@@ -299,91 +339,15 @@
             </a>
         </div>
     </section>
+
     <div class="containers" id="target-section">
-        <h1 style="text-align: center; font-size: 50px;">Upload PG Details</h1>
-        <form id="pgForm" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="ownerName">Owner Name:</label>
-                <input type="text" id="ownerName" name="ownerName" readonly>
-            </div>
-            <div class="form-group">
-                <label for="ownerPhone">Owner Phone:</label>
-                <input type="tel" id="ownerPhone" name="ownerPhone" pattern="[0-9]{10}" readonly>
-            </div>
-            <div class="form-group">
-                <label for="ownerEmail">Owner Email:</label>
-                <input type="email" id="ownerEmail" name="ownerEmail" readonly>
-            </div>
-            <!-- Other fields for PG details -->
-            <div class="form-group">
-                <label for="pgName">PG Name:</label>
-                <input type="text" id="pgName" name="pgName" placeholder="Enter the name of the PG" required>
-            </div>
-            <div class="form-group">
-                <label for="country">Country:</label>
-                <input type="text" id="country" name="country" placeholder="Enter the country where the PG is located"
-                    required>
-            </div>
-            <div class="form-group">
-                <label for="state">State:</label>
-                <input type="text" id="state" name="state" placeholder="Enter the state where the PG is located"
-                    required>
-            </div>
-            <div class="form-group">
-                <label for="city">City:</label>
-                <input type="text" id="city" name="city" placeholder="Enter the city where the PG is located" required>
-            </div>
-            <div class="form-group">
-                <label for="area">Area:</label>
-                <input type="text" id="area" name="area" placeholder="Enter the area where the PG is located" required>
-            </div>
-            <div class="form-group">
-                <label for="roomType">Room Type:</label>
-                <input type="text" id="roomType" name="roomType" placeholder="Enter the type of room (e.g.,AC, Non-AC)"
-                    required>
-            </div>
-            <div class="form-group">
-                <label for="food">Food:</label>
-                <input type="text" id="food" name="food"
-                    placeholder="Specify the food options provided (e.g., With Food, Without Food)" required>
-            </div>
-            <div class="form-group">
-                <label for="size">Room Size:</label>
-                <input type="text" id="size" name="size"
-                    placeholder="Enter the size of the room (e.g., Small, Medium, Large)" required>
-            </div>
-            <div class="form-group">
-                <label for="currentPrice">Price:</label>
-                <input type="number" id="currentPrice" name="currentPrice"
-                    placeholder="Enter the current price of the room" required>
-            </div>
-            <div class="form-group">
-                <label for="address">Address:</label>
-                <textarea id="address" name="address" rows="3" placeholder="Enter the full address of the PG"
-                    required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="facilities">Facilities:</label>
-                <textarea id="facilities" name="facilities" rows="3"
-                    placeholder="List the facilities provided (e.g., Wi-Fi, AC)" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="rules">Rules:</label>
-                <textarea id="rules" name="rules" rows="3" placeholder="Specify the rules (e.g., No smoking, No pets)"
-                    required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="availableSeats">Available Seats:</label>
-                <input type="number" id="availableSeats" name="availableSeats"
-                    placeholder="Enter the number of available seats" required>
-            </div>
-            <div class="form-group">
-                <label for="images">Upload Images (max 5, each < 100KB):</label>
-                        <input type="file" id="images" name="images" accept="image/*" multiple required>
-                        <div id="imageError" class="error"></div>
-            </div>
-            <button type="submit" id="submitBtn">Submit</button>
-        </form>
+        <h2>Fill Out the Form</h2>
+        <div class="loading" id="loadingText">Loading form...</div>
+        <div class="iframe-container">
+            <iframe id="googleForm"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdXGVcz_lCc9DOGiEhyVpFLoQJNiifGN9Qy_8KpfQf4W3j7eA/viewform?embedded=true"
+                onload="hideLoading()"></iframe>
+        </div>
     </div>
 
     <button onclick="scrollToTop()" id="scrollToTopBtn" style="padding: 0;">&#8593;</button>
@@ -475,6 +439,9 @@
     </footer>
 
     <script>
+        function hideLoading() {
+            document.getElementById("loadingText").style.display = "none";
+        }
         document.addEventListener("DOMContentLoaded", function () {
             var lastUpdated = document.getElementById("last-updated");
             if (lastUpdated) {
@@ -521,64 +488,6 @@
             }
         });
 
-        document.getElementById('pgForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-
-            const submitBtn = document.getElementById('submitBtn');
-
-            submitBtn.disabled = true;
-
-            submitBtn.style.display = 'none';
-
-            const message = document.createElement('p');
-            message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
-            message.style.fontSize = '16px';
-            message.style.color = '#333';
-
-            submitBtn.insertAdjacentElement('afterend', message);
-
-            const imagesInput = document.getElementById('images');
-            const imageError = document.getElementById('imageError');
-
-            const files = imagesInput.files;
-            if (files.length > 5) {
-                imageError.textContent = 'You can upload a maximum of 5 images.';
-                submitBtn.disabled = false;
-                return;
-            }
-
-            let valid = true;
-            for (const file of files) {
-                if (file.size > 100 * 1024) {
-                    imageError.textContent = 'Each image must be less than 100KB.';
-                    valid = false;
-                    break;
-                }
-            }
-
-            if (!valid) {
-                submitBtn.disabled = false;
-                return;
-            }
-
-            const formData = new FormData(document.getElementById('pgForm'));
-            fetch('https://my-pg-tnp9.onrender.com/upload-pg-details', {
-                method: 'POST',
-                body: formData
-            }).then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        alert('PG details submitted successfully');
-                        window.location.href = 'index.html';
-                    } else {
-                        alert('Error submitting PG details');
-                        submitBtn.disabled = false;
-                    }
-                }).catch(() => {
-                    alert('Error submitting PG details');
-                    submitBtn.disabled = false;
-                });
-        });
     </script>
 </body>
 
