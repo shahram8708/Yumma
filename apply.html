@@ -393,26 +393,26 @@
                 <input type="email" id="userEmail" name="userEmail" readonly>
             </div>
             <div class="form-group">
-                <label for="userPhoto">Your Photo (100KB max):</label>
+                <label for="userPhoto">Your Photo (5MB max):</label>
                 <input type="file" id="userPhoto" name="userPhoto" accept="image/*" required>
                 <span class="file-info">Accepted formats: JPG, PNG</span>
                 <div id="photoError" class="error"></div>
             </div>
             <div class="form-group">
-                <label for="adharCard">Aadhar Card (100KB max):</label>
+                <label for="adharCard">Aadhar Card (5MB max):</label>
                 <input type="file" id="adharCard" name="adharCard" accept="image/*,application/pdf">
                 <span class="file-info">Accepted formats: PDF, JPG, PNG</span>
                 <div id="adharError" class="error"></div>
             </div>
             <div class="form-group">
-                <label for="studentId">Upload Document (100KB max):</label>
+                <label for="studentId">Upload Document (5MB max):</label>
                 <input type="file" id="studentId" name="studentId" accept="image/*,application/pdf">
                 <span class="file-info">Accepted formats: PDF, JPG, PNG</span>
                 <div id="studentIdError" class="error"></div>
             </div>
 
             <div class="form-group">
-                <label for="otherDoc">Alternative Document (if primary document not available, 100KB max):</label>
+                <label for="otherDoc">Alternative Document (if primary document not available, 5MB max):</label>
                 <input type="file" id="otherDoc" name="otherDoc" accept="image/*,application/pdf">
                 <span class="file-info">Accepted formats: PDF, JPG, PNG</span>
                 <div id="otherDocError" class="error"></div>
@@ -625,29 +625,29 @@
 
                 let isValid = true;
 
-                if (photo && photo.size > 100 * 1024) {
-                    document.getElementById('photoError').innerText = 'Photo must be less than 100KB.';
+                if (photo && photo.size > 5000 * 1024) {
+                    document.getElementById('photoError').innerText = 'Photo must be less than 5MB.';
                     isValid = false;
                 } else {
                     document.getElementById('photoError').innerText = '';
                 }
 
-                if (adharCard && adharCard.size > 100 * 1024) {
-                    document.getElementById('adharError').innerText = 'Aadhar Card must be less than 100KB.';
+                if (adharCard && adharCard.size > 5000 * 1024) {
+                    document.getElementById('adharError').innerText = 'Aadhar Card must be less than 5MB.';
                     isValid = false;
                 } else {
                     document.getElementById('adharError').innerText = '';
                 }
 
-                if (studentId && studentId.size > 100 * 1024) {
-                    document.getElementById('studentIdError').innerText = 'Student ID Card must be less than 100KB.';
+                if (studentId && studentId.size > 5000 * 1024) {
+                    document.getElementById('studentIdError').innerText = 'Student ID Card must be less than 5MB.';
                     isValid = false;
                 } else {
                     document.getElementById('studentIdError').innerText = '';
                 }
 
-                if (otherDoc && otherDoc.size > 100 * 1024) {
-                    document.getElementById('otherDocError').innerText = 'Document must be less than 100KB.';
+                if (otherDoc && otherDoc.size > 5000 * 1024) {
+                    document.getElementById('otherDocError').innerText = 'Document must be less than 5MB.';
                     isValid = false;
                 } else {
                     document.getElementById('otherDocError').innerText = '';
