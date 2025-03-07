@@ -5302,7 +5302,7 @@
                     images: pgImages
                 };
 
-                const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(uniqueDetails.address)}&output=embed`;
+                // const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(uniqueDetails.address)}&output=embed`;
 
                 const roomDetails = matchedPGs.map(pg => ({
                     availableSeats: pg.availableSeats,
@@ -5331,11 +5331,6 @@
             <p><strong>🌍 Area:</strong> ${uniqueDetails.area}</p>
             <p><strong>⭐ Ratings:</strong> ${uniqueDetails.ratings}</p>
             <p><strong>📏 Room Size:</strong> ${uniqueDetails.size}</p>
-
-            <h4>📍 Location on Google Maps</h4>
-            <div class="map-container">
-                <iframe class="google-map" src="${googleMapsURL}" allowfullscreen="" loading="lazy"></iframe>
-            </div>
 
             <h4>💰 Pricing & Room Details</h4>
             <ul class="pricing-list">
@@ -5409,14 +5404,14 @@
             document.getElementById('modalSize').innerText = `📏 Room Size: ${pg.size}`;
             document.getElementById('modalPrice').innerHTML = `💸 Price: <strong>₹${pg.currentPrice}</strong> <span class="original-price">💰 Original Price: ₹${pg.originalPrice}</span>`;
             // document.getElementById('modalAddress').innerText = `🏠 Address: ${pg.address}`;
-            const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(pg.address)}&output=embed`;
+            // const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(pg.address)}&output=embed`;
 
-            document.getElementById('modalAddress').innerHTML = `
-    <h4>📍 Location on Google Maps</h4>
-    <div class="map-container">
-        <iframe class="google-map" src="${googleMapsURL}" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-`;
+//             document.getElementById('modalAddress').innerHTML = `
+//     <h4>📍 Location on Google Maps</h4>
+//     <div class="map-container">
+//         <iframe class="google-map" src="${googleMapsURL}" allowfullscreen="" loading="lazy"></iframe>
+//     </div>
+// `;
 
             const facilitiesList = pg.facilities.split(',').map(facility => `<li>${facility.trim()}</li>`).join('');
             document.getElementById('modalFacilities').innerHTML = `<strong>🔧 Facilities:</strong><ul class="styled-list">${facilitiesList}</ul>`;
