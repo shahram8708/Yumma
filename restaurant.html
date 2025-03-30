@@ -1138,14 +1138,6 @@
 
     <script>
 
-        function displayUserDetails() {
-            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-
-            if (userDetails) {
-                document.getElementById('userName').textContent = userDetails.name;
-            }
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             var lastUpdated = document.getElementById("last-updated");
             if (lastUpdated) {
@@ -1153,7 +1145,6 @@
                 var options = { year: 'numeric', month: 'long', day: 'numeric' };
                 lastUpdated.textContent = "Last updated: " + date.toLocaleDateString('en-US', options);
             }
-            displayUserDetails();
             filterFoods();
         });
 

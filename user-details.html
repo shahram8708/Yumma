@@ -281,9 +281,11 @@
     <sections class="hero-banner" style="margin-top: 50px;">
         <div class="hero-contents">
             <h1>Best PG, Tiffin, Hotel & Restaurant Services – Yumma</h1>
-            <p>Looking for comfortable PG rooms, homemade-style tiffin services, cozy hotel stays, or delicious restaurant 
-               food? Yumma brings you premium accommodation and food services for everyone—students, professionals, families, 
-               and travelers. Book now and get an exclusive 80% discount!</p>
+            <p>Looking for comfortable PG rooms, homemade-style tiffin services, cozy hotel stays, or delicious
+                restaurant
+                food? Yumma brings you premium accommodation and food services for everyone—students, professionals,
+                families,
+                and travelers. Book now and get an exclusive 80% discount!</p>
             <a href="#target-section" id="apply-button" class="button"
                 style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #fff; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease; margin-top: 10px;">
                 Your Details
@@ -294,9 +296,13 @@
     <section class="image-slider">
         <div class="slider-container">
             <div class="slides">
-                <div class="slide"><img src="https://th.bing.com/th/id/OIP.iFtqfFmVTBC6WTrFfs7pfAHaET?rs=1&pid=ImgDetMain" alt="Image 1"></div>
+                <div class="slide"><img
+                        src="https://th.bing.com/th/id/OIP.iFtqfFmVTBC6WTrFfs7pfAHaET?rs=1&pid=ImgDetMain"
+                        alt="Image 1"></div>
                 <div class="slide"><img src="https://wallpaperaccess.com/full/5655441.jpg" alt="Image 2"></div>
-                <div class="slide"><img src="https://lh3.googleusercontent.com/V_qJB17v-edxy7Wdnsp-jfBn2-yCiKEiDG5-JN5g9jv_pTssPfYM9icAqG4wLg6tCLXUy6Tq_Um1LJXeitRUQufObY5S=w1000" alt="Image 3"></div>
+                <div class="slide"><img
+                        src="https://lh3.googleusercontent.com/V_qJB17v-edxy7Wdnsp-jfBn2-yCiKEiDG5-JN5g9jv_pTssPfYM9icAqG4wLg6tCLXUy6Tq_Um1LJXeitRUQufObY5S=w1000"
+                        alt="Image 3"></div>
                 <div class="slide"><img src="https://images8.alphacoders.com/103/1032061.jpg" alt="Image 4"></div>
                 <div class="slide"><img src="image.jpeg" alt="Image 5"></div>
             </div>
@@ -305,7 +311,7 @@
 
     <script src="scripts.js"></script>
 
-    
+
     <div class="containers" id="target-section">
         <h1 style="text-align: center; font-size: 50px;">User Details</h1>
         <div class="details">
@@ -459,14 +465,6 @@
             displayUserDetails();
         });
 
-        function displayUserDetails() {
-            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-
-            if (userDetails) {
-                document.getElementById('userName').textContent = userDetails.name;
-            }
-        }
-
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
@@ -481,7 +479,6 @@
 
             if (userDetails) {
                 document.getElementById('userName').textContent = userDetails.name;
-                document.getElementById('userNames').textContent = userDetails.name;
                 document.getElementById('userAddress').textContent = userDetails.address || "Address not provided";
                 document.getElementById('userEmail').textContent = userDetails.email;
                 document.getElementById('userPhone').textContent = userDetails.phone;
