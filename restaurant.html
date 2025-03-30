@@ -874,7 +874,7 @@
                         </div>
                     </li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="https://yumma.onrender.com/food">Upload Food Details</a></li>
+                    <li><a href="https://yumma.onrender.com/meal">Upload Food Details</a></li>
                     <!-- <li><a href="user-details.html">Profile</a></li> -->
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="query.html">Contact</a></li>
@@ -896,7 +896,7 @@
                and travelers. Book now and get an exclusive 80% discount!</p>
             <a href="#target-section" id="apply-button" class="button"
                 style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #fff; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;">
-                Apply for Food Services
+                Apply for Restaurant Food Services
             </a>
         </div>
     </sections>
@@ -950,20 +950,20 @@
                 <label for="food">Food:</label>
                 <select id="food">
                     <option value="">Select Food Option</option>
-                    <option value="North Indian Thali">North Indian Thali</option>
-                    <option value="South Indian Thali">South Indian Thali</option>
-                    <option value="Gujarati Thali">Gujarati Thali</option>
-                    <option value="Rajasthani Thali">Rajasthani Thali</option>
-                    <option value="Bengali Thali">Bengali Thali</option>
-                    <option value="Maharashtrian Thali">Maharashtrian Thali</option>
-                    <option value="Punjabi Thali">Punjabi Thali</option>
+                    <option value="North Indian Menu">North Indian Menu</option>
+                    <option value="South Indian Menu">South Indian Menu</option>
+                    <option value="Gujarati Menu">Gujarati Menu</option>
+                    <option value="Rajasthani Menu">Rajasthani Menu</option>
+                    <option value="Bengali Menu">Bengali Menu</option>
+                    <option value="Maharashtrian Menu">Maharashtrian Menu</option>
+                    <option value="Punjabi Menu">Punjabi Menu</option>
                     <option value="Kerala Sadhya">Kerala Sadhya</option>
-                    <option value="Andhra Thali">Andhra Thali</option>
-                    <option value="Bihari Thali">Bihari Thali</option>
-                    <option value="Kashmiri Thali">Kashmiri Thali</option>
+                    <option value="Andhra Menu">Andhra Menu</option>
+                    <option value="Bihari Menu">Bihari Menu</option>
+                    <option value="Kashmiri Menu">Kashmiri Menu</option>
                 </select>
 
-                <label for="price">Max Price (per thali):</label>
+                <label for="price">Max Price (per Menu):</label>
                 <input type="number" id="price" placeholder="Enter max price">
 
                 <button onclick="filterFoods()">Search</button>
@@ -1194,482 +1194,36 @@
         }
 
         const FoodData = [
-            {
-                name: "Ridhi Tiffin-1 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "382424",
-                food: "Gujarati Thali",
-                originalPrice: 190,
-                currentPrice: 90,
-                extradiscount: 7.4,
-                items: "🌿🧅 Hari Pyaaz + 🥔 Aloo + 🥕 Gajar + 🌿 Matar Sabji, 🍛 Dal, 🍚 Rice, 🫓 5 Roti",
-                ownerContact: {
-                    phone: "+919574037824",
-                    email: "parthrawat14102004@gmail.com"
-                },
-                images: [
-                    "https://static.toiimg.com/thumb/imgsize-23456,msid-79064965,width-600,resizemode-4/79064965.jpg",
-                    "https://indianbusinesscanada.com/admin/uploads/2022/03/23/delicious-gujarati-tiffin-service-4792-96624-1-559.jpeg",
-                    "https://www.travenix.com/wp-content/uploads/2018/01/shree-thaker-bhojanalay-instagram-eisha3r-e1517393621979.jpg",
-                    "https://th.bing.com/th/id/OIP.IaBKlv30_bn34SbqWJd4YAHaEO?w=800&h=457&rs=1&pid=ImgDetMain",
-                    "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/7/2017/04/12141008/130417_GujaratiThali01.jpg"
-                ],
-                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
-                ratings: 4.7,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "10:30 AM",
-                    "morningdeliverytime": "01:00 - 01:30 PM",
-                    "nightStart": "03:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "08:00 - 08:30 PM"
-                }
-            },
-            {
-                name: "Ridhi Tiffin-2 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "382424",
-                food: "Gujarati Thali",
-                originalPrice: 200,
-                currentPrice: 120,
-                extradiscount: 7.4,
-                items: "🌿🧅 Hari Pyaaz + 🥔 Aloo + 🥕 Gajar + 🌿 Matar Sabji, 🍛 Dal, 🍚 Rice, 🫓 7 Roti",
-                ownerContact: {
-                    phone: "+919574037824",
-                    email: "parthrawat14102004@gmail.com"
-                },
-                images: [
-                    "https://indianbusinesscanada.com/admin/uploads/2022/03/23/delicious-gujarati-tiffin-service-4792-96624-1-559.jpeg",
-                    "https://th.bing.com/th/id/OIP.nQ_mqFB90NMBt0b7lqU2XQHaHt?w=769&h=800&rs=1&pid=ImgDetMain",
-                    "https://www.travenix.com/wp-content/uploads/2018/01/shree-thaker-bhojanalay-instagram-eisha3r-e1517393621979.jpg",
-                    "https://th.bing.com/th/id/OIP.IaBKlv30_bn34SbqWJd4YAHaEO?w=800&h=457&rs=1&pid=ImgDetMain",
-                    "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/7/2017/04/12141008/130417_GujaratiThali01.jpg"
-                ],
-                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
-                ratings: 4.7,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "10:30 AM",
-                    "morningdeliverytime": "01:00 - 01:30 PM",
-                    "nightStart": "03:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "08:00 - 08:30 PM"
-                }
-            },
-            {
-                name: "Pooja Tiffin-1 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "382424",
-                food: "Punjabi Thali",
-                originalPrice: 290,
-                currentPrice: 190,
-                extradiscount: 0,
-                items: "🍛 Paneer Butter Masala (Gravy), 🌶️ Bhindi 2 Pyaza (Sukhli), 🍲 Dal Fry, 🍚 Jeera Rice, 🌮 4 Chapatis",
-                ownerContact: {
-                    phone: "+919833815423",
-                    email: "pratik1809@gmail.com"
-                },
-                images: [
-                    "https://indianbusinesscanada.com/admin/uploads/2021/07/20/punjabi-thali-tiffin-service-87135-1-297.jpeg",
-                    "image/Pooja Tiffin-1/2.jpeg",
-                    "image/Pooja Tiffin-1/3.jpeg",
-                    "image/Pooja Tiffin-1/4.jpeg",
-                    "image/Pooja Tiffin-1/5.jpeg"
-                ],
-                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "09:00 AM",
-                    "morningdeliverytime": "01:00 - 01:30 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "04:00 PM",
-                    "nightdeliverytime": "08:00 - 08:30 PM"
-                }
-            },
-            {
-                name: "Pooja Tiffin-2 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "382424",
-                food: "Punjabi Thali",
-                originalPrice: 290,
-                currentPrice: 160,
-                extradiscount: 0,
-                items: "🍛 Paneer Butter Masala (Gravy), 🍲 Dal Fry, 🍚 Jeera Rice, 🌮 4 Chapatis",
-                ownerContact: {
-                    phone: "+919833815423",
-                    email: "pratik1809@gmail.com"
-                },
-                images: [
-                    "image/Pooja Tiffin-1/3.jpeg",
-                    "https://indianbusinesscanada.com/admin/uploads/2021/07/20/punjabi-thali-tiffin-service-87135-1-297.jpeg",
-                    "image/Pooja Tiffin-1/2.jpeg",
-                    "image/Pooja Tiffin-1/4.jpeg",
-                    "image/Pooja Tiffin-1/5.jpeg"
-                ],
-                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "09:00 AM",
-                    "morningdeliverytime": "01:00 - 01:30 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "04:00 PM",
-                    "nightdeliverytime": "08:00 - 08:30 PM"
-                }
-            },
-            {
-                name: "Pooja Tiffin-3 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "382424",
-                food: "Punjabi Thali",
-                originalPrice: 290,
-                currentPrice: 130,
-                extradiscount: 0,
-                items: "🌶️ Bhindi 2 Pyaza (Sukhi), 🍲 Dal Fry, 🍚 Jeera Rice, 🌮 4 Chapatis",
-                ownerContact: {
-                    phone: "+919833815423",
-                    email: "pratik1809@gmail.com"
-                },
-                images: [
-                    "image/Pooja Tiffin-1/2.jpeg",
-                    "https://indianbusinesscanada.com/admin/uploads/2021/07/20/punjabi-thali-tiffin-service-87135-1-297.jpeg",
-                    "image/Pooja Tiffin-1/3.jpeg",
-                    "image/Pooja Tiffin-1/4.jpeg",
-                    "image/Pooja Tiffin-1/5.jpeg"
-                ],
-                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "09:00 AM",
-                    "morningdeliverytime": "01:00 - 01:30 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "04:00 PM",
-                    "nightdeliverytime": "08:00 - 08:30 PM"
-                }
-            },
-            {
-                name: "Matrutva Tiffin-1 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 100,
-                extradiscount: 0,
-                items: "🥔 Vatana Bataka, 🍛 Dal, 🍚 Rice, 🥙 5 Roti",
-                ownerContact: {
-                    phone: "+917859833437",
-                    email: "tiffinservice2209@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "10:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "05:00 PM",
-                    "nightdeliverytime": "07:30 - 08:00 PM"
-                }
-            },
-            {
-                name: "Vegggies Tiffin-1 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Sabarmati",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 140,
-                extradiscount: 7.14,
-                items: "🥔 Aloo Matar, 🍛 Pulav, 🥣 Raita, 🥗 Salad, 🫓 5 Roti",
-                ownerContact: {
-                    phone: "+919426382361",
-                    email: "veggiesheavenamd@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Ramnagar", "Dharmanagar", "Jawahar Chowk", "Kabir Chowk", "Ranip", "Kaligam", "Motera", "Janata Nagar", "Chandkheda", "D-Cabin", "Visat"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
-            {
-                name: "Vegggies Tiffin-2 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Sabarmati",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 90,
-                extradiscount: 11.11,
-                items: "🥔 Aloo Matar, 🥗 Salad, 🫓 5 Roti",
-                ownerContact: {
-                    phone: "+919426382361",
-                    email: "veggiesheavenamd@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Ramnagar", "Dharmanagar", "Jawahar Chowk", "Kabir Chowk", "Ranip", "Kaligam", "Motera", "Janata Nagar", "Chandkheda", "D-Cabin", "Visat"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
-            {
-                name: "Didi Tiffin Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Sabarmati",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 160,
-                extradiscount: 0,
-                items: "🥘 2 Sabji, 🍛 Dal, 🍚 Rice, 🍞 4 Roti, 🥗 Salad",
-                ownerContact: {
-                    phone: "+919924666180",
-                    email: "chandapasti@yahoo.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Ramnagar", "Dharmanagar", "Jawahar Chowk", "Kabir Chowk", "Ranip", "Kaligam", "Motera", "Janata Nagar", "Chandkheda", "D-Cabin", "Visat"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
-            {
-                name: "Dharaiya Tiffin Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Sabarmati",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 130,
-                extradiscount: 11.11,
-                items: "🥔 Aloo Matar, 🥗 Salad, 🫓 5 Roti",
-                ownerContact: {
-                    phone: "+919998600416",
-                    email: "princyparikh111@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Ramnagar", "Dharmanagar", "Jawahar Chowk", "Kabir Chowk", "Ranip", "Kaligam", "Motera", "Janata Nagar", "Chandkheda", "D-Cabin", "Visat"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "09:00 AM",
-                    "morningdeliverytime": "12:00 - 01:00 PM",
-                    "nightStart": "01:00 PM",
-                    "nightEnd": "04:00 PM",
-                    "nightdeliverytime": "07:00 - 08:00 PM"
-                }
-            },
-            {
-                name: "Amrut Tiffin-1 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 130,
-                extradiscount: 13.33,
-                items: "🍽️ Lunch:, 🍞 4 Roti, 🍛 Dal, 🍚 Rice, 🥘 1 Sabji",
-                ownerContact: {
-                    phone: "+919016855727",
-                    email: "amrutkitchen@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Drive Inn", "Vastrapur", "Mansi", "Gurukul", "Vijay Cross Road", "Commerce Six Road", "Iscon", "CG Road", "Ashram Road", "VS Hospital"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
-            {
-                name: "Amrut Tiffin-2 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Chandkheda",
-                postalCode: "380005",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 150,
-                extradiscount: 13.33,
-                items: "🍽️ Lunch:, 🍞 6 Roti, 🍛 Dal, 🍚 Rice, 🥘 2 Sabji, 🥗 Salad, 🍘 Papad",
-                ownerContact: {
-                    phone: "+919016855727",
-                    email: "amrutkitchen@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Drive Inn", "Vastrapur", "Mansi", "Gurukul", "Vijay Cross Road", "Commerce Six Road", "Iscon", "CG Road", "Ashram Road", "VS Hospital"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
-            {
-                name: "Amrut Tiffin-3 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Thaltej",
-                postalCode: "380052",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 190,
-                extradiscount: 13.33,
-                items: "🍽️ Lunch:, 🍞 6 Roti, 🍛 Dal, 🍚 Rice, 🥘 2 Sabji, 🥗 Salad, 🍘 Papad, 🥤 Buttermilk, 🍬 Sweet",
-                ownerContact: {
-                    phone: "+919016855727",
-                    email: "amrutkitchen@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Drive Inn", "Vastrapur", "Mansi", "Gurukul", "Vijay Cross Road", "Commerce Six Road", "Iscon", "CG Road", "Ashram Road", "VS Hospital"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
-            {
-                name: "Amrut Tiffin-4 Service",
-                country: "India",
-                state: "GJ",
-                city: "Ahmedabad",
-                area: "Thaltej",
-                postalCode: "380052",
-                food: "Gujarati Thali",
-                originalPrice: 290,
-                currentPrice: 150,
-                extradiscount: 13.33,
-                items: "🍽️ Dinner:, 🍛 Includes Curry, 🍲 Khichdi, 🍞 5 Roti / 🫓 4 Paratha / 🫓 2 Bhakari, 🥘 Sabji (Other Dishes Available)",
-                ownerContact: {
-                    phone: "+919016855727",
-                    email: "amrutkitchen@gmail.com"
-                },
-                images: [
-                    "https://content.jdmagicbox.com/comp/ahmedabad/f8/079pxx79.xx79.240206190041.h5f8/catalogue/home-made-tiffin-servicess-nava-naroda-ahmedabad-tiffin-services-6ok31pauzg.jpg",
-                    "https://5.imimg.com/data5/SELLER/Default/2021/7/RJ/YG/UD/115428897/gujarati-food-tiffin-service-500x500.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQA4ZiX7C_OInheJJePyl5su1fa14z0nv0IJFwDai1nJelhApmlzZYYwvH7mZ6DA4-Lm4w&usqp=CAU",
-                    "https://content.jdmagicbox.com/comp/surat/i6/0261px261.x261.200323204138.c7i6/catalogue/neha-tiffin-service-nanpura-surat-tiffin-services-6xcffgj0ac.jpg",
-                    "https://content.jdmagicbox.com/comp/gandhinagar-gujarat/d1/9999pxx79.xx79.210502131504.k8d1/catalogue/shree-rang-tiffin-service-gandhinagar-sector-4-gandhinagar-gujarat-tiffin-services-2dmefd8umw.jpg"
-                ],
-                nearbyAreas: ["Drive Inn", "Vastrapur", "Mansi", "Gurukul", "Vijay Cross Road", "Commerce Six Road", "Iscon", "CG Road", "Ashram Road", "VS Hospital"],
-                ratings: 4.5,
-                availableDeliveryTime: {
-                    "morningStart": "06:00 AM",
-                    "morningEnd": "11:30 AM",
-                    "morningdeliverytime": "12:30 - 01:00 PM",
-                    "nightStart": "02:00 PM",
-                    "nightEnd": "06:30 PM",
-                    "nightdeliverytime": "07:30 - 08:30 PM"
-                }
-            },
+            // {
+            //     name: "Tiffin-1 Service",
+            //     country: "India",
+            //     state: "GJ",
+            //     city: "Ahmedabad",
+            //     area: "Chandkheda",
+            //     postalCode: "382424",
+            //     food: "Gujarati Menu",
+            //     originalPrice: 190,
+            //     currentPrice: 90,
+            //     extradiscount: 7.4,
+            //     items: "🌿🧅 Hari Pyaaz + 🥔 Aloo + 🥕 Gajar + 🌿 Matar Sabji, 🍛 Dal, 🍚 Rice, 🫓 5 Roti",
+            //     ownerContact: {
+            //         phone: "+919574037824",
+            //         email: "parthrawat14102004@gmail.com"
+            //     },
+            //     images: [
+            //         "https://static.toiimg.com/thumb/imgsize-23456,msid-79064965,width-600,resizemode-4/79064965.jpg",
+            //         "https://indianbusinesscanada.com/admin/uploads/2022/03/23/delicious-gujarati-tiffin-service-4792-96624-1-559.jpeg",
+            //         "https://www.travenix.com/wp-content/uploads/2018/01/shree-thaker-bhojanalay-instagram-eisha3r-e1517393621979.jpg",
+            //         "https://th.bing.com/th/id/OIP.IaBKlv30_bn34SbqWJd4YAHaEO?w=800&h=457&rs=1&pid=ImgDetMain",
+            //         "https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/sites/7/2017/04/12141008/130417_GujaratiMenu01.jpg"
+            //     ],
+            //     nearbyAreas: ["Motera", "Visat", "Sabarmati", "Koteshwar", "Ranip"],
+            //     ratings: 4.7,
+            //     availableDeliveryTime: {
+            //         "orderStart": "06:00 AM",
+            //         "orderEnd": "10:30 PM"
+            //     }
+            // },
         ];
 
         FoodData.forEach(Food => {
@@ -1831,12 +1385,11 @@
         <div class="details">
             <p><strong>🌍 Area:</strong> ${Food.area}</p>
             <p><strong>💰 Original Price:</strong> <span class="original-price">₹${Food.originalPrice}</span></p>
-            <p><strong>💸 Current Price (Per Thali):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
+            <p><strong>💸 Current Price (Per Menu):</strong> ₹${Food.currentPrice} <span style="color: red;">(Discount: ${discount}%)</span></p>
             <p><strong>⭐ Ratings:</strong> ${Food.ratings}</p>
             <p><strong>🍽️ Food Option:</strong> ${Food.food}</p>
-            <p><strong>🕒 Order Time:</strong> 🌅 Morning (${Food.availableDeliveryTime.morningStart} - ${Food.availableDeliveryTime.morningEnd}), 🌆 Night (${Food.availableDeliveryTime.nightStart} - ${Food.availableDeliveryTime.nightEnd})</p>
-            <p><strong>🚚 Delivery Time:</strong> 🍽️ Morning (${Food.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${Food.availableDeliveryTime.nightdeliverytime})</p>
-            <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
+            <p><strong>🕒 Order Time:</strong> (${Food.availableDeliveryTime.orderStart} - ${Food.availableDeliveryTime.orderEnd})</p>
+            <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the restaurant owner.</p>
             <a href="#" class="apply-btn" onclick="openModal('${Food.name}')">🔍 View Details</a>
         </div>
     `;
@@ -1877,9 +1430,8 @@
                     <p><strong>🌍 Area:</strong> ${firstFood.area}</p>
                     <p><strong>🍽️ Food Option:</strong> ${firstFood.food}</p>
                     <p><strong>⭐ Ratings:</strong> ${firstFood.ratings}</p>
-                    <p><strong>🕒 Order Time:</strong> 🌅 Morning (${firstFood.availableDeliveryTime.morningStart} - ${firstFood.availableDeliveryTime.morningEnd}), 🌆 Night (${firstFood.availableDeliveryTime.nightStart} - ${firstFood.availableDeliveryTime.nightEnd})</p>
-                    <p><strong>🚚 Delivery Time:</strong>  🍽️ Morning (${firstFood.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${firstFood.availableDeliveryTime.nightdeliverytime})</p>
-                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
+                    <p><strong>🕒 Order Time:</strong> (${firstFood.availableDeliveryTime.orderStart} - ${firstFood.availableDeliveryTime.orderEnd})</p>
+                    <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the restaurant owner.</p>
                     <button class="view-all-btn" onclick="showFoodDetails('${FoodKey}')">📂 View All Foods</button>
                     <div class="Food-details" id="${FoodKey.replace(/\s+/g, '-')}" style="display: none;"></div>
                 </div>
@@ -1948,9 +1500,8 @@
             <p><strong>🍛 Food Type:</strong> ${uniqueDetails.foodType}</p>
 
             <h4>🕒 Order & Delivery Timings</h4>
-            <p><strong>⏰ Order Time:</strong> 🌅 Morning (${uniqueDetails.availableDeliveryTime.morningStart} - ${uniqueDetails.availableDeliveryTime.morningEnd}), 🌆 Night (${uniqueDetails.availableDeliveryTime.nightStart} - ${uniqueDetails.availableDeliveryTime.nightEnd})</p>
-            <p><strong>🚚 Delivery Time:</strong> 🍽️ Morning (${uniqueDetails.availableDeliveryTime.morningdeliverytime}), 🌙 Night (${uniqueDetails.availableDeliveryTime.nightdeliverytime})</p>
-            <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the food owner.</p>
+            <p><strong>⏰ Order Time:</strong> (${uniqueDetails.availableDeliveryTime.orderStart} - ${uniqueDetails.availableDeliveryTime.orderEnd})</p>
+            <p style="color: red; font-weight: bold;">⚠️ Orders outside the given time may not be delivered, but might still be placed depending on the restaurant owner.</p>
 
             <h4>🍽️ Available Food Items & Pricing</h4>
             <ul class="pricing-list">
@@ -2009,14 +1560,14 @@
             document.getElementById('modalCity').innerText = `🏙️ City: ${Food.city}`;
             document.getElementById('modalArea').innerText = `📍 Area: ${Food.area}`;
             document.getElementById('modalFood').innerText = `🍲 Food: ${Food.food}`;
-            document.getElementById('modalPrice').innerHTML = `💰 Price (Per Thali): <strong>₹${Food.currentPrice}</strong> <span class="original-price">Original Price: ₹${Food.originalPrice}</span>`;
+            document.getElementById('modalPrice').innerHTML = `💰 Price (Per Menu): <strong>₹${Food.currentPrice}</strong> <span class="original-price">Original Price: ₹${Food.originalPrice}</span>`;
 
             const itemsList = Food.items.split(',').map(item => `<li>${item}</li>`).join('');
             document.getElementById('modalitems').innerHTML = `🍽️ Items Included: <ul class="styled-list">${itemsList}</ul>`;
 
             document.getElementById('modalRatings').innerText = `⭐ Ratings: ${Food.ratings}`;
 
-            document.getElementById('modalApplyBtn').href = `food-apply.html?name=${encodeURIComponent(Food.name)}&country=${encodeURIComponent(Food.country)}&state=${encodeURIComponent(Food.state)}&city=${encodeURIComponent(Food.city)}&area=${encodeURIComponent(Food.area)}&food=${encodeURIComponent(Food.food)}&currentPrice=${encodeURIComponent(Food.currentPrice)}&items=${encodeURIComponent(Food.items)}&phone=${encodeURIComponent(Food.ownerContact.phone)}&email=${encodeURIComponent(Food.ownerContact.email)}&postalCode=${encodeURIComponent(Food.postalCode)}&extraDiscount=${encodeURIComponent(Food.extradiscount)}`;
+            document.getElementById('modalApplyBtn').href = `restaurant-apply.html?name=${encodeURIComponent(Food.name)}&country=${encodeURIComponent(Food.country)}&state=${encodeURIComponent(Food.state)}&city=${encodeURIComponent(Food.city)}&area=${encodeURIComponent(Food.area)}&food=${encodeURIComponent(Food.food)}&currentPrice=${encodeURIComponent(Food.currentPrice)}&items=${encodeURIComponent(Food.items)}&phone=${encodeURIComponent(Food.ownerContact.phone)}&email=${encodeURIComponent(Food.ownerContact.email)}&postalCode=${encodeURIComponent(Food.postalCode)}&extraDiscount=${encodeURIComponent(Food.extradiscount)}`;
 
             const modal = document.getElementById('FoodModal');
             modal.style.display = 'block';

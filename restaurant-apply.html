@@ -172,66 +172,99 @@
     <meta name="google-adsense-account" content="ca-pub-9877839152732215">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9877839152732215"
         crossorigin="anonymous"></script>
-    <title>Yumma - Leave PG - PG Rooms, Tiffin, Home-Cooked Meals, Hotels & More</title>
+    <title>Yumma - Apply for Food - PG Rooms, Tiffin, Home-Cooked Meals, Hotels & More</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: white;
             margin: 0;
             padding: 0;
         }
 
         .containers {
-            max-width: 400px;
+            max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
             text-align: center;
+            font-size: 28px;
             color: #333;
+            margin-bottom: 20px;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
         }
 
-        .form-group input {
-            width: calc(100% - 20px);
-            padding: 10px;
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 6px;
+            font-size: 16px;
             box-sizing: border-box;
+            transition: border-color 0.3s ease;
         }
 
-        button {
-            width: calc(100% - 20px);
-            padding: 10px;
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .form-group input[type="file"] {
+            padding: 8px;
+        }
+
+        .file-info {
+            font-size: 14px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        .apply-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: #ffffff;
             border: none;
-            border-radius: 4px;
-            color: #fff;
-            background-color: #007bff;
+            border-radius: 6px;
             cursor: pointer;
-            box-sizing: border-box;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
 
-        button:disabled {
-            background-color: #ccc;
+        .apply-btn:hover {
+            background-color: #218838;
+        }
+
+        input[readonly] {
+            background-color: #f9f9f9;
             cursor: not-allowed;
-        }
-
-        button:hover:not(:disabled) {
-            background-color: #0056b3;
         }
 
         h1 {
@@ -241,6 +274,12 @@
             font-size: 2.5em;
             font-weight: 700;
             letter-spacing: -0.5px;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
         }
     </style>
 </head>
@@ -273,7 +312,7 @@
                         </div>
                     </li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="https://yumma.onrender.com/pg">Upload PG Details</a></li>
+                    <li><a href="https://yumma.onrender.com/food">Upload Food Details</a></li>
                     <!-- <li><a href="user-details.html">Profile</a></li> -->
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="query.html">Contact</a></li>
@@ -295,7 +334,7 @@
                and travelers. Book now and get an exclusive 80% discount!</p>
             <a href="#target-section" id="apply-button" class="button"
                 style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #fff; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease; margin-top: 10px;">
-                Leave PG
+                Apply for EATS Services
             </a>
         </div>
     </sections>
@@ -316,29 +355,101 @@
 
     
     <div class="containers" id="target-section">
-        <h1 style="text-align: center; font-size: 50px;">Leave PG</h1>
-        <form id="leavePgForm">
+        <h1 style="text-align: center; font-size: 50px;">Apply for Food</h1>
+        <form id="applyForm" method="POST" enctype="multipart/form-data"
+            action="https://my-pg-tnp9.onrender.com/restaurant_apply">
             <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" readonly>
+                <label for="FoodName">Food Name:</label>
+                <input type="text" id="FoodName" name="FoodName" readonly>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" readonly>
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" readonly>
             </div>
             <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" readonly>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" readonly>
             </div>
             <div class="form-group">
-                <label for="pgName">PG Name:</label>
-                <input type="text" id="pgName" name="pgName" required>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" readonly>
             </div>
-            <button type="submit" id="submitFormBtn">Submit</button>
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="area" readonly>
+            </div>
+            <div class="form-group">
+                <label for="postalCode">Postal Code:</label>
+                <input type="text" id="postalCode" name="postalCode" readonly>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="FoodPhone">Food Phone Number:</label>
+                <input type="text" id="FoodPhone" name="FoodPhone" readonly>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="FoodEmail">Food Email ID:</label>
+                <input type="text" id="FoodEmail" name="FoodEmail" readonly>
+            </div>
+            <div class="form-group">
+                <label for="food">Food:</label>
+                <input type="text" id="food" name="food" readonly>
+            </div>
+            <div class="form-group">
+                <label for="items">Items:</label>
+                <input type="text" id="items" name="items" readonly>
+            </div>
+            <div class="form-group">
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" name="userName" readonly>
+            </div>
+            <div class="form-group">
+                <label for="userPhone">Your Phone Number:</label>
+                <input type="tel" id="userPhone" name="userPhone" readonly>
+            </div>
+            <div class="form-group">
+                <label for="userEmail">Your Email:</label>
+                <input type="email" id="userEmail" name="userEmail" readonly>
+            </div>
+            <div class="form-group">
+                <label for="userAddress">Your Address:</label>
+                <input type="text" id="userAddress" name="userAddress" readonly>
+            </div>
+            <div class="form-group">
+                <label for="FoodPrice">Price per Menu:</label>
+                <input type="text" id="FoodPrice" name="FoodPrice" value="" readonly>
+            </div>
+            <div class="form-group">
+                <label for="duration">Quantity of Food Items:</label>
+                <input type="number" id="duration" name="duration" min="1" value="" required>
+            </div>
+
+            <div class="form-group">
+                <label for="FoodTotalPrice">Total Price:</label>
+                <input type="text" id="FoodTotalPrice" name="FoodTotalPrice" readonly>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    function calculateTotalPrice() {
+                        const pricePerItem = parseFloat(document.getElementById('FoodPrice').value.replace('₹', '')) || 0;
+                        const foodQuantity = parseInt(document.getElementById('duration').value) || 1;
+
+                        let totalPrice = foodQuantity * pricePerItem;
+
+                        document.getElementById('FoodTotalPrice').value = `₹${Math.floor(totalPrice)}`;
+                    }
+
+                    document.getElementById('duration').addEventListener('input', calculateTotalPrice);
+
+                    calculateTotalPrice();
+                });
+            </script>
+
+            <button type="submit" class="apply-btn" id="submitButton">Submit Application</button>
         </form>
     </div>
 
-    <button onclick="scrollToTop()" id="scrollToTopBtn" style="padding: 0;">&#8593;</button>
+    <button onclick="scrollToTop()" id="scrollToTopBtn">&#8593;</button>
 
     <footer>
         <div class="fcontainer">
@@ -470,14 +581,6 @@
             displayUserDetails();
         });
 
-        function displayUserDetails() {
-            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-
-            if (userDetails) {
-                document.getElementById('userName').textContent = userDetails.name;
-            }
-        }
-
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
@@ -487,65 +590,77 @@
                 behavior: 'smooth'
             });
         }
-        document.addEventListener('DOMContentLoaded', function () {
-            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-            if (userDetails) {
-                document.getElementById('name').value = userDetails.name;
-                document.getElementById('email').value = userDetails.email;
-                document.getElementById('phone').value = userDetails.phone;
-            } else {
-                alert('User not logged in');
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem('loggedIn') !== 'true') {
                 window.location.href = 'login.html';
+            } else {
+                const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+
+                if (userDetails) {
+                    document.getElementById('userName').value = userDetails.name || '';
+                    document.getElementById('userPhone').value = userDetails.phone || '';
+                    document.getElementById('userEmail').value = userDetails.email || '';
+                    document.getElementById('userAddress').value = userDetails.address || '';
+                } else {
+                    window.location.href = 'login.html';
+                }
             }
 
-            const leavePgForm = document.getElementById('leavePgForm');
-            const submitFormBtn = document.getElementById('submitFormBtn');
+            const lastApplicationDate = localStorage.getItem('lastApplicationDate');
+            if (lastApplicationDate) {
+                const lastApplicationTime = new Date(lastApplicationDate);
+                const currentTime = new Date();
+                const timeDiff = currentTime - lastApplicationTime;
+                const hoursDiff = timeDiff / (1000 * 60 * 60);
 
-            leavePgForm.addEventListener('submit', async function (event) {
-                event.preventDefault();
+                if (hoursDiff < 48) {
+                    window.location.href = 'status.html';
+                }
+            }
 
-                const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-                const pgName = document.getElementById('pgName').value;
+            const urlParams = new URLSearchParams(window.location.search);
 
-                const submitFormBtn = document.getElementById('submitFormBtn');
+            document.getElementById('FoodName').value = urlParams.get('name') || '';
+            document.getElementById('city').value = urlParams.get('city') || '';
+            document.getElementById('area').value = urlParams.get('area') || '';
+            document.getElementById('postalCode').value = urlParams.get('postalCode') || ''; document.getElementById('food').value = urlParams.get('food') || '';
+            document.getElementById('FoodPrice').value = urlParams.get('currentPrice') ? `₹${urlParams.get('currentPrice')} per Menu` : '';
+            document.getElementById('items').value = urlParams.get('items') || '';
+            document.getElementById('FoodPhone').value = urlParams.get('phone') || '';
+            document.getElementById('FoodEmail').value = urlParams.get('email') || '';
+            document.getElementById('state').value = urlParams.get('state') || '';
+            document.getElementById('country').value = urlParams.get('country') || '';
 
-                submitFormBtn.disabled = true;
+            const applyForm = document.getElementById('applyForm');
+            const submitButton = document.getElementById('submitButton');
 
-                submitFormBtn.style.display = 'none';
+            applyForm.addEventListener('submit', function (event) {
+                submitButton.disabled = true;
+                submitButton.innerText = 'Submitting...';
 
                 const message = document.createElement('p');
                 message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
                 message.style.fontSize = '16px';
                 message.style.color = '#333';
+                submitButton.insertAdjacentElement('afterend', message);
 
-                submitFormBtn.insertAdjacentElement('afterend', message);
+                event.preventDefault();
 
-                try {
-                    const response = await fetch('https://my-pg-tnp9.onrender.com/submit-leave-pg', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            userDetails: userDetails,
-                            pgName: pgName
-                        })
-                    });
-
-                    if (response.ok) {
-                        alert('Form submitted successfully. Confirmation email sent.');
-                        window.location.href = 'index.html';
-                    } else {
-                        alert('Failed to submit the form.');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('An error occurred. Please try again.');
-                } finally {
-                    submitFormBtn.disabled = false;
-                }
+                setTimeout(function () {
+                    applyForm.submit();
+                }, 2000);
             });
         });
+
+        function displayUserDetails() {
+            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+
+            if (userDetails) {
+                document.getElementById('userName').textContent = userDetails.name;
+                document.getElementById('userNames').textContent = userDetails.name;
+            }
+        }
 
     </script>
 </body>

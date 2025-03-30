@@ -471,6 +471,16 @@ nav {
     position: relative;
 }
 
+#popup {
+    position: fixed;
+    z-index: 9999;
+}
+
+.popup-content {
+    z-index: 10000;
+    position: relative;
+}
+
 .hero-banner h1 {
     z-index: 2;
     position: relative;
@@ -938,4 +948,63 @@ iframe {
 
 iframe:hover {
     transform: scale(1.02);
+}
+
+.nav {
+    list-style: none;
+    background: #333;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav>li {
+    position: relative;
+}
+
+.nav>li>a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav>li>a:hover {
+    background: #444;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: black;
+    display: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background: #f2f2f2;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav>li {
+        width: 100%;
+    }
+
+    .dropdown {
+        position: static;
+        box-shadow: none;
+    }
 }

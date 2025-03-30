@@ -172,29 +172,22 @@
     <meta name="google-adsense-account" content="ca-pub-9877839152732215">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9877839152732215"
         crossorigin="anonymous"></script>
-    <title>Yumma - Leave PG - PG Rooms, Tiffin, Home-Cooked Meals, Hotels & More</title>
+    <title>Yumma - Application - PG Rooms, Tiffin, Home-Cooked Meals, Hotels & More</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             background: white;
             margin: 0;
             padding: 0;
         }
 
         .containers {
-            max-width: 400px;
-            margin: 50px auto;
+            max-width: 600px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
+            border-radius: 10px;
         }
 
         .form-group {
@@ -202,36 +195,42 @@
         }
 
         .form-group label {
-            display: block;
-            margin-bottom: 5px;
+            font-weight: bold;
         }
 
         .form-group input {
             width: calc(100% - 20px);
             padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        button {
-            width: calc(100% - 20px);
-            padding: 10px;
+        .btn {
+            background-color: #4CAF50;
             border: none;
-            border-radius: 4px;
-            color: #fff;
-            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
             cursor: pointer;
-            box-sizing: border-box;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        button:disabled {
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        .btn:disabled {
             background-color: #ccc;
             cursor: not-allowed;
         }
 
-        button:hover:not(:disabled) {
-            background-color: #0056b3;
+        .hidden {
+            display: none;
         }
 
         h1 {
@@ -273,7 +272,7 @@
                         </div>
                     </li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="https://yumma.onrender.com/pg">Upload PG Details</a></li>
+                    <li><a href="https://yumma.onrender.com/food">Upload Food Details</a></li>
                     <!-- <li><a href="user-details.html">Profile</a></li> -->
                     <li><a href="feedback.html">Feedback</a></li>
                     <li><a href="query.html">Contact</a></li>
@@ -295,7 +294,7 @@
                and travelers. Book now and get an exclusive 80% discount!</p>
             <a href="#target-section" id="apply-button" class="button"
                 style="display: inline-block; padding: 12px 24px; background-color: #28a745; color: #fff; text-align: center; text-decoration: none; border-radius: 5px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease; margin-top: 10px;">
-                Leave PG
+                Confirm OR Reject
             </a>
         </div>
     </sections>
@@ -316,29 +315,79 @@
 
     
     <div class="containers" id="target-section">
-        <h1 style="text-align: center; font-size: 50px;">Leave PG</h1>
-        <form id="leavePgForm">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" readonly>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" readonly>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" readonly>
-            </div>
-            <div class="form-group">
-                <label for="pgName">PG Name:</label>
-                <input type="text" id="pgName" name="pgName" required>
-            </div>
-            <button type="submit" id="submitFormBtn">Submit</button>
-        </form>
+        <h1 style="text-align: center; font-size: 50px;">Food Application</h1>
+        <div class="form-group">
+            <label for="FoodName">Food Name:</label>
+            <input type="text" id="FoodName" readonly>
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" id="country" readonly>
+        </div>
+        <div class="form-group">
+            <label for="state">State:</label>
+            <input type="text" id="state" readonly>
+        </div>
+        <div class="form-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" readonly>
+        </div>
+        <div class="form-group">
+            <label for="area">Area:</label>
+            <input type="text" id="area" readonly>
+        </div>
+        <div class="form-group">
+            <label for="postalCode">Postal Code:</label>
+            <input type="text" id="postalCode" readonly>
+        </div>
+        <div class="form-group">
+            <label for="FoodPhone">Food Phone Number:</label>
+            <input type="text" id="FoodPhone" name="FoodPhone" readonly>
+        </div>
+        <div class="form-group">
+            <label for="FoodEmail">Food Email ID:</label>
+            <input type="text" id="FoodEmail" name="FoodEmail" readonly>
+        </div>
+        <div class="form-group">
+            <label for="food">Food:</label>
+            <input type="text" id="food" readonly>
+        </div>
+        <div class="form-group">
+            <label for="FoodTotalPrice">Total Price:</label>
+            <input type="text" id="FoodTotalPrice" name="FoodTotalPrice" readonly>
+        </div>
+        <div class="form-group">
+            <label for="items">Items:</label>
+            <input type="text" id="items" readonly>
+        </div>
+
+        <div class="form-group">
+            <label for="userName">User Name:</label>
+            <input type="text" id="userName" readonly>
+        </div>
+        <div class="form-group" style="display: none;">
+            <label for="userPhone">Your Phone Number:</label>
+            <input type="text" id="userPhone" readonly>
+        </div>
+        <div class="form-group" style="display: none;">
+            <label for="userEmail">Your Email:</label>
+            <input type="text" id="userEmail" readonly>
+        </div>
+        <div class="form-group">
+            <label for="userAddress">User Address</label>
+            <input type="text" id="userAddress" readonly>
+        </div>
+        <div class="form-group">
+            <label for="duration">Quantity of Food Items:</label>
+            <input type="text" id="duration" readonly>
+        </div>
+        <div class="form-group">
+            <button id="confirmBtn" class="btn">Confirm</button>
+            <button id="rejectBtn" class="btn">Reject</button>
+        </div>
     </div>
 
-    <button onclick="scrollToTop()" id="scrollToTopBtn" style="padding: 0;">&#8593;</button>
+    <button onclick="scrollToTop()" id="scrollToTopBtn">&#8593;</button>
 
     <footer>
         <div class="fcontainer">
@@ -470,14 +519,6 @@
             displayUserDetails();
         });
 
-        function displayUserDetails() {
-            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-
-            if (userDetails) {
-                document.getElementById('userName').textContent = userDetails.name;
-            }
-        }
-
         document.querySelector('.menu-toggle').addEventListener('click', function () {
             document.querySelector('.nav-menu').classList.toggle('active');
         });
@@ -487,67 +528,114 @@
                 behavior: 'smooth'
             });
         }
-        document.addEventListener('DOMContentLoaded', function () {
-            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-            if (userDetails) {
-                document.getElementById('name').value = userDetails.name;
-                document.getElementById('email').value = userDetails.email;
-                document.getElementById('phone').value = userDetails.phone;
-            } else {
-                alert('User not logged in');
-                window.location.href = 'login.html';
-            }
 
-            const leavePgForm = document.getElementById('leavePgForm');
-            const submitFormBtn = document.getElementById('submitFormBtn');
-
-            leavePgForm.addEventListener('submit', async function (event) {
-                event.preventDefault();
-
-                const userDetails = JSON.parse(localStorage.getItem('userDetails'));
-                const pgName = document.getElementById('pgName').value;
-
-                const submitFormBtn = document.getElementById('submitFormBtn');
-
-                submitFormBtn.disabled = true;
-
-                submitFormBtn.style.display = 'none';
-
-                const message = document.createElement('p');
-                message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
-                message.style.fontSize = '16px';
-                message.style.color = '#333';
-
-                submitFormBtn.insertAdjacentElement('afterend', message);
-
-                try {
-                    const response = await fetch('https://my-pg-tnp9.onrender.com/submit-leave-pg', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            userDetails: userDetails,
-                            pgName: pgName
-                        })
-                    });
-
-                    if (response.ok) {
-                        alert('Form submitted successfully. Confirmation email sent.');
-                        window.location.href = 'index.html';
-                    } else {
-                        alert('Failed to submit the form.');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('An error occurred. Please try again.');
-                } finally {
-                    submitFormBtn.disabled = false;
-                }
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const pairs = queryString.split('&');
+            pairs.forEach(pair => {
+                const [key, value] = pair.split('=');
+                params[decodeURIComponent(key)] = decodeURIComponent(value);
             });
+            return params;
+        }
+
+        window.onload = function () {
+            const params = getQueryParams();
+
+            document.getElementById('FoodName').value = params.FoodName || '';
+            document.getElementById('country').value = params.country || '';
+            document.getElementById('state').value = params.state || '';
+            document.getElementById('city').value = params.city || '';
+            document.getElementById('area').value = params.area || '';
+            document.getElementById('postalCode').value = params.postalCode || '';
+            document.getElementById('food').value = params.food || '';
+            document.getElementById('FoodTotalPrice').value = params.FoodTotalPrice || '';
+            document.getElementById('FoodEmail').value = params.FoodEmail || '';
+            document.getElementById('FoodPhone').value = params.FoodPhone || '';
+            document.getElementById('items').value = params.items || '';
+            document.getElementById('userName').value = params.userName || '';
+            document.getElementById('userPhone').value = params.userPhone || '';
+            document.getElementById('userEmail').value = params.userEmail || '';
+            document.getElementById('duration').value = params.duration || '';
+            document.getElementById('userAddress').value = params.userAddress || '';
+        };
+
+        function sendDecision(decision) {
+            const FoodDetails = {
+                FoodName: document.getElementById('FoodName').value,
+                country: document.getElementById('country').value,
+                state: document.getElementById('state').value,
+                city: document.getElementById('city').value,
+                area: document.getElementById('area').value,
+                postalCode: document.getElementById('postalCode').value,
+                food: document.getElementById('food').value,
+                FoodTotalPrice: document.getElementById('FoodTotalPrice').value,
+                items: document.getElementById('items').value,
+                FoodEmail: document.getElementById('FoodEmail').value,
+                FoodPhone: document.getElementById('FoodPhone').value
+            };
+
+            const userDetails = {
+                userName: document.getElementById('userName').value,
+                userPhone: document.getElementById('userPhone').value,
+                userEmail: document.getElementById('userEmail').value,
+                userAddress: document.getElementById('userAddress').value,
+                duration: document.getElementById('duration').value
+            };
+
+            fetch('https://mypgemail-3gol.onrender.com/restaurant-handle-decision', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ decision, FoodDetails, userDetails })
+            })
+                .then(response => response.json())
+                .then(data => {
+                    alert('Application sent successfully!');
+                    window.location.href = 'food.html';
+                    document.getElementById('confirmBtn').classList.add('hidden');
+                    document.getElementById('rejectBtn').classList.add('hidden');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+
+        document.getElementById('confirmBtn').addEventListener('click', function () {
+            sendDecision('confirm');
+            hideButtons();
         });
 
+        document.getElementById('rejectBtn').addEventListener('click', function () {
+            sendDecision('reject');
+            hideButtons();
+        });
+
+        function hideButtons() {
+            document.getElementById('confirmBtn').style.display = 'none';
+            document.getElementById('rejectBtn').style.display = 'none';
+
+            const message = document.createElement('p');
+            message.innerText = 'Please wait, your application is being processed. We will notify you shortly...';
+            message.style.fontSize = '16px';
+            message.style.color = '#333';
+
+            document.getElementById('confirmBtn').insertAdjacentElement('afterend', message);
+        }
+
+        function displayUserDetails() {
+            const userDetails = JSON.parse(localStorage.getItem('userDetails'));
+
+            if (userDetails) {
+                document.getElementById('userNames').textContent = userDetails.name;
+                document.getElementById('userName').textContent = userDetails.name;
+            }
+        }
+
     </script>
+
 </body>
 
 </html>

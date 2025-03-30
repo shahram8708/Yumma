@@ -63,3 +63,23 @@ style.innerHTML = `
     }
 `;
 document.head.appendChild(style);
+
+document.querySelectorAll('.dropdown-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+        e.preventDefault();
+        var dropdown = this.nextElementSibling;
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    });
+});
+
+window.addEventListener('click', function (e) {
+    document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+        if (!dropdown.contains(e.target) && !dropdown.previousElementSibling.contains(e.target)) {
+            dropdown.style.display = 'none';
+        }
+    });
+});
