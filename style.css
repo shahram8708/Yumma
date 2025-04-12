@@ -1110,7 +1110,6 @@ button:hover,
 .button:hover,
 .download-button:hover {
     background: linear-gradient(45deg, #283c86, #45a247) !important;
-    transform: scale(1.05) !important;
 }
 
 .hero-banner {
