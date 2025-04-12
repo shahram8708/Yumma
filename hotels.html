@@ -970,7 +970,7 @@
     <script src="scripts.js"></script>
 
     <div class="containers">
-        <h1 id="target-section">Find Your PG</h1>
+        <h1 id="target-section">Find Your Room</h1>
         <div class="filter-toggle">
             <i id="filterIcon" class="fas fa-filter"> Filter Room</i>
         </div>
@@ -1247,35 +1247,35 @@
         }
 
         const pgData = [
-            {
-                name: "Hotel-1 Room",
-                country: "India",
-                state: "Gujarat",
-                city: "Ahmedabad",
-                area: "Kuber Nagar",
-                roomType: "AC",
-                food: "With Food",
-                size: "Large",
-                originalPrice: 15000,
-                currentPrice: 11300,
-                address: "Kuber Nagar, Manko, Ahmedabad",
-                facilities: "📶 Free Wi-Fi, 🏍️ Two Wheeler Parking, ⚡ 24×7 Electricity, 🧺 Laundry, 🍳 Breakfast, 🍱 Lunch, 🍽️ Dinner, ❄️ A/C, 💧 24×7 Water, 🧊 Fridge, 🚿 Geyser, 🎥 CCTV",
-                rules: "👮 Police Verification, ⚡ Electricity Bill included in Rent (Excluding A/C bill), 🚷 Non Entry after 10 PM",
-                ownerContact: {
-                    phone: "+919265409344",
-                    email: "shahram8708@gmail.com"
-                },
-                images: [
-                   "https://www.thespruce.com/thmb/_xQMAqSNbX2bjnfXDKOdtaZRFaI=/2048x0/filters:no_upscale():max_bytes(150000):strip_icc()/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1eNCZu20XEK_QCrqxnXkxNP-oin8o47lNiik-S1ooZUpugzPJ3Zyoa_M0-LpJz0imc3M&usqp=CAU",
-                    "https://www.bhg.com/thmb/O308V5FawLSwluNQ8K1RHHtIW1I=/1244x0/filters:no_upscale():strip_icc()/modern-bedroom-neutrals-gold-sconces-7bLa8Fz-4H883NnY4KOJvi-261ce61898a340ff9cf6352ba1744ab7.jpg",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxtLz6AHzSgsle2byRY_nRsvF10iAijqOaQi9KRhC7MeQDpF8MP22oV0R0GqOBP0Fz_M&usqp=CAU",
-                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4wpLt9VDT40kudXs-flgzKz8sC9zkEugmrggOjVZhuLEIugjLqWVvZW3tKXmfv-05R5I&usqp=CAU"
-                ],
-                nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
-                availableSeats: 2,
-                ratings: 4.3,
-            },
+            // {
+            //     name: "Hotel-1 Room",
+            //     country: "India",
+            //     state: "Gujarat",
+            //     city: "Ahmedabad",
+            //     area: "Kuber Nagar",
+            //     roomType: "AC",
+            //     food: "With Food",
+            //     size: "Large",
+            //     originalPrice: 15000,
+            //     currentPrice: 11300,
+            //     address: "Kuber Nagar, Manko, Ahmedabad",
+            //     facilities: "📶 Free Wi-Fi, 🏍️ Two Wheeler Parking, ⚡ 24×7 Electricity, 🧺 Laundry, 🍳 Breakfast, 🍱 Lunch, 🍽️ Dinner, ❄️ A/C, 💧 24×7 Water, 🧊 Fridge, 🚿 Geyser, 🎥 CCTV",
+            //     rules: "👮 Police Verification, ⚡ Electricity Bill included in Rent (Excluding A/C bill), 🚷 Non Entry after 10 PM",
+            //     ownerContact: {
+            //         phone: "+919265409344",
+            //         email: "shahram8708@gmail.com"
+            //     },
+            //     images: [
+            //        "https://www.thespruce.com/thmb/_xQMAqSNbX2bjnfXDKOdtaZRFaI=/2048x0/filters:no_upscale():max_bytes(150000):strip_icc()/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg",
+            //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1eNCZu20XEK_QCrqxnXkxNP-oin8o47lNiik-S1ooZUpugzPJ3Zyoa_M0-LpJz0imc3M&usqp=CAU",
+            //         "https://www.bhg.com/thmb/O308V5FawLSwluNQ8K1RHHtIW1I=/1244x0/filters:no_upscale():strip_icc()/modern-bedroom-neutrals-gold-sconces-7bLa8Fz-4H883NnY4KOJvi-261ce61898a340ff9cf6352ba1744ab7.jpg",
+            //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxtLz6AHzSgsle2byRY_nRsvF10iAijqOaQi9KRhC7MeQDpF8MP22oV0R0GqOBP0Fz_M&usqp=CAU",
+            //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4wpLt9VDT40kudXs-flgzKz8sC9zkEugmrggOjVZhuLEIugjLqWVvZW3tKXmfv-05R5I&usqp=CAU"
+            //     ],
+            //     nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
+            //     availableSeats: 2,
+            //     ratings: 4.3,
+            // },
         ];
 
         pgData.forEach(pg => {

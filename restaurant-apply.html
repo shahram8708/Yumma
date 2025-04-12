@@ -598,18 +598,6 @@
                 }
             }
 
-            const lastApplicationDate = localStorage.getItem('lastApplicationDate');
-            if (lastApplicationDate) {
-                const lastApplicationTime = new Date(lastApplicationDate);
-                const currentTime = new Date();
-                const timeDiff = currentTime - lastApplicationTime;
-                const hoursDiff = timeDiff / (1000 * 60 * 60);
-
-                if (hoursDiff < 48) {
-                    window.location.href = 'status.html';
-                }
-            }
-
             const urlParams = new URLSearchParams(window.location.search);
 
             document.getElementById('FoodName').value = urlParams.get('name') || '';
