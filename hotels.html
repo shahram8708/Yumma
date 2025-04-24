@@ -991,7 +991,7 @@
                 <label for="city">City:</label>
                 <select id="city" onchange="updateAreas()">
                     <option value="">Select City</option>
-                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Navsari">Navsari</option>
                     <!-- <option value="Gandhinagar">Gandhinagar</option> -->
                 </select>
 
@@ -1247,35 +1247,31 @@
         }
 
         const pgData = [
-            // {
-            //     name: "Hotel-1 Room",
-            //     country: "India",
-            //     state: "Gujarat",
-            //     city: "Ahmedabad",
-            //     area: "Kuber Nagar",
-            //     roomType: "AC",
-            //     food: "With Food",
-            //     size: "Large",
-            //     originalPrice: 15000,
-            //     currentPrice: 11300,
-            //     address: "Kuber Nagar, Manko, Ahmedabad",
-            //     facilities: "📶 Free Wi-Fi, 🏍️ Two Wheeler Parking, ⚡ 24×7 Electricity, 🧺 Laundry, 🍳 Breakfast, 🍱 Lunch, 🍽️ Dinner, ❄️ A/C, 💧 24×7 Water, 🧊 Fridge, 🚿 Geyser, 🎥 CCTV",
-            //     rules: "👮 Police Verification, ⚡ Electricity Bill included in Rent (Excluding A/C bill), 🚷 Non Entry after 10 PM",
-            //     ownerContact: {
-            //         phone: "+919265409344",
-            //         email: "shahram8708@gmail.com"
-            //     },
-            //     images: [
-            //        "https://www.thespruce.com/thmb/_xQMAqSNbX2bjnfXDKOdtaZRFaI=/2048x0/filters:no_upscale():max_bytes(150000):strip_icc()/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg",
-            //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1eNCZu20XEK_QCrqxnXkxNP-oin8o47lNiik-S1ooZUpugzPJ3Zyoa_M0-LpJz0imc3M&usqp=CAU",
-            //         "https://www.bhg.com/thmb/O308V5FawLSwluNQ8K1RHHtIW1I=/1244x0/filters:no_upscale():strip_icc()/modern-bedroom-neutrals-gold-sconces-7bLa8Fz-4H883NnY4KOJvi-261ce61898a340ff9cf6352ba1744ab7.jpg",
-            //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxtLz6AHzSgsle2byRY_nRsvF10iAijqOaQi9KRhC7MeQDpF8MP22oV0R0GqOBP0Fz_M&usqp=CAU",
-            //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4wpLt9VDT40kudXs-flgzKz8sC9zkEugmrggOjVZhuLEIugjLqWVvZW3tKXmfv-05R5I&usqp=CAU"
-            //     ],
-            //     nearbyAreas: ["Navrangpura", "Ellisbridge", "Paldi", "CG Road", "Bodakdev"],
-            //     availableSeats: 2,
-            //     ratings: 4.3,
-            // },
+            {
+                name: "DELUXE AC-1 Room",
+                country: "India",
+                state: "Gujarat",
+                city: "Navsari",
+                area: "Kasbapar",
+                roomType: "AC",
+                food: "Without Food",
+                size: "Medium",
+                originalPrice: 5000,
+                currentPrice: 1500,
+                address: "OPERA HOMES NAVSARI - SURAT ROAD KASBAPAR NAVSARI, GUJARAT 396445",
+                facilities: "🌟 GOOD",
+                rules: "🚫 NOT ALLOWED: 🍷 ALCOHOL, 🚫 NOT ALLOWED: 🚬 SMOKING",
+                ownerContact: {
+                    phone: "+919265409344",
+                    email: "shahram8708@gmail.com"
+                },
+                images: [
+                    "images/DELUXE1/1.png"
+                ],
+                nearbyAreas: ["Kasbapar", "Kadipor", "Viraval", "Kaliawadi", "Junathana", "Mahavir Society", "Mangaliya Wad", "Madhumati Colony", "Amadpore", "Hansapore", "Italva", "Jamalpore", "Kothamadi", "Malesar", "Manekpore Tankoli", "Mogar", "Padgha", "Pethan", "Sagra", "Tavdi", "Vejalpore"],
+                availableSeats: "No Mentioned",
+                ratings: 4.3,
+            },
         ];
 
         pgData.forEach(pg => {
@@ -1302,7 +1298,7 @@
             citySelect.innerHTML = '<option value="">Select City</option>';
 
             if (state === "Gujarat") {
-                citySelect.innerHTML += '<option value="Ahmedabad">Ahmedabad</option>';
+                citySelect.innerHTML += '<option value="Navsari">Navsari</option>';
                 // citySelect.innerHTML += '<option value="Gandhinagar">Gandhinagar</option>';
             } else if (state === "California") {
                 // citySelect.innerHTML += '<option value="Los Angeles">Los Angeles</option>';
@@ -1315,20 +1311,28 @@
             const areaSelect = document.getElementById('area');
             areaSelect.innerHTML = '<option value="">Select Area</option>';
 
-            if (city === "Ahmedabad") {
-                areaSelect.innerHTML += '<option value="Chandkheda">Chandkheda</option>';
-                areaSelect.innerHTML += '<option value="Ellisbridge">Ellisbridge</option>';
-                areaSelect.innerHTML += '<option value="Gota">Gota</option>';
-                areaSelect.innerHTML += '<option value="Motera">Motera</option>';
-                areaSelect.innerHTML += '<option value="Navrangpura">Navrangpura</option>';
-                areaSelect.innerHTML += '<option value="Paldi">Paldi</option>';
-                areaSelect.innerHTML += '<option value="Panjara Pole">Panjara Pole</option>';
-                areaSelect.innerHTML += '<option value="Ranip">Ranip</option>';
-                areaSelect.innerHTML += '<option value="Sarkhej">Sarkhej</option>';
-                areaSelect.innerHTML += '<option value="Satelite">Satelite</option>';
-                areaSelect.innerHTML += '<option value="Shahibaug">Shahibaug</option>';
-                areaSelect.innerHTML += '<option value="Vastrapur">Vastrapur</option>';
-                areaSelect.innerHTML += '<option value="Visat">Visat</option>';
+            if (city === "Navsari") {
+                areaSelect.innerHTML += '<option value="Kasbapar">Kasbapar</option>';
+                areaSelect.innerHTML += '<option value="Kadipor">Kadipor</option>';
+                areaSelect.innerHTML += '<option value="Viraval">Viraval</option>';
+                areaSelect.innerHTML += '<option value="Kaliawadi">Kaliawadi</option>';
+                areaSelect.innerHTML += '<option value="Junathana">Junathana</option>';
+                areaSelect.innerHTML += '<option value="Mahavir Society">Mahavir Society</option>';
+                areaSelect.innerHTML += '<option value="Mangaliya Wad">Mangaliya Wad</option>';
+                areaSelect.innerHTML += '<option value="Madhumati Colony">Madhumati Colony</option>';
+                areaSelect.innerHTML += '<option value="Amadpore">Amadpore</option>';
+                areaSelect.innerHTML += '<option value="Hansapore">Hansapore</option>';
+                areaSelect.innerHTML += '<option value="Italva">Italva</option>';
+                areaSelect.innerHTML += '<option value="Jamalpore">Jamalpore</option>';
+                areaSelect.innerHTML += '<option value="Kothamadi">Kothamadi</option>';
+                areaSelect.innerHTML += '<option value="Malesar">Malesar</option>';
+                areaSelect.innerHTML += '<option value="Manekpore Tankoli">Manekpore Tankoli</option>';
+                areaSelect.innerHTML += '<option value="Mogar">Mogar</option>';
+                areaSelect.innerHTML += '<option value="Padgha">Padgha</option>';
+                areaSelect.innerHTML += '<option value="Pethan">Pethan</option>';
+                areaSelect.innerHTML += '<option value="Sagra">Sagra</option>';
+                areaSelect.innerHTML += '<option value="Tavdi">Tavdi</option>';
+                areaSelect.innerHTML += '<option value="Vejalpore">Vejalpore</option>';
             } else if (city === "Gandhinagar") {
                 // areaSelect.innerHTML += '<option value="Sector 11">Sector 11</option>';
                 // areaSelect.innerHTML += '<option value="Sector 21">Sector 21</option>';
@@ -1366,7 +1370,7 @@
                 );
             });
 
-            document.getElementById('pgCount').innerText = `${filteredPGs.length} PG available`;
+            document.getElementById('pgCount').innerText = `${filteredPGs.length} Room available`;
 
             if (filteredPGs.length > 0) {
                 showFilteredPGDetails(filteredPGs);
@@ -1392,7 +1396,7 @@
             const groupedPGs = {};
             pgs.sort(() => Math.random() - 0.5);
             pgs.forEach(pg => {
-                const pgKey = pg.name.replace(/-\d+\s*PG$/, ' PG');
+                const pgKey = pg.name.replace(/-\d+\s*Room$/, ' Room');
                 if (!groupedPGs[pgKey]) {
                     groupedPGs[pgKey] = [];
                 }
@@ -1406,12 +1410,12 @@
                 pgGroup.innerHTML = `
                 <div class="images">
                     <h3>🏠 ${pgKey}</h3>
-                    <img class="main-image" src="${firstPG.images[0]}" alt="${firstPG.name.replace(/-\d+\s*PG$/, ' PG')} Image">
+                    <img class="main-image" src="${firstPG.images[0]}" alt="${firstPG.name.replace(/-\d+\s*Room$/, ' Room')} Image">
                 </div>
                 <div class="details">
                     <p><strong>🌍 Area:</strong> ${firstPG.area}</p>
                     <p><strong>⭐ Ratings:</strong> ${firstPG.ratings}</p>
-                    <button class="view-all-btn" onclick="showPGDetails('${pgKey}')">📂 View All PGs</button>
+                    <button class="view-all-btn" onclick="showPGDetails('${pgKey}')">📂 View All Rooms</button>
                     <div class="pg-details" id="${pgKey.replace(/\s+/g, '-')}" style="display: none;"></div>
                 </div>
         `;
@@ -1439,7 +1443,7 @@
             const uniquePGs = {};
 
             pgs.forEach(pg => {
-                const pgKey = pg.name.replace(/-\d+\s*PG$/, ' PG');
+                const pgKey = pg.name.replace(/-\d+\s*Room$/, ' Room');
                 if (!uniquePGs[pgKey]) {
                     uniquePGs[pgKey] = {
                         name: pgKey,
@@ -1521,14 +1525,14 @@
             const pgList = document.getElementById('pgList');
             pgList.innerHTML = '';
 
-            const matchedPGs = pgData.filter(pg => pg.name.includes(pgKey.replace(' PG', '')));
+            const matchedPGs = pgData.filter(pg => pg.name.includes(pgKey.replace(' Room', '')));
 
             if (matchedPGs.length > 0) {
                 const firstPG = matchedPGs[0];
                 const pgImages = firstPG.images;
 
                 const uniqueDetails = {
-                    name: firstPG.name.replace(/-\d+\s*PG$/, ' PG'),
+                    name: firstPG.name.replace(/-\d+\s*Room$/, ' Room'),
                     area: firstPG.area,
                     city: firstPG.city,
                     ratings: firstPG.ratings,
@@ -1540,7 +1544,7 @@
                     images: pgImages
                 };
 
-                // const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(uniqueDetails.address)}&output=embed`;
+                const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(uniqueDetails.address)}&output=embed`;
 
                 const roomDetails = matchedPGs.map(pg => ({
                     availableSeats: pg.availableSeats,
@@ -1568,7 +1572,10 @@
             <p><strong>🌍 Area:</strong> ${uniqueDetails.area}</p>
             <p><strong>⭐ Ratings:</strong> ${uniqueDetails.ratings}</p>
             <p><strong>📏 Room Size:</strong> ${uniqueDetails.size}</p>
-
+            <h4>📍 Location on Google Maps</h4>
+            <div class="map-container">
+                <iframe class="google-map" src="${googleMapsURL}" allowfullscreen="" loading="lazy"></iframe>
+            </div>
             <h4>💰 Pricing & Room Details</h4>
             <ul class="pricing-list">
                 ${roomDetails.map(detail => `
@@ -1624,7 +1631,7 @@
         function openModal(pgName) {
             const pg = pgData.find(p => p.name === pgName);
 
-            document.getElementById('modalName').innerText = `${pg.name.replace(/-\d+\s*PG$/, ' PG')} 🏠`;
+            document.getElementById('modalName').innerText = `${pg.name.replace(/-\d+\s*Room$/, ' Room')} 🏠`;
             images = pg.images || [];
             currentImageIndex = 0;
 
@@ -1632,7 +1639,7 @@
 
             const extraImagesContainer = document.getElementById('extraImages');
             extraImagesContainer.innerHTML = images.slice(1).map(img =>
-                `<img src="${img}" alt="${pg.name.replace(/-\d+\s*PG$/, ' PG')} Image" onclick="setMainImage('${img}')">`).join('');
+                `<img src="${img}" alt="${pg.name.replace(/-\d+\s*Room$/, ' Room')} Image" onclick="setMainImage('${img}')">`).join('');
 
             document.getElementById('modalCity').innerText = `📍 City: ${pg.city}`;
             document.getElementById('modalArea').innerText = `🌍 Area: ${pg.area}`;
@@ -1640,15 +1647,15 @@
             document.getElementById('modalFood').innerText = `🍽️ Food: ${pg.food}`;
             document.getElementById('modalSize').innerText = `📏 Room Size: ${pg.size}`;
             document.getElementById('modalPrice').innerHTML = `💸 Price: <strong>₹${pg.currentPrice}</strong> <span class="original-price">💰 Original Price: ₹${pg.originalPrice}</span>`;
-            // document.getElementById('modalAddress').innerText = `🏠 Address: ${pg.address}`;
-            // const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(pg.address)}&output=embed`;
+            document.getElementById('modalAddress').innerText = `🏠 Address: ${pg.address}`;
+            const googleMapsURL = `https://www.google.com/maps?q=${encodeURIComponent(pg.address)}&output=embed`;
 
-            //             document.getElementById('modalAddress').innerHTML = `
-            //     <h4>📍 Location on Google Maps</h4>
-            //     <div class="map-container">
-            //         <iframe class="google-map" src="${googleMapsURL}" allowfullscreen="" loading="lazy"></iframe>
-            //     </div>
-            // `;
+            document.getElementById('modalAddress').innerHTML = `
+                <h4>📍 Location on Google Maps</h4>
+                <div class="map-container">
+                    <iframe class="google-map" src="${googleMapsURL}" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            `;
 
             const facilitiesList = pg.facilities.split(',').map(facility => `<li>${facility.trim()}</li>`).join('');
             document.getElementById('modalFacilities').innerHTML = `<strong>🔧 Facilities:</strong><ul class="styled-list">${facilitiesList}</ul>`;
