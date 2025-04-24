@@ -1434,6 +1434,15 @@
             displayPGs(pgData);
         }
 
+        window.onload = () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const pgNameFromURL = urlParams.get('pgName');
+
+            if (pgNameFromURL) {
+                showPGDetails(pgNameFromURL);
+            }
+        };
+
         function showFilteredPGDetails(pgs) {
             const pgList = document.getElementById('pgList');
             pgList.innerHTML = '';
@@ -1501,6 +1510,8 @@
                         <span>🤝 Room Available: ${room.availableSeats} | 🏠 Room Type: ${room.roomType} | 🍽️ Food: ${room.food}</span>
                         <span class="price"><del>₹${room.originalPrice}</del> → <strong>₹${room.currentPrice}</strong> <span class="discount">(${room.discount}%)</span></span>
                         <button class="details-btn" onclick="openModal('${room.pgName}')">🔍 View Details</button>
+                        <br>
+                        <button class="share-btn" style="margin-left: 10px;" onclick="shareLink('${detail.pgName}')">🔗 Share</button>
                     </li>
                 `).join('')}
             </ul>
@@ -1583,6 +1594,8 @@
                         <span>🤝 Room Available: ${detail.availableSeats} | 🏠 Room Type: ${detail.roomType} | 🍽️ Food: ${detail.food}</span>
                         <span class="price"><del>₹${detail.originalPrice}</del> → <strong>₹${detail.currentPrice}</strong> <span class="discount">(${detail.discount}%)</span></span>
                         <button class="details-btn" onclick="openModal('${detail.pgName}')">🔍 View Details</button>
+                        <br>
+                        <button class="share-btn" style="margin-left: 10px;" onclick="shareLink('${detail.pgName}')">🔗 Share</button>
                     </li>
                 `).join('')}
             </ul>
@@ -1604,6 +1617,18 @@
                 window.currentImages = uniqueDetails.images;
                 window.currentIndex = 0;
             }
+        }
+
+        function shareLink(pgName) {
+            const pgUrl = `https://theyumma.netlify.app/hotels.html?pgName=${encodeURIComponent(pgName)}`;
+
+            navigator.clipboard.writeText(pgUrl)
+                .then(() => {
+                    alert('Link copied to clipboard!');
+                })
+                .catch(err => {
+                    console.error('Failed to copy the link: ', err);
+                });
         }
 
         function nextImage() {
